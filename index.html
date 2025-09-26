@@ -17,11 +17,9 @@
       </div>
     </div>
     <div class="theme-switch-wrapper">
-      <label class="theme-switch">
-        <input type="checkbox" id="theme-toggle" />
-        <span class="slider"></span>
-      </label>
-      <span id="theme-icon">🌙</span>
+      <button id="theme-toggle-btn" class="theme-toggle-btn">
+        <span class="theme-icon">🌙</span>
+      </button>
     </div>
   </header>
 
@@ -41,6 +39,29 @@
         <span class="social-name">LinkedIn</span>
       </a>
     </section>
+
+    <!-- Hackathon & Experience Section -->
+    <section class="experience">
+      <h2 class="gradient-text">Hackathons & Experience</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Hackathon 1</h3>
+          <p>🏆 Built a full-stack project in 24 hours, won 2nd place.</p>
+        </div>
+        <div class="card">
+          <h3>Hackathon 2</h3>
+          <p>🚀 Developed an AI-powered chatbot for students.</p>
+        </div>
+        <div class="card">
+          <h3>Internship</h3>
+          <p>💻 Software Developer Intern at XYZ Company.</p>
+        </div>
+        <div class="card">
+          <h3>Freelance Project</h3>
+          <p>🌐 Designed and deployed a responsive portfolio website.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -57,8 +78,8 @@
   </footer>
 
   <script>
-    const toggleButton = document.getElementById("theme-toggle");
-    const themeIcon = document.getElementById("theme-icon");
+    const themeBtn = document.getElementById("theme-toggle-btn");
+    const themeIcon = document.querySelector(".theme-icon");
     const html = document.documentElement;
 
     const icons = {
@@ -79,8 +100,9 @@
       document.getElementById("linkedin-footer-icon").src = icons.linkedin[theme];
     };
 
-    toggleButton.addEventListener("change", () => {
-      const newTheme = toggleButton.checked ? "light" : "dark";
+    themeBtn.addEventListener("click", () => {
+      const currentTheme = html.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
       html.setAttribute("data-theme", newTheme);
       updateIcons(newTheme);
       themeIcon.textContent = newTheme === "dark" ? "🌙" : "☀️";
