@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yuvanesh KS Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Material+Icons&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -18,7 +18,7 @@
     </div>
     <div class="theme-switch-wrapper">
       <button id="theme-toggle-btn" class="theme-toggle-btn">
-        <span class="theme-icon">🌙</span>
+        <span class="material-icons theme-icon">dark_mode</span>
       </button>
     </div>
   </header>
@@ -44,22 +44,42 @@
     <section class="experience">
       <h2 class="gradient-text">Hackathons & Experience</h2>
       <div class="card-container">
-        <div class="card">
-          <h3>Hackathon 1</h3>
-          <p>🏆 Built a full-stack project in 24 hours, won 2nd place.</p>
+        <!-- Card 1 -->
+        <div class="card" data-title="Hackathon 1" data-img="Assets/Pictures/hackathon1.jpg" data-desc="🏆 Built a full-stack project in 24 hours and secured 2nd place. Worked on React + Node.js." data-link="https://example.com">
+          <img src="Assets/Pictures/hackathon1.jpg" alt="Hackathon 1" class="card-img">
+          <div class="card-text">
+            <h3>Hackathon 1</h3>
+            <p>🏆 2nd place | Full-stack</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Hackathon 2</h3>
-          <p>🚀 Developed an AI-powered chatbot for students.</p>
+
+        <!-- Card 2 -->
+        <div class="card" data-title="Hackathon 2" data-img="Assets/Pictures/hackathon2.jpg" data-desc="🚀 Developed an AI-powered chatbot for students to help with learning resources." data-link="https://example.com">
+          <img src="Assets/Pictures/hackathon2.jpg" alt="Hackathon 2" class="card-img">
+          <div class="card-text">
+            <h3>Hackathon 2</h3>
+            <p>🚀 AI Chatbot</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Internship</h3>
-          <p>💻 Software Developer Intern at XYZ Company.</p>
+
+        <!-- Card 3 -->
+        <div class="card" data-title="Internship" data-img="Assets/Pictures/internship.jpg" data-desc="💻 Software Developer Intern at XYZ Company. Worked on backend APIs and system design." data-link="https://example.com">
+          <img src="Assets/Pictures/internship.jpg" alt="Internship" class="card-img">
+          <div class="card-text">
+            <h3>Internship</h3>
+            <p>💻 Backend Development</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Freelance Project</h3>
-          <p>🌐 Designed and deployed a responsive portfolio website.</p>
+
+        <!-- Card 4 -->
+        <div class="card" data-title="Freelance Project" data-img="Assets/Pictures/freelance.jpg" data-desc="🌐 Designed and deployed a responsive portfolio website for a client using HTML, CSS, JS." data-link="https://example.com">
+          <img src="Assets/Pictures/freelance.jpg" alt="Freelance Project" class="card-img">
+          <div class="card-text">
+            <h3>Freelance Project</h3>
+            <p>🌐 Responsive Web Design</p>
+          </div>
         </div>
+        
       </div>
     </section>
   </main>
@@ -76,6 +96,17 @@
     </div>
     <p>&copy; 2025 Yuvanesh KS</p>
   </footer>
+
+  <!-- Popup Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="material-icons modal-close">close</span>
+      <img id="modal-img" src="" alt="Modal Header" class="modal-header-img">
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <a id="modal-link" href="#" target="_blank" class="modal-link">View More</a>
+    </div>
+  </div>
 
   <script>
     const themeBtn = document.getElementById("theme-toggle-btn");
@@ -105,7 +136,35 @@
       const newTheme = currentTheme === "dark" ? "light" : "dark";
       html.setAttribute("data-theme", newTheme);
       updateIcons(newTheme);
-      themeIcon.textContent = newTheme === "dark" ? "🌙" : "☀️";
+      themeIcon.textContent = newTheme === "dark" ? "dark_mode" : "light_mode";
+    });
+
+    // Modal Logic
+    const modal = document.getElementById("modal");
+    const modalClose = document.getElementById("modal-close");
+    const modalImg = document.getElementById("modal-img");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDesc = document.getElementById("modal-desc");
+    const modalLink = document.getElementById("modal-link");
+
+    document.querySelectorAll(".card").forEach(card => {
+      card.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = card.dataset.img;
+        modalTitle.textContent = card.dataset.title;
+        modalDesc.textContent = card.dataset.desc;
+        modalLink.href = card.dataset.link;
+      });
+    });
+
+    modalClose.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
     });
   </script>
 </body>
