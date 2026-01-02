@@ -605,7 +605,15 @@ section {
     margin-bottom: 1rem;
 }
 
-.read-more {
+/* Fix for button overlapping */
+.card-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Optional: Adds a subtle separator line */
+    /* text-align: right;  Aligns button to the right for better aesthetics */
+}
+
+.read-more:not(.uiverse-button) {
     background: rgba(255, 255, 255, 0.1);
     border: none;
     color: var(--accent-cyan);
@@ -615,7 +623,7 @@ section {
     transition: all 0.3s;
 }
 
-.read-more:hover {
+.read-more:not(.uiverse-button):hover {
     background: var(--accent-cyan);
     color: #000;
 }
