@@ -7,19 +7,32 @@ document.addEventListener('DOMContentLoaded', () => {
     let typingSpeed = 100;
 
     // Theme Toggle Logic
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = themeToggleBtn.querySelector('i');
+    const themeCheckbox = document.getElementById('theme-checkbox');
 
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
+        themeCheckbox.checked = savedTheme === 'light'; // Light is checked (Sun/Day mode for this toggle logic?)
+        // Wait, looking at CSS:
+        // .slider:checked + .switch { background-color: #112350; } -> Dark Blue.
+        // And it shows moons/stars.
+        // So CHECKED = DARK MODE (Night).
+        // UNCHECKED = LIGHT MODE (Day).
+
+        // My site defaults to Dark Mode in :root.
+        // So if savedTheme is 'dark', it should be CHECKED.
+        // If savedTheme is 'light', it should be UNCHECKED.
+
+        themeCheckbox.checked = savedTheme === 'dark';
         updateThemeIcon(savedTheme);
+    } else {
+        // Default is Dark Mode (:root), so check it by default
+        themeCheckbox.checked = true;
     }
 
-    themeToggleBtn.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    themeCheckbox.addEventListener('change', () => {
+        const newTheme = themeCheckbox.checked ? 'dark' : 'light';
 
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
@@ -28,17 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateThemeIcon(theme) {
         if (theme === 'light') {
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-            themeIcon.style.color = '#333';
             // Update header icons color for light mode
             document.querySelectorAll('.header-contacts .social-icon').forEach(icon => {
                 icon.style.color = '#333';
             });
         } else {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-            themeIcon.style.color = '#fff';
             // Update header icons color for dark mode
             document.querySelectorAll('.header-contacts .social-icon').forEach(icon => {
                 icon.style.color = '#fff';
