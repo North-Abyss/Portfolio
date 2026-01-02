@@ -14,10 +14,16 @@
     --font-heading: 'Orbitron', sans-serif;
     --font-body: 'Inter', sans-serif;
     --matrix-color: rgba(0, 150, 255, 0.4);
-}
+    /* Logo shadow (monochrome: white + black depth) */
+    --logo-shadow: 0 0 8px rgba(255,255,255,0.06), 0 8px 24px rgba(0,0,0,0.45);
+    --logo-hover-shadow: 0 0 12px rgba(255,255,255,0.08), 0 12px 36px rgba(0,0,0,0.35);
+} 
 
 [data-theme="light"] {
     --bg-color: #ffffff;
+    /* Monochrome logo shadows for light mode */
+    --logo-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    --logo-hover-shadow: 0 8px 24px rgba(0,0,0,0.15);
     --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     --bg-deep: #f0f2f5;
     --text-primary: #1a1a1a;
@@ -213,7 +219,18 @@ to {
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--text-primary);
-    text-shadow: 0 0 10px var(--accent-cyan);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.1rem 0.25rem;
+    border-radius: 6px;
+    box-shadow: var(--logo-shadow);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.logo:hover {
+    transform: translateY(-2px) scale(1.03);
+    /* Neutral monochrome hover shadow */
+    box-shadow: var(--logo-hover-shadow);
 }
 
 .nav-links {
@@ -605,6 +622,19 @@ section {
     margin-bottom: 1rem;
 }
 
+/* Theme-aware link preview text */
+.whatsapp-preview-content .whatsapp-preview-title {
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+    transition: color 0.25s ease;
+}
+
+.whatsapp-preview-content .whatsapp-preview-domain {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    transition: color 0.25s ease;
+}
+
 /* Fix for button overlapping */
 .card-footer {
     margin-top: 1.5rem;
@@ -657,6 +687,12 @@ section {
     color: #ffffff;
     transform: translateY(-10px);
     text-shadow: 0 0 15px #9b59b6;
+}
+
+.social-icon.itch:hover {
+    color: #ff6a00;
+    transform: translateY(-10px);
+    text-shadow: 0 0 15px #ff6a00;
 }
 
 .social-icon.email:hover {
