@@ -1,82 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuvanesh KS | Portfolio</title>
-    <!-- Theme init: apply system preferred theme first to avoid flash, user preference will be applied after JS loads -->
-    <script>
-      (function(){
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuvanesh KS | System Administrator & Game Developer | NorthAbyss</title>
+
+<!-- SEO & Metadata -->
+<meta name="description"
+    content="Portfolio of Yuvanesh KS (NorthAbyss). System Administrator, Data Engineer, and Game Developer specializing in Linux, Databricks, and Godot Engine.">
+<meta name="keywords"
+    content="Yuvanesh KS, NorthAbyss, North-Abyss, System Administrator, Game Developer, Portfolio, Linux, Anna Mira College, AMCET">
+<meta name="author" content="Yuvanesh KS">
+<link rel="canonical" href="https://north-abyss.github.io/Portfolio/">
+
+<!-- Theme init: apply system preferred theme first to avoid flash -->
+<script>
+    (function () {
         try {
-          var system = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
-          document.documentElement.setAttribute('data-theme', system);
+            var system = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', system);
         } catch (e) { /* ignore */ }
-      })();
+    })();
+</script>
+
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Yuvanesh KS",
+      "alternateName": "NorthAbyss",
+      "jobTitle": "System Administrator",
+      "url": "https://north-abyss.github.io/Portfolio/",
+      "image": "https://north-abyss.github.io/Portfolio/preview.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/yuvaneshks/",
+        "https://github.com/North-Abyss",
+        "https://north-abyss.itch.io/"
+      ],
+      "alumniOf": "Annai Mira College of Engineering and Technology"
+    }
     </script>
 
-    <!-- Preconnect to Google Fonts to reduce latency -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://north-abyss.github.io/Portfolio/">
+<meta property="og:title" content="Yuvanesh KS - SysAdmin & Developer Portfolio">
+<meta property="og:description"
+    content="Explore the Home Lab, Data Engineering projects, and Game Dev work of Yuvanesh KS (NorthAbyss).">
+<meta property="og:image" content="https://north-abyss.github.io/Portfolio/preview.png">
 
-    <!-- Load critical fonts non-blocking (swap) -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap" rel="stylesheet"></noscript>
-    <meta name="description" content="Personal portfolio of Yuvanesh KS — System Architect & Data Engineer. Explore projects, experience, and contact info.">
-    <meta name="google-site-verification" content="HNZvXfhWbrig6mgzIRp-HQ3sCXLojGQZvWSeu7QEXT4" />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet"></noscript>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://north-abyss.github.io/Portfolio/">
+<meta property="twitter:title" content="Yuvanesh KS | System Administrator & Game Developer">
+<meta property="twitter:description"
+    content="Explore the Home Lab, Data Engineering projects, and Game Dev work of Yuvanesh KS (NorthAbyss).">
+<meta property="twitter:image" content="https://north-abyss.github.io/Portfolio/preview.png">
 
-    <!-- Load main stylesheet asynchronously to avoid blocking first paint -->
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
+<!-- Performance: Preconnect & Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</noscript>
 
-    <!-- Minimal inline glass overlay for loader back-layer (LinkedIn-like glass) -->
-    <style>
-      /* Full-screen glass layer behind the loader; theme-aware via html[data-theme] */
-      .loader-back-layer{position:fixed; inset:0; z-index:9998; pointer-events:none; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); background: rgba(0,0,0,0.48); border:none}
-      html[data-theme="light"] .loader-back-layer{background: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.12)}
-      html[data-theme="dark"] .loader-back-layer{background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.04)}
-      /* Keep overlay transparent so loader colors remain unchanged */
-      .tetris-overlay{background:transparent}
-      .loader-back-layer.hidden{opacity:0; visibility:hidden; transition:opacity 300ms ease, visibility 300ms ease}
-    </style>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+</noscript>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://north-abyss.github.io/Portfolio/">
-    <meta property="og:title" content="Yuvanesh KS | Portfolio">
-    <meta property="og:description"
-        content="IDC Joint Secretary | Python • Java • C • SQL/PLSQL • HTML/CSS. Explore my projects and experience.">
-    <meta property="og:image" content="https://north-abyss.github.io/Portfolio/preview.png">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</noscript>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://north-abyss.github.io/Portfolio/">
-    <meta property="twitter:title" content="Yuvanesh KS | Portfolio">
-    <meta property="twitter:description"
-        content="IDC Joint Secretary | Python • Java • C • SQL/PLSQL • HTML/CSS. Explore my projects and experience.">
-    <meta property="twitter:image" content="https://north-abyss.github.io/Portfolio/preview.png">
-</head>
+<meta name="google-site-verification" content="HNZvXfhWbrig6mgzIRp-HQ3sCXLojGQZvWSeu7QEXT4" />
+
+<!-- Performance: CSS -->
+<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="style.css">
+</noscript>
+
+<!-- Minimal inline glass overlay for loader back-layer -->
+<style>
+    .loader-back-layer {
+        position: fixed;
+        inset: 0;
+        z-index: 9998;
+        pointer-events: none;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.48);
+        border: none
+    }
+
+    html[data-theme="light"] .loader-back-layer {
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.12)
+    }
+
+    html[data-theme="dark"] .loader-back-layer {
+        background: rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.04)
+    }
+
+    .tetris-overlay {
+        background: transparent
+    }
+
+    .loader-back-layer.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 300ms ease, visibility 300ms ease
+    }
+</style>
 
 <body>
     <!-- Loading overlay (Tetris) -->
     <div class="loader-back-layer" id="loaderBackLayer" aria-hidden="true"></div>
     <div class="tetris-overlay" id="tetrisOverlay" aria-hidden="false">
-      <div class="tetris-loader-root" role="status" aria-live="polite">
-        <div class="tetris-loader">
-          <span class="tetris-block">L</span>
-          <span class="tetris-block">O</span>
-          <span class="tetris-block">A</span>
-          <span class="tetris-block">D</span>
-          <span class="tetris-block">I</span>
-          <span class="tetris-block">N</span>
-          <span class="tetris-block">G</span>
+        <div class="tetris-loader-root" role="status" aria-live="polite">
+            <div class="tetris-loader">
+                <span class="tetris-block">L</span>
+                <span class="tetris-block">O</span>
+                <span class="tetris-block">A</span>
+                <span class="tetris-block">D</span>
+                <span class="tetris-block">I</span>
+                <span class="tetris-block">N</span>
+                <span class="tetris-block">G</span>
+            </div>
+            <div class="tetris-loader-text">Loading</div>
         </div>
-        <div class="tetris-loader-text">Loading</div>
-      </div>
     </div>
 
     <div class="background-container">
@@ -98,7 +161,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="header-contacts" style="display: flex; gap: 1rem; align-items: center;">
-            
+
             <!-- BB-8 Theme Toggle -->
             <label for="theme-checkbox" style="margin-right: 1rem;">
                 <input id="theme-checkbox" class="slider" type="checkbox" aria-label="Toggle theme">
@@ -149,9 +212,11 @@
                 </div>
             </label>
 
-            <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile" class="social-icon neon-icon"
+            <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
+                aria-label="Open LinkedIn profile" class="social-icon neon-icon"
                 style="font-size: 1.2rem; color: #fff;"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-            <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile" class="social-icon neon-icon"
+            <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
+                aria-label="Open GitHub profile" class="social-icon neon-icon"
                 style="font-size: 1.2rem; color: #fff;"><i class="fab fa-github" aria-hidden="true"></i></a>
             <a href="mailto:yuvaneshkarunakaran@gmail.com" aria-label="Send email" class="social-icon neon-icon"
                 style="font-size: 1.2rem; color: #fff;"><i class="fas fa-envelope" aria-hidden="true"></i></a>
@@ -179,21 +244,28 @@
             <h2 class="section-title"><span>About Me</span></h2>
             <div class="glass-card float-delayed">
                 <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">System Architect & Data Engineer 🐧🚀</h3>
-                
+
                 <p>
-                    Transitioning from Game Development to the world of <strong>Enterprise Linux</strong> and <strong>Big Data Infrastructure</strong>. 
-                    I don't just use operating systems; I engineer them. My journey is defined by a passion for the terminal—whether it's 
-                    customizing Arch Linux kernels for performance or deploying robust Rocky Linux servers in a virtualized home lab.
+                    Transitioning from Game Development to the world of <strong>Enterprise Linux</strong> and
+                    <strong>Big Data Infrastructure</strong>.
+                    I don't just use operating systems; I engineer them. My journey is defined by a passion for the
+                    terminal—whether it's
+                    customizing Arch Linux kernels for performance or deploying robust Rocky Linux servers in a
+                    virtualized home lab.
                 </p>
                 <br>
-                
+
                 <p>
-                    <strong>Current Mission:</strong> Bridging the gap between raw system administration and scalable data pipelines. 
-                    As the <strong>Joint Secretary of the Indian Data Club (IDC)</strong>, I am actively building a "Lakehouse" foundation 
-                    using Databricks and Spark, proving that deep kernel-level knowledge is the ultimate launchpad for high-performance Data Engineering.
+                    <strong>Current Mission:</strong> Bridging the gap between raw system administration and scalable
+                    data pipelines.
+                    As the <strong>Joint Secretary of the Indian Data Club (IDC)</strong>, I am actively building a
+                    "Lakehouse" foundation
+                    using Databricks and Spark, proving that deep kernel-level knowledge is the ultimate launchpad for
+                    high-performance Data Engineering.
                 </p>
 
-                <h3 style="margin-top: 1.5rem; color: var(--accent-purple); font-family: var(--font-heading); font-size: 1.1rem;">
+                <h3
+                    style="margin-top: 1.5rem; color: var(--accent-purple); font-family: var(--font-heading); font-size: 1.1rem;">
                     Tech Stack</h3>
                 <div class="skills-container">
                     <span class="skill-tag">Linux (Rocky/Arch)</span>
@@ -263,9 +335,11 @@
                         <p>Check out my repositories and contributions! 👨‍💻<br>Building tools for the open source
                             community.</p>
                         <!-- Link Preview -->
-                        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" class="whatsapp-link-preview">
+                        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
+                            class="whatsapp-link-preview">
                             <img src="https://github.com/North-Abyss.png" alt="GitHub Profile"
-                                class="whatsapp-preview-image" style="background: #0f0c29;" loading="lazy" width="600" height="160">
+                                class="whatsapp-preview-image" style="background: #0f0c29;" loading="lazy" width="600"
+                                height="160">
                             <div class="whatsapp-preview-content">
                                 <small class="whatsapp-preview-domain">github.com</small>
                                 <h4 class="whatsapp-preview-title">North-Abyss (Yuvanesh KS)</h4>
@@ -274,7 +348,8 @@
                     </div>
                     <!-- Card Footer -->
                     <div class="card-footer">
-                        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" class="read-more uiverse-button"><span>View Profile</span></a>
+                        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
+                            class="read-more uiverse-button"><span>View Profile</span></a>
                     </div>
                 </div>
 
@@ -299,7 +374,8 @@
                         <a href="https://github.com/North-Abyss/wave-of-fate" target="_blank" rel="noopener noreferrer"
                             class="whatsapp-link-preview">
                             <img src="https://opengraph.githubassets.com/1/North-Abyss/wave-of-fate"
-                                alt="Wave of Fate Preview" class="whatsapp-preview-image" loading="lazy" width="600" height="160">
+                                alt="Wave of Fate Preview" class="whatsapp-preview-image" loading="lazy" width="600"
+                                height="160">
                             <div class="whatsapp-preview-content">
                                 <small class="whatsapp-preview-domain">github.com</small>
                                 <h4 class="whatsapp-preview-title">North-Abyss/wave-of-fate</h4>
@@ -309,7 +385,8 @@
 
                     <!-- Card Footer -->
                     <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/wave-of-fate" target="_blank" rel="noopener noreferrer" class="read-more uiverse-button"><span>View on GitHub</span></a>
+                        <a href="https://github.com/North-Abyss/wave-of-fate" target="_blank" rel="noopener noreferrer"
+                            class="read-more uiverse-button"><span>View on GitHub</span></a>
                     </div>
                 </div>
 
@@ -320,7 +397,7 @@
             <h2 class="section-title"><span>Latest Updates</span></h2>
             <div class="updates-grid">
 
-                 <!-- LinkedIn Profile Card -->
+                <!-- LinkedIn Profile Card -->
                 <div class="linkedin-card glass-panel">
                     <!-- Card Header -->
                     <div class="card-header">
@@ -335,9 +412,11 @@
                     <div class="card-body">
                         <p>Let's connect! Viewing my full professional journey and network. 🚀</p>
                         <!-- Link Preview -->
-                        <a href="https://www.linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" class="whatsapp-link-preview">
+                        <a href="https://www.linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
+                            class="whatsapp-link-preview">
                             <img src="https://github.com/North-Abyss.png" alt="LinkedIn Profile"
-                                class="whatsapp-preview-image" style="background: #0f0c29;">
+                                class="whatsapp-preview-image" style="background: #0f0c29;" loading="lazy" width="600"
+                                height="160">
                             <div class="whatsapp-preview-content">
                                 <small class="whatsapp-preview-domain">linkedin.com</small>
                                 <h4 class="whatsapp-preview-title">Yuvanesh KS | LinkedIn</h4>
@@ -345,56 +424,62 @@
                         </a>
                         <!-- Card Footer -->
                         <div class="card-footer">
-                            <a href="https://www.linkedin.com/in/yuvaneshks/" class="read-more uiverse-button" target="_blank" rel="noopener noreferrer"><span>View Profile</span></a>
+                            <a href="https://www.linkedin.com/in/yuvaneshks/" class="read-more uiverse-button"
+                                target="_blank" rel="noopener noreferrer"><span>View Profile</span></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- LinkedIn Post Card -->
                 <div class="linkedin-card glass-panel">
-                <div class="card-header">
-                    <div class="profile-pic"
-                        style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                    <div class="profile-info">
-                        <h4>Yuvanesh KS</h4>
-                        <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
-                            <time datetime="2025-01-01T10:00:00Z">Recently</time> • SysAdmin Portfolio
-                        </span>
+                    <div class="card-header">
+                        <div class="profile-pic"
+                            style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
+                        <div class="profile-info">
+                            <h4>Yuvanesh KS</h4>
+                            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
+                                <time datetime="2025-01-01T10:00:00Z">Recently</time> • SysAdmin Portfolio
+                            </span>
+                        </div>
                     </div>
-                </div>
 
-        <div class="card-body">
-            <p><strong>Turning a "Potato" Laptop into a Linux Powerhouse 🚀</strong><br><br>
-                They told me you can't do much with a government-issued Lenovo E41-25. I took that as a challenge.
-                Meet <strong>"Caelestia"</strong> — A custom Arch Linux environment designed for speed.<br><br>
-                
-                🔧 <strong>The Technical Setup:</strong><br>
-                • <strong>OS:</strong> Arch Linux (Minimal Install via CLI)<br>
-                • <strong>Performance:</strong> Idle RAM usage &lt; 900MB<br>
-                • <strong>Shell:</strong> Fish + Custom Bash Scripting<br><br>
-                
-                If you need a fast learner who can squeeze every drop of performance out of a server, let's connect!
-            </p>
+                    <div class="card-body">
+                        <p><strong>Turning a "Potato" Laptop into a Linux Powerhouse 🚀</strong><br><br>
+                            They told me you can't do much with a government-issued Lenovo E41-25. I took that as a
+                            challenge.
+                            Meet <strong>"Caelestia"</strong> — A custom Arch Linux environment designed for
+                            speed.<br><br>
 
-            <a href="https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-activity-7411089253058899969-WC6j"
-                target="_blank" rel="noopener noreferrer" class="whatsapp-link-preview" 
-                style="display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; background: rgba(0, 255, 136, 0.05); border: 1px solid var(--glass-border);">
-            
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-                <i class="fas fa-play-circle" style="font-size: 2.5rem; color: var(--accent-cyan);"></i>
-                
-                <div class="whatsapp-preview-content" style="padding: 0;">
-                    <h4 class="whatsapp-preview-title" style="margin-bottom: 0.2rem;">Watch Full Video Demo</h4>
-                    <small class="whatsapp-preview-domain">Click to watch on LinkedIn</small>
-                </div>
-            </div>
-        </a>
-    </div>
+                            🔧 <strong>The Technical Setup:</strong><br>
+                            • <strong>OS:</strong> Arch Linux (Minimal Install via CLI)<br>
+                            • <strong>Performance:</strong> Idle RAM usage &lt; 900MB<br>
+                            • <strong>Shell:</strong> Fish + Custom Bash Scripting<br><br>
 
-    <div class="card-footer">
-        <a href="https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-activity-7411089253058899969-WC6j"
-            class="read-more uiverse-button" target="_blank" rel="noopener noreferrer"><span>View Post</span></a>
-    </div>
+                            If you need a fast learner who can squeeze every drop of performance out of a server, let's
+                            connect!
+                        </p>
+
+                        <a href="https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-activity-7411089253058899969-WC6j"
+                            target="_blank" rel="noopener noreferrer" class="whatsapp-link-preview"
+                            style="display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; background: rgba(0, 255, 136, 0.05); border: 1px solid var(--glass-border);">
+
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-play-circle" style="font-size: 2.5rem; color: var(--accent-cyan);"></i>
+
+                                <div class="whatsapp-preview-content" style="padding: 0;">
+                                    <h4 class="whatsapp-preview-title" style="margin-bottom: 0.2rem;">Watch Full Video
+                                        Demo</h4>
+                                    <small class="whatsapp-preview-domain">Click to watch on LinkedIn</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-activity-7411089253058899969-WC6j"
+                            class="read-more uiverse-button" target="_blank" rel="noopener noreferrer"><span>View
+                                Post</span></a>
+                    </div>
                 </div>
 
             </div>
@@ -404,11 +489,14 @@
             <h2 class="section-title"><span>Connect</span></h2>
 
             <div class="social-icons-container">
-                <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile" class="social-icon github"><i
-                        class="fab fa-github" aria-hidden="true"></i></a>
-                <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile" class="social-icon linkedin"><i
-                        class="fab fa-linkedin" aria-hidden="true"></i></a>
-                <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer" class="social-icon itch" aria-label="Itch.io"><i class="fas fa-gamepad" aria-hidden="true"></i></a>
+                <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
+                    aria-label="Open GitHub profile" class="social-icon github"><i class="fab fa-github"
+                        aria-hidden="true"></i></a>
+                <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Open LinkedIn profile" class="social-icon linkedin"><i class="fab fa-linkedin"
+                        aria-hidden="true"></i></a>
+                <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer"
+                    class="social-icon itch" aria-label="Itch.io"><i class="fas fa-gamepad" aria-hidden="true"></i></a>
                 <a href="mailto:yuvaneshkarunakaran@gmail.com" class="social-icon email"><i
                         class="fas fa-envelope"></i></a>
             </div>
@@ -424,7 +512,9 @@
                         Designed & Built by <strong>Yuvanesh KS</strong>
                     </p>
                     <p>
-                        Matrix effect by <a href="https://uiverse.io/profile/solowzrd" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: none;">solowzrd</a> via Uiverse.io
+                        Matrix effect by <a href="https://uiverse.io/profile/solowzrd" target="_blank"
+                            rel="noopener noreferrer"
+                            style="color: var(--accent-cyan); text-decoration: none;">solowzrd</a> via Uiverse.io
                     </p>
                 </div>
             </div>

@@ -1,0 +1,15 @@
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Forced settings to ensure proper serving
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/preview.png"

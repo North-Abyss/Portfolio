@@ -41,33 +41,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function type() {
-        if (!typingElement) return; // defensive: skip typing if element is absent
-        const currentRole = roles[roleIndex];
+    let lastTime = 0;
+    function type(timestamp) {
+        if (!typingElement) return;
+        if (!lastTime) lastTime = timestamp;
 
-        if (isDeleting) {
-            typingElement.textContent = currentRole.substring(0, charIndex - 1);
-            charIndex--;
-            typeSpeed = 50;
-        } else {
-            typingElement.textContent = currentRole.substring(0, charIndex + 1);
-            charIndex++;
-            typeSpeed = 100;
+        const elapsed = timestamp - lastTime;
+
+        if (elapsed > typeSpeed) {
+            const currentRole = roles[roleIndex];
+
+            if (isDeleting) {
+                typingElement.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50;
+            } else {
+                typingElement.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100;
+            }
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                isDeleting = true;
+                typeSpeed = 2000;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typeSpeed = 500;
+            }
+
+            lastTime = timestamp;
         }
 
-        if (!isDeleting && charIndex === currentRole.length) {
-            isDeleting = true;
-            typeSpeed = 2000; // Pause at end
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            typeSpeed = 500; // Pause before new word
-        }
-
-        setTimeout(type, typeSpeed);
+        requestAnimationFrame(type);
     }
 
-    type();
+    requestAnimationFrame(type);
 
     // Scroll Animations
     const observerOptions = {
@@ -90,9 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Matrix generation (deterministic: one pattern duplicated, constant cell size)
-    (function() {
+    (function () {
         const container = () => document.getElementById('jp-matrix') || document.querySelector('.jp-matrix');
-        const PATTERN = ["ア","イ","ウ","エ","オ","カ","キ","ク","ケ","コ","サ","シ","ス","セ","ソ","タ","チ","ツ","テ","ト","ナ","ニ","ヌ","ネ","ノ","ハ","ヒ","フ","ヘ","ホ","マ","ミ","ム","メ","モ","ヤ","ユ","ヨ","ラ","リ","ル","レ","ロ","ワ","ヲ","ン","ガ","ギ","グ","ゲ","ゴ","ザ","ジ","ズ","ゼ","ゾ","ダ","ヂ","ヅ","デ","ド","バ","ビ","ブ","ベ","ボ","パ","ピ","プ","ペ","ポ"];
+        const PATTERN = ["ア", "イ", "ウ", "エ", "オ", "カ", "キ", "ク", "ケ", "コ", "サ", "シ", "ス", "セ", "ソ", "タ", "チ", "ツ", "テ", "ト", "ナ", "ニ", "ヌ", "ネ", "ノ", "ハ", "ヒ", "フ", "ヘ", "ホ", "マ", "ミ", "ム", "メ", "モ", "ヤ", "ユ", "ヨ", "ラ", "リ", "ル", "レ", "ロ", "ワ", "ヲ", "ン", "ガ", "ギ", "グ", "ゲ", "ゴ", "ザ", "ジ", "ズ", "ゼ", "ゾ", "ダ", "ヂ", "ヅ", "デ", "ド", "バ", "ビ", "ブ", "ベ", "ボ", "パ", "ピ", "プ", "ペ", "ポ"];
 
         function generateMatrix() {
             const ct = container();
