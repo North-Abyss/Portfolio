@@ -159,6 +159,27 @@ document.addEventListener('DOMContentLoaded', () => {
         // Defer generation to idle time to reduce initial load/TTI impact
         scheduleMatrixGeneration();
 
+        // Performance: Pause animation when off-screen
+        const matrixObserver = new IntersectionObserver((entries) => {
+            const ct = container();
+            if (!ct) return;
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    ct.classList.add('paused');
+                } else {
+                    ct.classList.remove('paused');
+                }
+            });
+        });
+
+        // Start observing once the container is available
+        const ct = container();
+        if (ct) matrixObserver.observe(ct);
+        else window.addEventListener('DOMContentLoaded', () => {
+            const c = container();
+            if (c) matrixObserver.observe(c);
+        });
+
     })();
 
     // Add this style dynamically or in css, ensuring opacity starts at 0
