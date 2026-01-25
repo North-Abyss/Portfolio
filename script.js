@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const typingElement = document.querySelector('.typing-effect');
-    const roles = ["Linux Enthusiast", "Game Developer", "RAG Integrator", "Open Source Contributor"];
+    const roles = ["Linux Enthusiast", "Game Developer", "Godot Engine Enthusiast", "Open Source Contributor", "IDC Joint Secretary"];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
