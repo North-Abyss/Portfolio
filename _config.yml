@@ -1,6 +1,10 @@
 plugins:
   - jekyll-seo-tag
 
+title: "Yuvanesh KS Portfolio"
+url: "https://north-abyss.github.io"
+baseurl: "/Portfolio"
+
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -12,4 +16,4 @@ defaults:
   - scope:
       path: ""
     values:
-      image: "/preview.png"
+      image: "https://north-abyss.github.io/Portfolio/preview.png"
