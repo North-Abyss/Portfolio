@@ -49,9 +49,9 @@ permalink: /404.html
     </noscript>
 
     <!-- Performance: CSS -->
-    <link rel="preload" href="/Portfolio/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="/Portfolio/style.css">
+        <link rel="stylesheet" href="style.css">
     </noscript>
 
 </head>
@@ -137,46 +137,43 @@ permalink: /404.html
 
     <main>
         <section id="hero" class="hero-section" style="min-height: 100vh;">
-            <div class="hero-content float-animation">
-                <h1 class="glitch" data-text="ERROR 404">ERROR 404</h1>
-                <h2 class="role-text"
-                    style="line-height: 1.6; font-size: 1.5rem; color: var(--accent-cyan); margin-bottom: 2rem;">
-                    Lost in the Abyss...
-                </h2>
-                <p
-                    style="margin-bottom: 2rem; color: var(--text-secondary); max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
-                    The page you are looking for has been relocated, moved to `/dev/null`, or simply does not exist.
-                    Let's get you back to familiar territory.
-                </p>
+            <div class="hero-content float-animation"
+                style="width: 100%; display: flex; justify-content: center; padding: 1rem;">
+                <div class="linkedin-card glass-panel"
+                    style="width: 100%; max-width: 550px; text-align: center; display: flex; flex-direction: column; align-items: center;">
 
-                <div class="updates-grid" style="display: flex; justify-content: center; margin-bottom: 2rem;">
-                    <!-- Glass Panel Card -->
-                    <div class="linkedin-card glass-panel" style="width: 100%; max-width: 400px; text-align: left;">
-                        <div class="card-header">
-                            <div class="profile-pic"
-                                style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                            <div class="profile-info">
-                                <h4>Yuvanesh KS</h4>
-                                <span>System Administrator & Developer</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p style="margin-bottom: 1rem;">While you're here, why not check out some of my work?</p>
-                            <a href="/Portfolio/" class="whatsapp-link-preview">
-                                <img src="https://north-abyss.github.io/Portfolio/preview.png" alt="Portfolio Preview"
-                                    class="whatsapp-preview-image" loading="lazy" width="600" height="160">
-                                <div class="whatsapp-preview-content">
-                                    <small class="whatsapp-preview-domain">north-abyss.github.io</small>
-                                    <h4 class="whatsapp-preview-title">Yuvanesh KS | View Full Portfolio</h4>
-                                </div>
-                            </a>
+                    <!-- Header with Profile -->
+                    <div class="card-header" style="width: 100%; justify-content: center; margin-bottom: 2rem;">
+                        <div class="profile-pic"
+                            style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
+                        <div class="profile-info" style="text-align: left;">
+                            <h4 style="color: var(--text-primary);">Yuvanesh KS</h4>
+                            <span style="color: var(--text-secondary);">System Administrator & Developer</span>
                         </div>
                     </div>
-                </div>
-                <div class="cta-group" style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
-                    <a href="/Portfolio/" class="uiverse-button">
-                        <span>Return to Main Terminal</span>
-                    </a>
+
+                    <!-- 404 Content -->
+                    <h1 class="glitch" data-text="ERROR 404" style="color: var(--text-primary);">ERROR 404</h1>
+                    <h2 class="role-text"
+                        style="line-height: 1.5; font-size: 1.3rem; color: var(--accent-cyan); margin-bottom: 1.5rem;">
+                        Lost in the Abyss...
+                    </h2>
+
+                    <div class="card-body" style="width: 100%;">
+                        <p style="margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.6;">
+                            The page you are looking for has been relocated, moved to `/dev/null`, or simply does not
+                            exist.
+                            Let's get you back to familiar territory.
+                        </p>
+                    </div>
+
+                    <!-- Button Footer -->
+                    <div class="card-footer"
+                        style="margin-top: 0; padding-top: 0; border: none; width: 100%; display: flex; justify-content: center;">
+                        <a href="/Portfolio/" class="uiverse-button">
+                            <span>Return to Main Terminal</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
