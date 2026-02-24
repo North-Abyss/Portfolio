@@ -1,5 +1,6 @@
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 title: "Yuvanesh KS Portfolio"
 url: "https://north-abyss.github.io"
