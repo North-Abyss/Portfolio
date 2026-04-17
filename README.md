@@ -7,30 +7,38 @@ Live Demo: [https://north-abyss.github.io/Portfolio/](https://north-abyss.github
 
 ## 📖 About The Project
 
-This portfolio features a "Deep Space" aesthetic with dynamic visual effects to showcase a transition from Game Development to Enterprise Infrastructure. It is built to be fast, responsive, and visually engaging without relying on heavy frameworks.
+This portfolio features a "Deep Space" aesthetic with dynamic visual effects to showcase a transition from Game Development to Enterprise Infrastructure. It is built to be fast, responsive, and visually engaging without relying on heavy frontend frameworks.
 
 **Current Persona:**
 * **Role:** System Architect & Data Engineer 🐧🚀
 * **Focus:** Enterprise Linux (Rocky/Arch), Virtualization (KVM), and Big Data Pipelines (Databricks).
 * **Key Projects:** Enterprise Home Lab, Caelestia Shell, SDN Analysis.
 
+### 🗂️ Core Architecture
+The portfolio utilizes a multi-page structure cleanly integrated using Jekyll and native HTML for optimal SEO parsing:
+- **`index.html`**: The unified landing page.
+- **`Projects.html`**: The main repository gallery showcasing open-source game development and data engineering web apps.
+- **`Updates.html`**: A dedicated LinkedIn/social activity feed.
+- **`404.html`**: A native GitHub Pages catch-all error handling route.
+- **`issues.md`**: The official changelog and SEO audit tracker.
+
 ## ✨ Key Features
 
 * **Matrix Rain Background:** A mesmerizing, animated background pattern using CSS animations, inspired by the Matrix code rain.
-* **Theme Toggle:** Switch between **Deep Space (Dark)** and **Clean (Light)** modes. User preference is saved via Local Storage.
+* **Theme Toggle (`localStorage`):** Switch between **Deep Space (Dark)** and **Clean (Light)** modes. Your active theme is instantly synchronized across all pages!
 * **Glassmorphism UI:** Modern, translucent card designs with neon accents using `backdrop-filter`.
 * **Interactive Elements:**
-    * **Hovers:** Neon glows and scale effects.
-    * **Typing Effect:** Dynamic role text animation in `script.js`.
-    * **Profile Cards:** Dedicated previews for GitHub and LinkedIn integration.
-* **Responsive Design:** Fully optimized for desktop and mobile viewing.
+    * **Hovers:** Neon glows and scale effects managed securely in `style.css`.
+    * **Typing Effect:** Dynamic role text animation managed via `script.js`.
+    * **Open Graph Previews:** Dynamic visual previews automatically fetched via GitHub's Open Graph API (`opengraph.githubassets.com`).
+* **Responsive Layouts:** Grid-responsive structures using pure CSS for optimum layout integrity block rendering on mobile devices.
 
 ## 🛠️ Tech Stack
 
-* **HTML5:** Semantic structure.
-* **CSS3:** Custom variables, Grid/Flexbox, Keyframe animations (`@keyframes smooth-pulse`).
-* **JavaScript (Vanilla):** Theme logic, local storage handling, and typing effects.
-* **Hosting:** GitHub Pages.
+* **HTML5:** Semantic structure with integrated Open Graph metadata logic across multiple routes.
+* **CSS3:** Built strictly on CSS Custom Properties (`var`), `@keyframes` intersection animations, and structural pseudo-classes.
+* **JavaScript (Vanilla):** Light footprint managing DOM observer intersection logic and Theme syncing natively. No jQuery/React dependencies.
+* **Hosting Ecosystem:** GitHub Pages running Jekyll backend plugins (`jekyll-seo-tag`, `jekyll-sitemap`).
 
 ## 🚀 Usage
 
