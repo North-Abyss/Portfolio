@@ -17,6 +17,7 @@
     /* Logo shadow (dark theme: visible white halo + depth) */
     --logo-shadow: 0 0 14px rgba(255,255,255,0.18), 0 8px 24px rgba(0,0,0,0.45);
     --logo-hover-shadow: 0 0 22px rgba(255,255,255,0.22), 0 12px 36px rgba(0,0,0,0.35);
+    --bb8-orange: #CD7640;
 } 
 
 [data-theme="light"] {
@@ -622,12 +623,11 @@ section {
     border-color: rgba(0, 243, 255, 0.3);
 }
 
-.float-animation {
+.float-animation, .float-delayed {
     animation: float 6s ease-in-out infinite;
 }
 
 .float-delayed {
-    animation: float 6s ease-in-out infinite;
     animation-delay: 3s;
 }
 
@@ -1106,7 +1106,7 @@ footer {
 }
 
 .head .stripe.two {
-    background: #CD7640;
+    background: var(--bb8-orange);
     height: 4px;
     top: 14px;
 }
@@ -1135,25 +1135,25 @@ footer {
 }
 
 .head .detail.zero {
-    background-color: #CD7640;
+    background-color: var(--bb8-orange);
     width: 2%;
     margin-left: 3px;
 }
 
 .head .detail.one {
-    background-color: #CD7640;
+    background-color: var(--bb8-orange);
     width: 8%;
     margin-left: 3px;
 }
 
 .head .detail.two {
-    background-color: #CD7640;
+    background-color: var(--bb8-orange);
     width: 6%;
     margin-left: 5px;
 }
 
 .head .detail.three {
-    background-color: #CD7640;
+    background-color: var(--bb8-orange);
     width: 4%;
     margin-left: 45px;
     height: 5px;
@@ -1161,13 +1161,13 @@ footer {
 }
 
 .head .detail.four {
-    background-color: #CD7640;
+    background-color: var(--bb8-orange);
     width: 10%;
     margin-left: 4px;
 }
 
 .head .detail.five {
-    background-color: #CD7640;
+    background-color: var(--bb8-orange);
     width: 2%;
     margin-left: 3px;
 }
@@ -1259,7 +1259,7 @@ footer {
 }
 
 .ring {
-    background: #CD7640;
+    background: var(--bb8-orange);
     border-radius: 50%;
     height: 70px;
     margin-left: -35px;
@@ -1651,4 +1651,16 @@ footer {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none;
+}
+
+/* Observer Animations */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

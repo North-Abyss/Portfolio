@@ -182,19 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })();
 
-    // Add this style dynamically or in css, ensuring opacity starts at 0
-    const style = document.createElement('style');
-    style.innerHTML = `
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    `;
     // Hide loader when window finishes loading resources
     const tetrisOverlay = document.getElementById('tetrisOverlay');
     const loaderBack = document.getElementById('loaderBackLayer');
@@ -214,6 +201,4 @@ document.addEventListener('DOMContentLoaded', () => {
             if (loaderBack && loaderBack.parentNode) loaderBack.parentNode.removeChild(loaderBack);
         }, 400);
     });
-
-    document.head.appendChild(style);
 });
