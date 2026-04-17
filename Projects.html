@@ -14,18 +14,23 @@
 
     <!-- SEO & Metadata -->
     <meta name="description"
-        content="Yuvanesh KS Portfolio - System Administrator and Game Developer specializing in Linux, Databricks, and Godot Engine. Explore my projects and experience.">
+        content="Yuvanesh KS Projects - Explore my technical playground featuring GitHub repositories, Godot games, Python web apps, and Data Engineering dashboards.">
     <meta name="keywords"
-        content="Yuvanesh KS Portfolio, NorthAbyss, System Administrator, Game Developer, Linux, Databricks, Godot Engine">
+        content="Yuvanesh KS Projects, GitHub Repositories, Godot Developer, Streamlit, Open Source, Hackathon">
     <meta name="author" content="Yuvanesh KS">
-    <link rel="canonical" href="https://north-abyss.github.io/Portfolio/">
+    <link rel="canonical" href="https://north-abyss.github.io/Portfolio/Projects.html">
 
-    <!-- Theme init: apply system preferred theme first to avoid flash -->
+    <!-- Theme init: apply saved cross-page theme or system preferred -->
     <script>
         (function () {
             try {
-                var system = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
-                document.documentElement.setAttribute('data-theme', system);
+                var savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                } else {
+                    var system = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', system);
+                }
             } catch (e) { /* ignore */ }
         })();
     </script>
@@ -53,10 +58,10 @@
         },
         {
           "@type": "WebSite",
-          "@id": "https://north-abyss.github.io/Portfolio/#website",
-          "url": "https://north-abyss.github.io/Portfolio/",
-          "name": "Yuvanesh KS Portfolio",
-          "description": "Portfolio of Yuvanesh KS - System Administrator & Game Developer",
+          "@id": "https://north-abyss.github.io/Portfolio/Projects.html#website",
+          "url": "https://north-abyss.github.io/Portfolio/Projects.html",
+          "name": "Yuvanesh KS Projects",
+          "description": "Explore the open-source projects, Godot games, and data engineering apps built by Yuvanesh KS.",
           "publisher": {
             "@id": "https://north-abyss.github.io/Portfolio/#person"
           },
@@ -69,18 +74,18 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:site_name" content="Yuvanesh KS Portfolio">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://north-abyss.github.io/Portfolio/">
-    <meta property="og:title" content="Yuvanesh KS - SysAdmin & Developer Portfolio">
+    <meta property="og:url" content="https://north-abyss.github.io/Portfolio/Projects.html">
+    <meta property="og:title" content="Yuvanesh KS | Open Source Projects">
     <meta property="og:description"
-        content="Explore the Home Lab, Data Engineering projects, and Game Dev work of Yuvanesh KS (NorthAbyss).">
+        content="Explore the technical playground of Yuvanesh KS: GitHub repositories, Godot games, and Python Web Apps.">
     <meta property="og:image" content="https://north-abyss.github.io/Portfolio/preview.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://north-abyss.github.io/Portfolio/">
-    <meta property="twitter:title" content="Yuvanesh KS | System Administrator & Game Developer">
+    <meta property="twitter:url" content="https://north-abyss.github.io/Portfolio/Projects.html">
+    <meta property="twitter:title" content="Yuvanesh KS | Open Source Projects">
     <meta property="twitter:description"
-        content="Explore the Home Lab, Data Engineering projects, and Game Dev work of Yuvanesh KS (NorthAbyss).">
+        content="Explore the technical playground of Yuvanesh KS: GitHub repositories, Godot games, and Python Web Apps.">
     <meta property="twitter:image" content="https://north-abyss.github.io/Portfolio/preview.png">
 
     <!-- Performance: Preconnect & Fonts -->
@@ -276,7 +281,7 @@
                     <div class="card-body">
                         <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">AI Disease Prediction</h3>
                         <p>Transforming healthcare with AI by enabling early prediction of diseases like Heart Disease and Diabetes using machine learning models trained on patient data.</p>
-                        <a href="https://github.com/North-Abyss/NM-AI-powered-disease-prediction-based-on-patient-data" target="_blank" class="whatsapp-link-preview" style="background: rgba(0, 0, 0, 0.2);">
+                        <a href="https://github.com/North-Abyss/NM-AI-powered-disease-prediction-based-on-patient-data" target="_blank" class="whatsapp-link-preview">
                             <img src="https://opengraph.githubassets.com/1/North-Abyss/NM-AI-powered-disease-prediction-based-on-patient-data" alt="Preview" class="whatsapp-preview-image" loading="lazy" width="600" height="160">
                             <div class="whatsapp-preview-content">
                                 <small class="whatsapp-preview-domain">github.com</small>
@@ -301,7 +306,7 @@
                     <div class="card-body">
                         <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">AI Sugarcane Disease Detection</h3>
                         <p>AI-powered Flask application for early detection of sugarcane diseases (Ring Spot & Yellow Leaf) using YOLOv8 for image classification and TabNet.</p>
-                        <a href="https://github.com/North-Abyss/AI-Sugarcane-Disease-Ring-Spot-Yellow-Leaf-Prediction" target="_blank" class="whatsapp-link-preview" style="background: rgba(0, 0, 0, 0.2);">
+                        <a href="https://github.com/North-Abyss/AI-Sugarcane-Disease-Ring-Spot-Yellow-Leaf-Prediction" target="_blank" class="whatsapp-link-preview">
                             <img src="https://opengraph.githubassets.com/1/North-Abyss/AI-Sugarcane-Disease-Ring-Spot-Yellow-Leaf-Prediction" alt="Preview" class="whatsapp-preview-image" loading="lazy" width="600" height="160">
                             <div class="whatsapp-preview-content">
                                 <small class="whatsapp-preview-domain">github.com</small>
@@ -326,7 +331,7 @@
                     <div class="card-body">
                         <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Wind Energy Dashboard</h3>
                         <p>Interactive map using OpenStreetMap tiles. City input fetches coordinates automatically, visualizing charts for wind speed and direction feasibility.</p>
-                        <a href="https://github.com/North-Abyss/Wind-Energy-Feasibility-Dashboard" target="_blank" class="whatsapp-link-preview" style="background: rgba(0, 0, 0, 0.2);">
+                        <a href="https://github.com/North-Abyss/Wind-Energy-Feasibility-Dashboard" target="_blank" class="whatsapp-link-preview">
                             <img src="https://opengraph.githubassets.com/1/North-Abyss/Wind-Energy-Feasibility-Dashboard" alt="Preview" class="whatsapp-preview-image" loading="lazy" width="600" height="160">
                             <div class="whatsapp-preview-content">
                                 <small class="whatsapp-preview-domain">github.com</small>
@@ -351,7 +356,7 @@
                     <div class="card-body">
                         <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Color Picker App</h3>
                         <p>An easy and simple UI for people to select and pick colors from images across all color formats. Built using Streamlit.</p>
-                        <a href="https://github.com/North-Abyss/Color-Picker-App-KSY" target="_blank" class="whatsapp-link-preview" style="background: rgba(0, 0, 0, 0.2);">
+                        <a href="https://github.com/North-Abyss/Color-Picker-App-KSY" target="_blank" class="whatsapp-link-preview">
                             <img src="https://opengraph.githubassets.com/1/North-Abyss/Color-Picker-App-KSY" alt="Preview" class="whatsapp-preview-image" loading="lazy" width="600" height="160">
                             <div class="whatsapp-preview-content">
                                 <small class="whatsapp-preview-domain">github.com</small>

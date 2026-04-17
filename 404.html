@@ -13,12 +13,17 @@ permalink: /404.html
     <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/183628925?v=4">
     <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/183628925?v=4">
 
-    <!-- Theme init: apply system preferred theme first to avoid flash -->
+    <!-- Theme init: apply saved cross-page theme or system preferred -->
     <script>
         (function () {
             try {
-                var system = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
-                document.documentElement.setAttribute('data-theme', system);
+                var savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                } else {
+                    var system = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', system);
+                }
             } catch (e) { /* ignore */ }
         })();
     </script>

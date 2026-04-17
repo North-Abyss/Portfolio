@@ -1474,6 +1474,16 @@ footer {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+/* Light Theme Overrides */
+[data-theme="light"] .whatsapp-link-preview {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="light"] .whatsapp-link-preview:hover {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 .whatsapp-preview-image {
     width: 100%;
     height: 160px;
@@ -1485,6 +1495,10 @@ footer {
 .whatsapp-preview-content {
     padding: 12px;
     background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] .whatsapp-preview-content {
+    background: rgba(0, 0, 0, 0.03);
 }
 
 .whatsapp-preview-domain {

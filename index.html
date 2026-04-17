@@ -20,12 +20,17 @@
     <meta name="author" content="Yuvanesh KS">
     <link rel="canonical" href="https://north-abyss.github.io/Portfolio/">
 
-    <!-- Theme init: apply system preferred theme first to avoid flash -->
+    <!-- Theme init: apply saved cross-page theme or system preferred -->
     <script>
         (function () {
             try {
-                var system = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
-                document.documentElement.setAttribute('data-theme', system);
+                var savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                } else {
+                    var system = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', system);
+                }
             } catch (e) { /* ignore */ }
         })();
     </script>
@@ -422,7 +427,7 @@
                 <div class="linkedin-card glass-panel" style="width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 250px; cursor: pointer; transition: transform 0.3s ease, border-color 0.3s ease;" onclick="window.location.href='Projects.html'" onmouseover="this.style.borderColor='var(--accent-cyan)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor=''; this.style.transform='';">
                     <span class="material-symbols-outlined" style="font-size: 4rem; color: var(--accent-cyan); margin-bottom: 1rem;">apps</span>
                     <h3 style="margin-bottom: 0.5rem; text-align: center;">Know More Projects</h3>
-                    <p style="color: rgba(255,255,255,0.7); text-align: center; padding: 0 1rem;">View all my GitHub repositories and full portfolio.</p>
+                    <p style="color: var(--text-secondary); text-align: center; padding: 0 1rem;">View all my GitHub repositories and full portfolio.</p>
                     <span class="material-symbols-outlined" style="margin-top: 1rem; color: var(--accent-cyan);">arrow_forward</span>
                 </div>
 
@@ -497,7 +502,7 @@
 
                         <a href="https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-activity-7411089253058899969-WC6j"
                             target="_blank" rel="noopener noreferrer" class="whatsapp-link-preview"
-                            style="display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; background: rgba(0, 255, 136, 0.05); border: 1px solid var(--glass-border);">
+                            style="display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center;">
 
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
                                 <i class="fas fa-play-circle" style="font-size: 2.5rem; color: var(--accent-cyan);"></i>
@@ -522,7 +527,7 @@
                 <div class="linkedin-card glass-panel" style="width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 250px; cursor: pointer; transition: transform 0.3s ease, border-color 0.3s ease;" onclick="window.location.href='Updates.html'" onmouseover="this.style.borderColor='var(--accent-purple)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor=''; this.style.transform='';">
                     <span class="material-symbols-outlined" style="font-size: 4rem; color: var(--accent-purple); margin-bottom: 1rem;">dynamic_feed</span>
                     <h3 style="margin-bottom: 0.5rem; text-align: center;">Know More Updates</h3>
-                    <p style="color: rgba(255,255,255,0.7); text-align: center; padding: 0 1rem;">Check out the rest of my LinkedIn posts and announcements.</p>
+                    <p style="color: var(--text-secondary); text-align: center; padding: 0 1rem;">Check out the rest of my LinkedIn posts and announcements.</p>
                     <span class="material-symbols-outlined" style="margin-top: 1rem; color: var(--accent-purple);">arrow_forward</span>
                 </div>
 
