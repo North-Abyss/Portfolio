@@ -31,6 +31,7 @@ The portfolio utilizes a multi-page structure cleanly integrated using Jekyll an
     * **Hovers:** Neon glows and scale effects managed securely in `style.css`.
     * **Typing Effect:** Dynamic role text animation managed via `script.js`.
     * **Open Graph Previews:** Dynamic visual previews automatically fetched via GitHub's Open Graph API (`opengraph.githubassets.com`).
+    * **Secret Toy Menu:** A global Floating Action Button (FAB) loaded on all pages with future easter egg capabilities (Matrix Rain, Konami Code).
 * **Responsive Layouts:** Grid-responsive structures using pure CSS for optimum layout integrity block rendering on mobile devices.
 
 ## 🛠️ Tech Stack

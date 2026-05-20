@@ -1,0 +1,16 @@
+# LinkedIn Posts Links
+# Please paste your LinkedIn post links below. 
+# Once pasted, let me know, and I can use them to update your Updates.html and index.html pages.
+# 
+# NOTE: To dynamically fetch the image preview, wrap the URL in the Microlink API:
+# <img src="https://api.microlink.io/?url=[YOUR_LINK]&embed=image.url" />
+
+# Example format:
+# 1. Post Name: <URL>
+# 2. Post Name: <URL>
+
+1. Day 25 of Flutter: https://www.linkedin.com/posts/yuvaneshks_100daysofflutter-flutter-dart-share-7461006349435326464-WLG8
+
+2. IDC Nexus Conducted Successfully: https://www.linkedin.com/posts/yuvaneshks_idcnexus2026-idcnexus26-amcet-activity-7429195425506779136-G9ll
+
+3. Choosing Dev and GitHub: https://www.linkedin.com/posts/yuvaneshks_gamedevelopment-systemadministration-godotengine-activity-7421071544204009472-f5Jv

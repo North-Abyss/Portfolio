@@ -1,6 +1,7 @@
 ---
 permalink: /404.html
 ---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,6 +60,11 @@ permalink: /404.html
         <link rel="stylesheet" href="style.css">
     </noscript>
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <meta name="google-site-verification" content="HNZvXfhWbrig6mgzIRp-HQ3sCXLojGQZvWSeu7QEXT4" />
+
 </head>
 
 <body>
@@ -74,8 +80,8 @@ permalink: /404.html
         <a href="/Portfolio/" class="logo" aria-label="Home">YUVANESH KS</a>
         <ul class="nav-links">
             <li><a href="/Portfolio/#about">About</a></li>
-            <li><a href="/Portfolio/#projects">Projects</a></li>
-            <li><a href="/Portfolio/#experience">Experience</a></li>
+            <li><a href="/Portfolio/Projects.html">Projects</a></li>
+            <li><a href="/Portfolio/Updates.html">Updates</a></li>
             <li><a href="/Portfolio/#contact">Contact</a></li>
         </ul>
         <div class="header-contacts" style="display: flex; gap: 1rem; align-items: center;">
@@ -183,6 +189,21 @@ permalink: /404.html
             </div>
         </section>
     </main>
+
+    <!-- Toy Menu Button -->
+    <div class="toy-menu-container">
+        <button class="toy-menu-btn neon-icon" id="toyMenuBtn" aria-label="Secret Menu">
+            <span class="material-symbols-outlined" style="font-size: 2rem;">apps</span>
+        </button>
+        <div class="toy-menu-items" id="toyMenuItems">
+            <button class="toy-item" onclick="alert('Feature coming soon!')" title="Matrix Rain">
+                <i class="fas fa-code"></i>
+            </button>
+            <button class="toy-item" onclick="alert('Feature coming soon!')" title="Konami Code">
+                <i class="fas fa-space-shuttle"></i>
+            </button>
+        </div>
+    </div>
 
     <script src="script.js" defer></script>
 </body>

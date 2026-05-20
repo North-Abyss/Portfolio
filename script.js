@@ -202,3 +202,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 400);
     });
 });
+
+// Toy Menu Button Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const toyMenuBtn = document.getElementById('toyMenuBtn');
+    const toyMenuItems = document.getElementById('toyMenuItems');
+
+    if (toyMenuBtn && toyMenuItems) {
+        toyMenuBtn.addEventListener('click', () => {
+            toyMenuItems.classList.toggle('show');
+        });
+    }
+});
