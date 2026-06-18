@@ -1713,12 +1713,12 @@ footer {
     visibility: hidden;
     transform: translateY(20px) scale(0.95);
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    background: rgba(5, 5, 10, 0.85);
+    background: var(--glass-bg);
     border: 1px solid var(--accent-cyan);
     backdrop-filter: blur(15px);
     padding: 1.5rem;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 243, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     position: absolute;
     bottom: 80px;
     right: 0;
@@ -1764,5 +1764,5 @@ footer {
     transform: scale(1.15) translateY(-5px);
     color: #fff;
     background: var(--accent-purple);
-    box-shadow: 0 10px 20px rgba(188, 19, 254, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
