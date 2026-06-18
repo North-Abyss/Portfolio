@@ -1,19 +1,20 @@
 
 
 :root {
-    --bg-color: #161F30;
-    --bg-gradient: linear-gradient(135deg, #0B0F19 0%, #161F30 50%, #0B0F19 100%);
-    --bg-deep: #0B0F19;
-    /* Matrix Bg base */
-    --text-primary: #E2E8F0;
-    --text-secondary: #A0AEC0;
-    --accent-cyan: #A78BFA;
-    --accent-purple: #34D399;
+    --bg-color: #37013a;
+    --bg-gradient: linear-gradient(135deg, #1f0022 0%, #37013a 50%, #1f0022 100%);
+    --bg-deep: #120015;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --accent-cyan: #55ffe1;
+    --accent-purple: #af3dff;
+    --accent-pink: #ff3b94;
+    --accent-green: #a6fd29;
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     --font-heading: 'Orbitron', sans-serif;
     --font-body: 'Inter', sans-serif;
-    --matrix-color: rgba(52, 211, 153, 0.4);
+    
     /* Logo shadow (dark theme: visible white halo + depth) */
     --logo-shadow: 0 0 14px rgba(255,255,255,0.18), 0 8px 24px rgba(0,0,0,0.45);
     --logo-hover-shadow: 0 0 22px rgba(255,255,255,0.22), 0 12px 36px rgba(0,0,0,0.35);
@@ -21,21 +22,20 @@
 } 
 
 [data-theme="light"] {
-    --bg-color: #F3F4F6;
+    --bg-color: #f5f0f6;
     /* Monochrome logo shadows for light mode */
     --logo-shadow: 0 6px 18px rgba(0,0,0,0.12);
     --logo-hover-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    --bg-gradient: linear-gradient(135deg, #F3F4F6 0%, #FFFFFF 100%);
-    --bg-deep: #FFFFFF;
-    --text-primary: #0F172A;
-    --text-secondary: #475569;
-    --accent-cyan: #6D28D9;
-    /* Keep accent for brand brand */
-    --accent-purple: #0D9488;
-    --glass-bg: rgba(255, 255, 255, 0.6);
+    --bg-gradient: linear-gradient(135deg, #f5f0f6 0%, #ffffff 100%);
+    --bg-deep: #ffffff;
+    --text-primary: #2a0033;
+    --text-secondary: #553366;
+    --accent-cyan: #00bba3;
+    --accent-purple: #8a22d4;
+    --accent-pink: #cc005f;
+    --accent-green: #67b800;
+    --glass-bg: rgba(255, 255, 255, 0.7);
     --glass-border: rgba(0, 0, 0, 0.1);
-    --matrix-color: rgba(109, 40, 217, 0.1);
-    /* Subtle matrix in light mode */
 }
 
 * {
