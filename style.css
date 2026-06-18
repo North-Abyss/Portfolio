@@ -1,19 +1,19 @@
 
 
 :root {
-    --bg-color: #0f0c29;
-    --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-    --bg-deep: #05050a;
+    --bg-color: #161F30;
+    --bg-gradient: linear-gradient(135deg, #0B0F19 0%, #161F30 50%, #0B0F19 100%);
+    --bg-deep: #0B0F19;
     /* Matrix Bg base */
-    --text-primary: #ffffff;
-    --text-secondary: #c0c0c0;
-    --accent-cyan: #ff0055;
-    --accent-purple: #0575E6;
+    --text-primary: #E2E8F0;
+    --text-secondary: #A0AEC0;
+    --accent-cyan: #A78BFA;
+    --accent-purple: #34D399;
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     --font-heading: 'Orbitron', sans-serif;
     --font-body: 'Inter', sans-serif;
-    --matrix-color: rgba(0, 150, 255, 0.4);
+    --matrix-color: rgba(52, 211, 153, 0.4);
     /* Logo shadow (dark theme: visible white halo + depth) */
     --logo-shadow: 0 0 14px rgba(255,255,255,0.18), 0 8px 24px rgba(0,0,0,0.45);
     --logo-hover-shadow: 0 0 22px rgba(255,255,255,0.22), 0 12px 36px rgba(0,0,0,0.35);
@@ -21,20 +21,20 @@
 } 
 
 [data-theme="light"] {
-    --bg-color: #ffffff;
+    --bg-color: #F3F4F6;
     /* Monochrome logo shadows for light mode */
     --logo-shadow: 0 6px 18px rgba(0,0,0,0.12);
     --logo-hover-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    --bg-deep: #f0f2f5;
-    --text-primary: #1a1a1a;
-    --text-secondary: #4a4a4a;
-    --accent-cyan: #ff0055;
+    --bg-gradient: linear-gradient(135deg, #F3F4F6 0%, #FFFFFF 100%);
+    --bg-deep: #FFFFFF;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --accent-cyan: #6D28D9;
     /* Keep accent for brand brand */
-    --accent-purple: #0575E6;
+    --accent-purple: #0D9488;
     --glass-bg: rgba(255, 255, 255, 0.6);
     --glass-border: rgba(0, 0, 0, 0.1);
-    --matrix-color: rgba(0, 0, 0, 0.1);
+    --matrix-color: rgba(109, 40, 217, 0.1);
     /* Subtle matrix in light mode */
 }
 
@@ -1691,7 +1691,7 @@ footer {
     color: var(--accent-cyan);
     font-size: 1.5rem;
     cursor: pointer;
-    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+    box-shadow: 0 0 15px var(--accent-cyan);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;

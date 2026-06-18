@@ -37,3 +37,4 @@ echo -e "${BLUE}Pushing changes...${NC}"
 git push origin "$(git rev-parse --abbrev-ref HEAD)"
 
 echo -e "${GREEN}Git sync completed successfully!${NC}"
+

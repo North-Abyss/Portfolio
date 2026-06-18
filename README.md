@@ -1,48 +1,86 @@
-
 # Portfolio 🌌
 
-A futuristic, highly interactive personal portfolio website designed for **Yuvanesh KS**, bridging the gap between **Linux System Administration** and **Data Engineering**.
+A futuristic, highly interactive personal portfolio website designed for **Yuvanesh KS**, bridging the gap between **Linux System Administration** and **Data Engineering**. 
 
-Live Demo: [https://north-abyss.github.io/Portfolio/](https://north-abyss.github.io/Portfolio/)
+**Live Demo**: [https://north-abyss.github.io/Portfolio/](https://north-abyss.github.io/Portfolio/)
+
+---
 
 ## 📖 About The Project
 
-This portfolio features a "Deep Space" aesthetic with dynamic visual effects to showcase a transition from Game Development to Enterprise Infrastructure. It is built to be fast, responsive, and visually engaging without relying on heavy frontend frameworks.
+This portfolio features a "Deep Space" aesthetic with dynamic visual effects to showcase a transition from Game Development to Enterprise Infrastructure. It is designed to be **fast, responsive, and visually engaging** without relying on heavy frontend frameworks (no React, no jQuery).
 
 **Current Persona:**
 * **Role:** System Architect & Data Engineer 🐧🚀
 * **Focus:** Enterprise Linux (Rocky/Arch), Virtualization (KVM), and Big Data Pipelines (Databricks).
 * **Key Projects:** Enterprise Home Lab, Caelestia Shell, SDN Analysis.
 
-### 🗂️ Core Architecture
-The portfolio utilizes a multi-page structure cleanly integrated using Jekyll and native HTML for optimal SEO parsing:
-- **`index.html`**: The unified landing page.
+---
+
+## 🏗️ Structure & Architecture
+
+This is a **Static Website hosted on GitHub Pages**. It utilizes GitHub's native Jekyll backend to automatically handle SEO generation, routing, and metadata, ensuring a completely serverless frontend architecture.
+
+### File Structure
+The portfolio utilizes a multi-page routing structure for optimal SEO and performance:
+- **`index.html`**: The unified landing page and main interactive hub.
 - **`Projects.html`**: The main repository gallery showcasing open-source game development and data engineering web apps.
-- **`Updates.html`**: A dedicated LinkedIn/social activity feed.
+- **`Updates.html`**: A dedicated LinkedIn and social activity feed.
 - **`404.html`**: A native GitHub Pages catch-all error handling route.
-- **`issues.md`**: The official changelog and SEO audit tracker.
+- **`issues.md`**: The official changelog, feature tracker, and SEO audit file.
+- **`style.css`**: The core styling engine containing all design logic and CSS variables.
+- **`script.js`**: Lightweight DOM logic for intersection observers and visual effect timings.
+- **`_config.yml`**: GitHub Pages / Jekyll configuration for automated SEO meta tag generation.
 
-## ✨ Key Features
+---
 
-* **Matrix Rain Background:** A mesmerizing, animated background pattern using CSS animations, inspired by the Matrix code rain.
-* **Theme Toggle (`localStorage`):** Switch between **Deep Space (Dark)** and **Clean (Light)** modes. Your active theme is instantly synchronized across all pages!
-* **Glassmorphism UI:** Modern, translucent card designs with neon accents using `backdrop-filter`.
-* **Interactive Elements:**
-    * **Hovers:** Neon glows and scale effects managed securely in `style.css`.
-    * **Typing Effect:** Dynamic role text animation managed via `script.js`.
-    * **Open Graph Previews:** Dynamic visual previews automatically fetched via GitHub's Open Graph API (`opengraph.githubassets.com`).
-    * **Secret Toy Menu:** A global Floating Action Button (FAB) loaded on all pages with future easter egg capabilities (Matrix Rain, Konami Code).
-* **Responsive Layouts:** Grid-responsive structures using pure CSS for optimum layout integrity block rendering on mobile devices.
+## 🎨 Base Color Themes & Design
 
-## 🛠️ Tech Stack
+The site uses a responsive **Glassmorphism** UI pattern with a dynamically toggled dark/light theme engine utilizing `localStorage`.
 
-* **HTML5:** Semantic structure with integrated Open Graph metadata logic across multiple routes.
-* **CSS3:** Built strictly on CSS Custom Properties (`var`), `@keyframes` intersection animations, and structural pseudo-classes.
-* **JavaScript (Vanilla):** Light footprint managing DOM observer intersection logic and Theme syncing natively. No jQuery/React dependencies.
-* **Hosting Ecosystem:** GitHub Pages running Jekyll backend plugins (`jekyll-seo-tag`, `jekyll-sitemap`).
+### Theme Engine Details
+CSS custom variables in the `:root` pseudo-class control the entire aesthetic.
 
-## 🚀 Usage
+**Deep Space Theme (Dark Mode) - Default**
+- **Base Background (`--bg-deep`)**: `#05050a` (Pure deep space black)
+- **Gradient Start (`--bg-color`)**: `#0f0c29`
+- **Primary Accent (`--accent-cyan`)**: `#ff0055` (Neon Red/Pink)
+- **Secondary Accent (`--accent-purple`)**: `#0575E6` (Neon Blue)
+- **Text (`--text-primary`)**: `#ffffff` (Pure White)
 
+**Clean Theme (Light Mode)**
+- **Base Background (`--bg-deep`)**: `#f0f2f5` (Soft grey)
+- **Gradient Base (`--bg-color`)**: `#ffffff`
+- **Primary Text (`--text-primary`)**: `#1a1a1a` (Dark charcoal)
+- **Secondary Text (`--text-secondary`)**: `#4a4a4a`
+
+### Key Visual Features
+* **Matrix Rain Background:** A mesmerizing, pure CSS/JS animated background pattern inspired by the Matrix code rain.
+* **Glassmorphism UI:** Translucent card designs with neon accents using `backdrop-filter: blur(15px)`.
+* **Dynamic Open Graph Previews:** Automated visual previews fetched via GitHub's Open Graph API (`opengraph.githubassets.com`).
+
+---
+
+## ⚙️ What This Project Does & Needs
+
+### What It Does
+- Serves as a central, highly indexable personal hub.
+- Synchronizes theme preferences instantly across multiple sub-pages without flashing.
+- Displays rich media (LinkedIn posts, GitHub repositories) in a standardized, performant grid format.
+
+### Future Needs & Maintenance
+1. **Zero-Framework Strictness:** Maintain the vanilla HTML/CSS/JS architecture. Do not add React, Vue, or Tailwind.
+2. **SEO Optimization Maintenance:** Ensure any new HTML pages include the `_config.yml` integrations and semantic `<meta>` tags.
+3. **Core Web Vitals:** Keep DOM manipulation minimal in `script.js` to ensure fast Time-To-Interactive (TTI) scores on mobile devices.
+4. **CSS Variable Integrity:** All new colors or thematic elements MUST be bound to the `:root` variables in `style.css` to prevent theme-breaking behavior.
+
+---
+
+## 🚀 Usage & Deployment
+
+Since all data needed is contained within the repository and served statically, deployment is entirely automated via GitHub Pages.
+
+### Local Development
 Simply open `index.html` in any modern web browser to view the site locally.
 
 ```bash
@@ -52,35 +90,14 @@ git clone https://github.com/North-Abyss/Portfolio.git
 # Navigate to directory
 cd Portfolio
 
-# Open locally (Linux)
+# Open locally (Linux example)
 xdg-open index.html
 ```
 
-## 🎨 Customization
-
-### Changing Colors
-
-Edit the `:root` variables in `style.css` to match your preferred color scheme:
-
-```css
-:root {
-    --accent-cyan: #00f3ff;  /* Primary Neon */
-    --accent-purple: #bc13fe; /* Secondary Neon */
-    --bg-deep: #05050a;       /* Background Base */
-}
-```
-
-### Adjusting Matrix Effect
-
-The matrix animation speed and colors can be tweaked in the `.jp-matrix` classes in `style.css`.
-
-## 💎 Credits & Acknowledgments
-
-* **Background Animation:** "Matrix Rain" by **solowzrd** via [Uiverse.io](https://uiverse.io/).
-* **Theme Toggle:** Custom animated toggle switch inspired by designs on **Uiverse.io**.
-* **Icons:** [Font Awesome](https://fontawesome.com/) for social links and UI elements.
-* **Fonts:** 'Orbitron' and 'Inter' via [Google Fonts](https://fonts.google.com/).
+### GitHub Pages Deployment
+1. Commit any changes to the `main` branch.
+2. GitHub Actions will automatically trigger the Jekyll build process.
+3. The site will be live at `https://north-abyss.github.io/Portfolio/` within ~1-2 minutes.
 
 ---
-
 *Created by [Yuvanesh KS](https://github.com/North-Abyss)*
