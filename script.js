@@ -8,16 +8,34 @@
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
+/**
+ * Shorthand for document.querySelector.
+ * @param {string} selector - The CSS selector to match.
+ * @param {ParentNode} [parent=document] - The parent node to search within.
+ * @returns {Element|null} The first matching element or null.
+ */
 function $(selector, parent) {
   return (parent || document).querySelector(selector);
 }
 
+/**
+ * Shorthand for document.querySelectorAll, returning an Array.
+ * @param {string} selector - The CSS selector to match.
+ * @param {ParentNode} [parent=document] - The parent node to search within.
+ * @returns {Element[]} An array of matching elements.
+ */
 function $$(selector, parent) {
   return Array.from((parent || document).querySelectorAll(selector));
 }
 
 // ── Theme ─────────────────────────────────────────────────────────────────────
 
+/**
+ * Initializes the dark/light theme toggle functionality.
+ * Reads the current theme from HTML attributes (set by the flash-free inline script)
+ * and attaches event listeners to the toggle switch. Also synchronizes theme changes
+ * across multiple browser tabs using the 'storage' event.
+ */
 function initTheme() {
   var toggle = $('#themeToggle');
   if (!toggle) return;
@@ -43,6 +61,12 @@ function initTheme() {
 
 // ── Nav: scroll + hamburger ───────────────────────────────────────────────────
 
+/**
+ * Initializes navigation bar behaviors including:
+ * 1. Adding a 'scrolled' class when scrolling past 10px (for drop shadows/glassmorphism).
+ * 2. Toggling the mobile hamburger menu open/closed.
+ * 3. Highlighting the active link based on the current URL path.
+ */
 function initNav() {
   var nav         = $('#mainNav');
   var hamburger   = $('#hamburgerBtn');
@@ -89,6 +113,11 @@ function initNav() {
 
 // ── Typed Effect ──────────────────────────────────────────────────────────────
 
+/**
+ * Initializes the typewriter effect in the hero section.
+ * Cycles through an array of phrases, typing them out character by character,
+ * pausing, and then deleting them to start the next phrase.
+ */
 function initTyped() {
   var el = $('#typedText');
   if (!el) return;
@@ -136,6 +165,11 @@ function initTyped() {
 
 // ── Scroll Animations ─────────────────────────────────────────────────────────
 
+/**
+ * Initializes scroll-triggered animations using IntersectionObserver.
+ * Elements with '.fade-up' or '.fade-in' classes will have the '.visible'
+ * class added when they scroll into the viewport.
+ */
 function initScrollAnimations() {
   var targets = $$('.fade-up, .fade-in');
   if (!targets.length) return;
@@ -157,6 +191,12 @@ function initScrollAnimations() {
 // ── Filter Tabs (Projects page) ───────────────────────────────────────────────
 // Uses event delegation so it works after initGitHubData() injects cards async.
 
+/**
+ * Initializes the filter tabs on the Projects page.
+ * Implements event delegation to handle clicks on filter buttons, allowing
+ * dynamically injected DOM elements (from fetch API) to be filtered without
+ * re-binding event listeners.
+ */
 function initFilterTabs() {
   var tabs = $('#filterTabs');
   var grid = $('#projectsGrid');
@@ -200,6 +240,12 @@ function initFilterTabs() {
 
 // ── Contact Form ──────────────────────────────────────────────────────────────
 
+/**
+ * Initializes the Formspree contact form.
+ * Handles client-side validation for required fields and email formatting.
+ * Uses the Fetch API to submit the form asynchronously without reloading the page,
+ * and displays success/error status messages to the user.
+ */
 function initContactForm() {
   var form   = $('#contactForm');
   var status = $('#formStatus');
@@ -263,6 +309,11 @@ function initContactForm() {
 
 // ── Smooth anchor scroll (for #hash links) ────────────────────────────────────
 
+/**
+ * Implements smooth scrolling for internal anchor links (e.g. href="#about").
+ * Calculates offsets dynamically based on the height of the fixed navigation bar
+ * to prevent content from being hidden underneath the header.
+ */
 function initAnchorScroll() {
   document.addEventListener('click', function (e) {
     var link = e.target.closest('a[href^="#"]');
@@ -284,6 +335,11 @@ function initAnchorScroll() {
 // available — this works on file:// protocol locally.
 // Falls back to fetch('_data/links.json') when on a real server (GitHub Pages).
 
+/**
+ * Retrieves portfolio data from the global scope (if loaded via data.js)
+ * or dynamically fetches it from '_data/links.json' as a fallback.
+ * @returns {Promise<Object>} The parsed JSON data containing projects and updates.
+ */
 function getData() {
   if (window.PORTFOLIO_DATA) {
     return Promise.resolve(window.PORTFOLIO_DATA);
@@ -294,6 +350,12 @@ function getData() {
   });
 }
 
+/**
+ * Fetches and renders the project gallery asynchronously.
+ * Dynamically builds HTML cards for each project found in the data source,
+ * applies the correct color accents based on tags, and handles image fallbacks.
+ * Once injected, it re-initializes filter tabs and scroll animations.
+ */
 async function initGitHubData() {
   const grid = $('#projectsGrid');
   if (!grid) return;
@@ -370,6 +432,11 @@ async function initGitHubData() {
   }
 }
 
+/**
+ * Fetches and renders LinkedIn update cards asynchronously.
+ * Uses microlink.io to generate rich preview images of LinkedIn posts.
+ * Once injected into the DOM, it re-triggers scroll animations.
+ */
 async function initUpdatesData() {
   const grid = $('#updatesDataGrid');
   if (!grid) return;
