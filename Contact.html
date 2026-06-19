@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Yuvanesh KS Portfolio</title>
+  <script>
+    (function(){
+      var t=localStorage.getItem('theme')||
+        (window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+      document.documentElement.setAttribute('data-theme',t);
+    })();
+  </script>
+  <meta name="description" content="Get in touch with Yuvanesh KS — open to SRE, DevOps, Flutter, and Software Engineering opportunities.">
+  <link rel="canonical" href="https://north-abyss.github.io/Portfolio/Contact.html">
+  <meta property="og:title" content="Contact | Yuvanesh KS">
+  <meta property="og:image" content="https://north-abyss.github.io/Portfolio/preview.png">
+  <meta name="google-site-verification" content="HNZvXfhWbrig6mgzIRp-HQ3sCXLojGQZvWSeu7QEXT4">
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/183628925?v=4">
+  <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/183628925?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Home">
+        <img src="https://avatars.githubusercontent.com/u/183628925?v=4"
+             alt="Yuvanesh KS avatar" class="nav__logo-avatar" width="38" height="38">
+        <span class="nav__logo-text">YUVANESH KS</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="Projects.html" class="nav__link">Projects</a></li>
+        <li><a href="Updates.html" class="nav__link">Updates</a></li>
+        <li><a href="Contact.html" class="nav__link active">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <label class="theme-toggle" aria-label="Toggle light/dark mode">
+          <input type="checkbox" class="theme-toggle__input" id="themeToggle" aria-label="Switch between dark and light theme">
+          <span class="theme-toggle__track"></span>
+        </label>
+        <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
+           class="nav__icon" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
+           class="nav__icon" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer"
+           class="nav__icon" aria-label="Itch.io">
+          <i class="fab fa-itch-io"></i>
+        </a>
+        <a href="mailto:yuvaneshkarunakaran@gmail.com"
+           class="nav__icon" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://g.dev/NorthAbyss" target="_blank" rel="noopener noreferrer"
+           class="nav__icon" aria-label="Google Developer">
+          <i class="fab fa-google"></i>
+        </a>
+        <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="nav__mobile" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="Projects.html" class="nav__mobile-link">Projects</a>
+    <a href="Updates.html" class="nav__mobile-link">Updates</a>
+    <a href="Contact.html" class="nav__mobile-link">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;" aria-hidden="true">
+        <div style="position:absolute;top:-120px;right:-100px;width:500px;height:500px;
+             background:var(--cyan);border-radius:50%;filter:blur(120px);opacity:0.10;"></div>
+        <div style="position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;
+             background:var(--violet);border-radius:50%;filter:blur(100px);opacity:0.12;"></div>
+      </div>
+      <div class="page-hero__inner container">
+        <div class="section-label" style="display:inline-flex; margin:0 auto var(--space-md);">
+          <span class="material-symbols-rounded" style="vertical-align: middle; margin-right: 4px;">mail</span> Contact
+        </div>
+        <h1 class="section-title" style="font-family:var(--font-display);">
+          Let's <span class="accent">Connect</span>
+        </h1>
+        <p class="section-subtitle" style="margin:0 auto;">
+          Open to SRE, DevOps, Flutter, and Software Engineering opportunities. Let's build something.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="contact__grid">
+
+          <!-- Left: Info + Links -->
+          <div class="contact__info fade-up">
+            <p class="contact__intro">
+              I'm actively seeking <strong>internships</strong> and <strong>full-time roles</strong>
+              with companies that value strong systems thinking, clean code, and continuous delivery.
+              Whether you have a position, a collaboration, or just want to connect —
+              my inbox is always open.
+            </p>
+
+            <div class="contact__links">
+              <a href="mailto:yuvaneshkarunakaran@gmail.com" class="contact__link-item">
+                <div class="contact__link-icon"><span class="material-symbols-rounded">mail</span></div>
+                <div class="contact__link-text">
+                  <div class="contact__link-label">Email</div>
+                  <div class="contact__link-value">yuvaneshkarunakaran@gmail.com</div>
+                </div>
+                <i class="fas fa-chevron-right" style="margin-left:auto; color:var(--text-muted); font-size:0.75rem;"></i>
+              </a>
+
+              <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
+                 class="contact__link-item">
+                <div class="contact__link-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div class="contact__link-text">
+                  <div class="contact__link-label">LinkedIn</div>
+                  <div class="contact__link-value">linkedin.com/in/yuvaneshks</div>
+                </div>
+                <i class="fas fa-external-link-alt" style="margin-left:auto; color:var(--text-muted); font-size:0.75rem;"></i>
+              </a>
+
+              <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
+                 class="contact__link-item">
+                <div class="contact__link-icon"><i class="fab fa-github"></i></div>
+                <div class="contact__link-text">
+                  <div class="contact__link-label">GitHub</div>
+                  <div class="contact__link-value">github.com/North-Abyss</div>
+                </div>
+                <i class="fas fa-external-link-alt" style="margin-left:auto; color:var(--text-muted); font-size:0.75rem;"></i>
+              </a>
+
+              <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer"
+                 class="contact__link-item">
+                <div class="contact__link-icon"><span class="material-symbols-rounded">sports_esports</span></div>
+                <div class="contact__link-text">
+                  <div class="contact__link-label">Itch.io</div>
+                  <div class="contact__link-value">north-abyss.itch.io</div>
+                </div>
+                <i class="fas fa-external-link-alt" style="margin-left:auto; color:var(--text-muted); font-size:0.75rem;"></i>
+              </a>
+            </div>
+
+            <!-- Availability badge -->
+            <div style="
+              margin-top: var(--space-xl);
+              display: inline-flex;
+              align-items: center;
+              gap: var(--space-sm);
+              background: rgba(var(--green-rgb), 0.08);
+              border: 1px solid rgba(var(--green-rgb), 0.3);
+              border-radius: var(--radius-full);
+              padding: 0.6rem 1.2rem;
+              font-size: 0.85rem;
+              color: var(--green);
+              font-weight: 600;
+            ">
+              <span style="width:8px;height:8px;background:var(--green);border-radius:50%;
+                box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite;"></span>
+              Available for Opportunities — 2026
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="contact__form fade-up" data-delay="150">
+            <form
+              action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+              method="POST"
+              id="contactForm"
+              novalidate>
+
+              <div class="form__group">
+                <label class="form__label" for="contactName">Name</label>
+                <input type="text" id="contactName" name="name"
+                  class="form__input" placeholder="Your full name"
+                  required autocomplete="name">
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" name="email"
+                  class="form__input" placeholder="you@company.com"
+                  required autocomplete="email">
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="contactSubject">Subject</label>
+                <input type="text" id="contactSubject" name="subject"
+                  class="form__input"
+                  placeholder="Internship / Collaboration / General">
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="contactMsg">Message</label>
+                <textarea id="contactMsg" name="message"
+                  class="form__textarea"
+                  placeholder="Tell me about the opportunity or project…"
+                  rows="5" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary form__submit" id="submitBtn">
+                <span class="material-symbols-rounded" style="vertical-align: middle; margin-right: 4px;">send</span> Send Message
+              </button>
+              <p id="formStatus"
+                 style="text-align:center;margin-top:1rem;font-size:0.875rem;color:var(--cyan);display:none;"></p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__brand">YUVANESH KS</span>
+        <p class="footer__copy">© 2026 Yuvanesh KS. Designed & built from scratch.</p>
+        <nav class="footer__links" aria-label="Footer links">
+          <a href="index.html" class="footer__link">Home</a>
+          <a href="Projects.html" class="footer__link">Projects</a>
+          <a href="Updates.html" class="footer__link">Updates</a>
+          <a href="Contact.html" class="footer__link">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

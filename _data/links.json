@@ -1,0 +1,222 @@
+{
+  "profile": {
+    "name": "Yuvanesh KS",
+    "alias": "NorthAbyss",
+    "tagline": "SRE & Linux Sys Admin | Flutter & Software Dev | B.Tech IT '27",
+    "email": "yuvaneshkarunakaran@gmail.com",
+    "github": "https://github.com/North-Abyss",
+    "linkedin": "https://www.linkedin.com/in/yuvaneshks/",
+    "itch": "https://north-abyss.itch.io/",
+    "avatar": "https://avatars.githubusercontent.com/u/183628925?v=4",
+    "portfolio": "https://north-abyss.github.io/Portfolio/"
+  },
+  "linkedin_posts": [
+    {
+      "id": 1,
+      "title": "Enterprise Home Lab Architecture 🚀🐧",
+      "desc": "A custom Linux virtualization environment built on KVM/QEMU, running Rocky Linux and Arch. Optimized for containerization and automated deployments.",
+      "url": "https://www.linkedin.com/in/yuvaneshks/",
+      "meta": "Recently • System Administration"
+    },
+    {
+      "id": 2,
+      "title": "Day 25 of #100DaysOfFlutter is complete! 🚀📱",
+      "desc": "Continuing the journey deep into Flutter and Dart. Building cross-platform mobile apps with seamless UIs and state management.",
+      "url": "https://www.linkedin.com/in/yuvaneshks/",
+      "meta": "Recently • 100DaysOfFlutter"
+    },
+    {
+      "id": 3,
+      "title": "IDC Nexus 2026 successfully conducted! 🎉🚀",
+      "desc": "Extremely proud to have led and organized this major tech convergence at AMCET. From planning to execution, a massive success.",
+      "url": "https://www.linkedin.com/in/yuvaneshks/",
+      "meta": "Recently • Tech Event"
+    },
+    {
+      "id": 4,
+      "title": "Choosing Game Development and System Administration 🚀",
+      "desc": "Embracing Godot Engine and exploring the deep tech behind System Administration. Here's why I chose this specific path to mastery.",
+      "url": "https://www.linkedin.com/in/yuvaneshks/",
+      "meta": "Recently • Game Dev & SysAdmin"
+    },
+    {
+      "id": 5,
+      "title": "Turning a \"Potato\" Laptop into a Linux Powerhouse 🚀",
+      "desc": "They told me you can't do much with a government-issued Lenovo E41-25. I took that as a challenge. Meet \"Caelestia\" — A custom Arch Linux environment designed for speed. 🔧 The Technical Setup: • OS: Arch Linux (Minimal Install via CLI) • Performance: Idle RAM usage < 900MB • Shell: Fish + Custom Bash Scripting",
+      "url": "https://www.linkedin.com/in/yuvaneshks/",
+      "meta": "Recently • SysAdmin Portfolio"
+    },
+    {
+      "id": 6,
+      "title": "𝗗𝗮𝘆 𝟮 𝗼𝗳 𝗺𝘆 #𝟭𝟬𝟬𝗗𝗮𝘆𝘀𝗢𝗳𝗙𝗹𝘂𝘁𝘁𝗲𝗿 𝗰𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲 is in the books! 📚",
+      "desc": "Today was all about the 𝗪𝗶𝗱𝗴𝗲𝘁 𝗧𝗿𝗲𝗲 and moving from imperative to 𝗗𝗲𝗰𝗹𝗮𝗿𝗮𝘁𝗶𝘃𝗲 𝗨𝗜. Coming from Java, I'm used to manually updating views. In Flutter, I simply describe the UI state, and the framework handles the rest.",
+      "url": "https://www.linkedin.com/in/yuvaneshks/",
+      "meta": "1d ago • 100DaysOfFlutter"
+    },
+    {
+      "id": 7,
+      "title": "🚀 𝗥𝗲𝘀𝘂𝗹𝘁𝘀 𝗮𝗿𝗲 𝗶𝗻!",
+      "desc": "I recently submitted my first-ever complete game, 𝗪𝗮𝘃𝗲 𝗼𝗳 𝗙𝗮𝘁𝗲, to the GitHub Game Off 2025, placing #𝟯𝟲𝟭 out of 𝟳𝟭𝟲 global entries! 🌊⚔️ Building a 2D Metroidvania from scratch within a strict one-month deadline... was the ultimate stress test in 𝘁𝗶𝗺𝗲 𝗺𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 and 𝘀𝘆𝘀𝘁𝗲𝗺 𝗮𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲.",
+      "url": "https://www.linkedin.com/in/yuvaneshks/",
+      "meta": "1mo ago • GitHub Game Off 2025"
+    },
+    {
+      "id": 8,
+      "title": "𝐈𝐃𝐂 𝐍𝐄𝐗𝐔𝐒 ’𝟐𝟔: 𝐌𝐈𝐒𝐒𝐈𝐎𝐍 𝐀𝐂𝐂𝐎𝐌𝐏𝐋𝐈𝐒𝐇𝐄𝐃!",
+      "desc": "We have officially wrapped up the biggest tech convergence in the district at AMCET. Reflecting on those 24 hours of innovation, code, and community, I can proudly say we didn’t just organize a hackathon—we raised the standard.",
+      "url": "https://www.linkedin.com/in/yuvaneshks/",
+      "meta": "2mo ago • Hackathon Event"
+    },
+    {
+      "id": 9,
+      "title": "🚀 𝗠𝗶𝘀𝘀𝗶𝗼𝗻 𝗔𝗰𝗰𝗼𝗺𝗽𝗹𝗶𝘀𝗵𝗲𝗱: 𝟭𝟰 𝗗𝗮𝘆𝘀 𝗼𝗳 𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀 & 𝗔𝗜 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱! 🏆",
+      "desc": "I have officially crossed the finish line of the 𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀 𝟭𝟰 𝗗𝗮𝘆𝘀 𝗔𝗜 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲! What started two weeks ago as a simple \"Hello World\" in a notebook has evolved into a full-scale Data & AI implementation.",
+      "url": "https://www.linkedin.com/in/yuvaneshks/",
+      "meta": "2mo ago • Databricks & AI"
+    },
+    {
+      "id": 10,
+      "title": "Day 1 of 4: Crushing it at the Google Antigravity Workshop! 🚀👾",
+      "desc": "I just wrapped up Day 1 of the Google Antigravity workshop, and honestly, the pace is insane. We aren't just learning theory—we are building real, deployable apps from scratch. ☁️ The Weather Star 💬 The Lore Bot 📂 Pixel Portfolio.",
+      "url": "https://www.linkedin.com/in/yuvaneshks/",
+      "meta": "3mo ago • AI Workshop"
+    }
+  ],
+  "projects": [
+    {
+      "name": "wave-of-fate",
+      "desc": "A fully playable 2D platformer submitted for GitHub Game Off 2025. Features custom physics engine, parallax scrolling, dynamic audio, and full web-export. Complete, compiled and delivered under competition deadline.",
+      "url": "https://github.com/North-Abyss/wave-of-fate",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/wave-of-fate",
+      "category": "Game Off 2025",
+      "filter": "game",
+      "tags": ["Godot Engine", "GDScript", "2D Platformer"]
+    },
+    {
+      "name": "1st-GODOT-Game",
+      "desc": "A Vampire Survivor clone featuring procedural enemy generation, intense survival mechanics, and custom wave AI built in Godot 4.",
+      "url": "https://github.com/North-Abyss/1st-GODOT-Game",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/1st-GODOT-Game",
+      "category": "Game Development",
+      "filter": "game",
+      "tags": ["Godot 4", "GDScript", "Roguelite"]
+    },
+    {
+      "name": "2D-crossplatform-RPG-Game",
+      "desc": "A cross-platform 2D RPG game built to run on various operating systems, exploring deep game loops and inventory systems.",
+      "url": "https://github.com/North-Abyss/2D-crossplatform-RPG-Game",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/2D-crossplatform-RPG-Game",
+      "category": "Game Development",
+      "filter": "game",
+      "tags": ["Godot", "RPG", "Cross-Platform"]
+    },
+    {
+      "name": "digital-snack-arcade",
+      "desc": "A web-based retro arcade portal combining multiple mini-games built natively with vanilla HTML, CSS, and JavaScript.",
+      "url": "https://github.com/North-Abyss/digital-snack-arcade",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/digital-snack-arcade",
+      "category": "Game Web App",
+      "filter": "game",
+      "tags": ["Vanilla JS", "HTML5 Canvas", "Arcade"]
+    },
+    {
+      "name": "Trackify-Flutter",
+      "desc": "Cross-platform habit tracker from #100DaysOfFlutter. Implements Riverpod for complex global state management, custom theming engine, and persistent local storage.",
+      "url": "https://github.com/North-Abyss/Trackify-Flutter",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/Trackify-Flutter",
+      "category": "Mobile App",
+      "filter": "flutter",
+      "tags": ["Flutter", "Dart", "Riverpod", "Cross-Platform"]
+    },
+    {
+      "name": "AI-Sugarcane-Disease-Detection",
+      "desc": "Real-time computer vision pipeline using YOLOv8 to detect and classify sugarcane diseases from field images. Streamlit web UI for upload-based inference. Demonstrated at Agrithon 2.0, VIT.",
+      "url": "https://github.com/North-Abyss/AI-Sugarcane-Disease-Detection",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/AI-Sugarcane-Disease-Detection",
+      "category": "Computer Vision",
+      "filter": "ai",
+      "tags": ["YOLOv8", "Python", "Streamlit", "OpenCV"]
+    },
+    {
+      "name": "NM-AI-powered-disease-prediction-based-on-patient-data",
+      "desc": "Transforming healthcare with AI. Enables early prediction of Heart Disease and Diabetes using machine learning models trained on patient data.",
+      "url": "https://github.com/North-Abyss/NM-AI-powered-disease-prediction-based-on-patient-data",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/NM-AI-powered-disease-prediction-based-on-patient-data",
+      "category": "AI & ML",
+      "filter": "ai",
+      "tags": ["Python", "ML", "Healthcare", "Scikit-Learn"]
+    },
+    {
+      "name": "AI-Chat-Support",
+      "desc": "An intelligent AI-driven chat support system built to automate customer interactions and resolve queries rapidly using NLP and context awareness.",
+      "url": "https://github.com/North-Abyss/AI-Chat-Support",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/AI-Chat-Support",
+      "category": "AI Chatbot",
+      "filter": "ai",
+      "tags": ["Python", "NLP", "Flask", "AI"]
+    },
+    {
+      "name": "Wind-Energy-Feasibility-Dashboard",
+      "desc": "Interactive map using OpenStreetMap tiles. City input fetches coordinates automatically, visualizing charts for wind speed and direction feasibility.",
+      "url": "https://github.com/North-Abyss/Wind-Energy-Feasibility-Dashboard",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/Wind-Energy-Feasibility-Dashboard",
+      "category": "Data Engineering",
+      "filter": "systems",
+      "tags": ["Python", "OpenStreetMap", "Data Viz", "Flask"]
+    },
+    {
+      "name": "Smart-Noise-Pollution",
+      "desc": "A smart system to monitor, analyze, and mitigate noise pollution using data-driven insights and IoT sensor integration.",
+      "url": "https://github.com/North-Abyss/Smart-Noise-Pollution",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/Smart-Noise-Pollution",
+      "category": "IoT & Data",
+      "filter": "systems",
+      "tags": ["IoT", "Python", "Data Analysis"]
+    },
+    {
+      "name": "Portfolio",
+      "desc": "This portfolio — built entirely from scratch with zero frameworks. Pure Vanilla HTML, CSS, and JavaScript with dark/light theming, scroll animations, and GitHub Pages hosting.",
+      "url": "https://github.com/North-Abyss/Portfolio",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/Portfolio",
+      "category": "Web Development",
+      "filter": "web",
+      "tags": ["HTML5", "CSS3", "Vanilla JS", "GitHub Pages"]
+    },
+    {
+      "name": "webar_prototype",
+      "desc": "Prototype implementing Augmented Reality concepts straight in the browser using WebXR and HTML integrations — no native app required.",
+      "url": "https://github.com/North-Abyss/webar_prototype",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/webar_prototype",
+      "category": "AR / WebXR",
+      "filter": "web",
+      "tags": ["WebXR", "HTML5", "JavaScript", "AR"]
+    },
+    {
+      "name": "Color-Picker-App-KSY",
+      "desc": "Easy and simple UI for selecting and picking colors from images across all color formats. Built using Python and Streamlit.",
+      "url": "https://github.com/North-Abyss/Color-Picker-App-KSY",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/Color-Picker-App-KSY",
+      "category": "Python Web App",
+      "filter": "web",
+      "tags": ["Python", "Streamlit", "OpenCV", "UI"]
+    },
+    {
+      "name": "Weather-Forecast-App-UIUX",
+      "desc": "Minimal Weather App UI/UX case study designed in Figma. Covers design tokens, component libraries, and responsive layouts.",
+      "url": "https://github.com/North-Abyss/Weather-Forecast-App-UIUX",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/Weather-Forecast-App-UIUX",
+      "category": "UI/UX Design",
+      "filter": "web",
+      "tags": ["Figma", "UI/UX", "Design System"]
+    },
+    {
+      "name": "IT-6-Semester-Lab-Manual",
+      "desc": "Comprehensive lab manual and source codes for the 6th Semester IT curriculum at AMCET.",
+      "url": "https://github.com/North-Abyss/IT-6-Semester-Lab-Manual",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/IT-6-Semester-Lab-Manual",
+      "category": "Documentation",
+      "filter": "systems",
+      "tags": ["Documentation", "Lab Manual", "IT"]
+    }
+  ]
+}

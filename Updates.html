@@ -1,617 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Updates | Yuvanesh KS Portfolio</title>
-
-    <!-- SEO & Metadata -->
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/183628925?v=4">
-    <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/183628925?v=4">
-
-    <!-- SEO & Metadata -->
-    <meta name="description"
-        content="Yuvanesh KS Updates - Follow my journey learning Data Engineering, Databricks, building Game Engines, and engaging in Hackathons.">
-    <meta name="keywords"
-        content="Yuvanesh KS Updates, LinkedIn Posts, Hackathons, Databricks Challenge, Godot, Tech Journey">
-    <meta name="author" content="Yuvanesh KS">
-    <link rel="canonical" href="https://north-abyss.github.io/Portfolio/Updates.html">
-
-    <!-- Theme init: apply saved cross-page theme or system preferred -->
-    <script>
-        (function () {
-            try {
-                var savedTheme = localStorage.getItem('theme');
-                if (savedTheme) {
-                    document.documentElement.setAttribute('data-theme', savedTheme);
-                } else {
-                    var system = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
-                    document.documentElement.setAttribute('data-theme', system);
-                }
-            } catch (e) { /* ignore */ }
-        })();
-    </script>
-
-    <!-- JSON-LD Schema -->
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://north-abyss.github.io/Portfolio/#person",
-          "name": "Yuvanesh KS",
-          "alternateName": "NorthAbyss",
-          "jobTitle": ["System Administrator", "Game Developer"],
-          "url": "https://north-abyss.github.io/Portfolio/",
-          "image": "https://north-abyss.github.io/Portfolio/preview.png",
-          "sameAs": [
-            "https://www.linkedin.com/in/yuvaneshks/",
-            "https://github.com/North-Abyss",
-            "https://north-abyss.itch.io/"
-          ],
-          "alumniOf": "Annai Mira College of Engineering and Technology"
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://north-abyss.github.io/Portfolio/Updates.html#website",
-          "url": "https://north-abyss.github.io/Portfolio/Updates.html",
-          "name": "Yuvanesh KS Updates",
-          "description": "Latest updates, tech journey milestones, and LinkedIn posts by Yuvanesh KS.",
-          "publisher": {
-            "@id": "https://north-abyss.github.io/Portfolio/#person"
-          },
-          "inLanguage": "en-US"
-        }
-      ]
-    }
-    </script>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:site_name" content="Yuvanesh KS Portfolio">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://north-abyss.github.io/Portfolio/Updates.html">
-    <meta property="og:title" content="Yuvanesh KS | Latest Updates & Journey">
-    <meta property="og:description"
-        content="Catch up with my latest professional milestones, hackathon achievements, and ongoing learning challenges.">
-    <meta property="og:image" content="https://north-abyss.github.io/Portfolio/preview.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://north-abyss.github.io/Portfolio/Updates.html">
-    <meta property="twitter:title" content="Yuvanesh KS | Latest Updates & Journey">
-    <meta property="twitter:description"
-        content="Catch up with my latest professional milestones, hackathon achievements, and ongoing learning challenges.">
-    <meta property="twitter:image" content="https://north-abyss.github.io/Portfolio/preview.png">
-
-    <!-- Performance: Preconnect & Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
-            rel="stylesheet">
-    </noscript>
-
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap"
-            rel="stylesheet">
-    </noscript>
-
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
-
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-    <meta name="google-site-verification" content="HNZvXfhWbrig6mgzIRp-HQ3sCXLojGQZvWSeu7QEXT4" />
-
-    <!-- Performance: CSS -->
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="style.css">
-    </noscript>
-
-    <!-- Minimal inline glass overlay for loader back-layer -->
-    <style>
-        .loader-back-layer {
-            position: fixed;
-            inset: 0;
-            z-index: 9998;
-            pointer-events: none;
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            background: rgba(0, 0, 0, 0.48);
-            border: none
-        }
-
-        html[data-theme="light"] .loader-back-layer {
-            background: rgba(255, 255, 255, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.12)
-        }
-
-        html[data-theme="dark"] .loader-back-layer {
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.04)
-        }
-
-        .tetris-overlay {
-            background: transparent
-        }
-
-        .loader-back-layer.hidden {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 300ms ease, visibility 300ms ease
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Updates | Yuvanesh KS Portfolio</title>
+  <script>
+    (function(){
+      var t=localStorage.getItem('theme')||
+        (window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+      document.documentElement.setAttribute('data-theme',t);
+    })();
+  </script>
+  <meta name="description" content="Latest LinkedIn posts, achievements, and community updates from Yuvanesh KS.">
+  <link rel="canonical" href="https://north-abyss.github.io/Portfolio/Updates.html">
+  <meta property="og:title" content="Updates | Yuvanesh KS">
+  <meta property="og:image" content="https://north-abyss.github.io/Portfolio/preview.png">
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/183628925?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Loading overlay (Tetris) -->
-    <div class="loader-back-layer" id="loaderBackLayer" aria-hidden="true"></div>
-    <div class="tetris-overlay" id="tetrisOverlay" aria-hidden="false">
-        <div class="tetris-loader-root" role="status" aria-live="polite">
-            <div class="tetris-loader">
-                <span class="tetris-block">L</span>
-                <span class="tetris-block">O</span>
-                <span class="tetris-block">A</span>
-                <span class="tetris-block">D</span>
-                <span class="tetris-block">I</span>
-                <span class="tetris-block">N</span>
-                <span class="tetris-block">G</span>
-            </div>
-            <div class="tetris-loader-text">Loading</div>
-        </div>
-    </div>
 
-    <div class="background-container">
-        <!-- From Uiverse.io by solowzrd -->
-        
-
-    </div>
-
-    <!-- Sticky Header -->
-    <nav class="glass-nav">
-        <a href="#" class="logo" aria-label="Home">YUVANESH KS</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Projects.html">Projects</a></li>
-            <li><a href="Updates.html">Updates</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <div class="header-contacts" style="display: flex; gap: 1rem; align-items: center;">
-
-            <!-- BB-8 Theme Toggle -->
-            <label for="theme-checkbox" style="margin-right: 1rem;">
-                <input id="theme-checkbox" class="slider" type="checkbox" aria-label="Toggle theme">
-                <div class="switch">
-                    <div class="suns"></div>
-                    <div class="moons">
-                        <div class="star star-1"></div>
-                        <div class="star star-2"></div>
-                        <div class="star star-3"></div>
-                        <div class="star star-4"></div>
-                        <div class="star star-5"></div>
-                        <div class="first-moon"></div>
-                    </div>
-                    <div class="sand"></div>
-                    <div class="bb8">
-                        <div class="antennas">
-                            <div class="antenna short"></div>
-                            <div class="antenna long"></div>
-                        </div>
-                        <div class="head">
-                            <div class="stripe one"></div>
-                            <div class="stripe two"></div>
-                            <div class="eyes">
-                                <div class="eye one"></div>
-                                <div class="eye two"></div>
-                            </div>
-                            <div class="stripe detail">
-                                <div class="detail zero"></div>
-                                <div class="detail zero"></div>
-                                <div class="detail one"></div>
-                                <div class="detail two"></div>
-                                <div class="detail three"></div>
-                                <div class="detail four"></div>
-                                <div class="detail five"></div>
-                                <div class="detail five"></div>
-                            </div>
-                            <div class="stripe three"></div>
-                        </div>
-                        <div class="ball">
-                            <div class="lines one"></div>
-                            <div class="lines two"></div>
-                            <div class="ring one"></div>
-                            <div class="ring two"></div>
-                            <div class="ring three"></div>
-                        </div>
-                        <div class="shadow"></div>
-                    </div>
-                </div>
-            </label>
-
-            <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
-                aria-label="Open LinkedIn profile" class="social-icon neon-icon"
-                style="font-size: 1.2rem; color: #fff;"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-            <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
-                aria-label="Open GitHub profile" class="social-icon neon-icon"
-                style="font-size: 1.2rem; color: #fff;"><i class="fab fa-github" aria-hidden="true"></i></a>
-            <a href="mailto:yuvaneshkarunakaran@gmail.com" aria-label="Send email" class="social-icon neon-icon"
-                style="font-size: 1.2rem; color: #fff;"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-
-        </div>
-    </nav>
-
-    <main>
-
-        <section id="updates" class="hero-section" style="padding-top: 15vh; min-height: unset; padding-bottom: 2rem;">
-            <div class="hero-content float-animation">
-                <h1 class="glitch" data-text="LATEST UPDATES" style="font-size: 3rem;">LATEST UPDATES</h1>
-                <p>My latest posts and activities on LinkedIn.</p>
-            </div>
-        </section>
-
-        <section class="section pt-0">
-            <div class="updates-grid">
-
-                <!-- Post: Enterprise-Home-Lab -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
-                                <time>Recently</time> • System Administration
-                            </span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>Enterprise Home Lab Architecture 🚀🐧</strong><br><br>
-                            A custom Linux virtualization environment built on KVM/QEMU, running Rocky Linux and Arch. Optimized for containerization and automated deployments.
-                        </p>
-                        <a href="https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-ugcPost-7411089191008301056-YVbU" target="_blank" rel="noopener noreferrer" class="social-link-preview">
-                            <img src="https://api.microlink.io/?url=https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-ugcPost-7411089191008301056-YVbU&embed=image.url" alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">linkedin.com</small>
-                                <h4 class="social-preview-title">View on LinkedIn</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-ugcPost-7411089191008301056-YVbU" class="read-more uiverse-button" target="_blank"><span>Read Post</span></a>
-                    </div>
-                </div>
-
-                <!-- Post: Flutter Day 25 -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
-                                <time>Recently</time> • 100DaysOfFlutter
-                            </span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>Day 25 of #100DaysOfFlutter is complete! 🚀📱</strong><br><br>
-                            Continuing the journey deep into Flutter and Dart. Building cross-platform mobile apps with seamless UIs and state management.
-                        </p>
-                        <a href="https://www.linkedin.com/posts/yuvaneshks_100daysofflutter-flutter-dart-share-7461006349435326464-WLG8" target="_blank" rel="noopener noreferrer" class="social-link-preview">
-                            <img src="https://api.microlink.io/?url=https://www.linkedin.com/posts/yuvaneshks_100daysofflutter-flutter-dart-share-7461006349435326464-WLG8&embed=image.url" alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">linkedin.com</small>
-                                <h4 class="social-preview-title">View on LinkedIn</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://www.linkedin.com/posts/yuvaneshks_100daysofflutter-flutter-dart-share-7461006349435326464-WLG8" class="read-more uiverse-button" target="_blank"><span>Read Post</span></a>
-                    </div>
-                </div>
-
-                <!-- Post: IDC Nexus -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
-                                <time>Recently</time> • Tech Event
-                            </span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>IDC Nexus 2026 successfully conducted! 🎉🚀</strong><br><br>
-                            Extremely proud to have led and organized this major tech convergence at AMCET. From planning to execution, a massive success.
-                        </p>
-                        <a href="https://www.linkedin.com/posts/yuvaneshks_idcnexus2026-idcnexus26-amcet-activity-7429195425506779136-G9ll" target="_blank" rel="noopener noreferrer" class="social-link-preview">
-                            <img src="https://api.microlink.io/?url=https://www.linkedin.com/posts/yuvaneshks_idcnexus2026-idcnexus26-amcet-activity-7429195425506779136-G9ll&embed=image.url" alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">linkedin.com</small>
-                                <h4 class="social-preview-title">View on LinkedIn</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://www.linkedin.com/posts/yuvaneshks_idcnexus2026-idcnexus26-amcet-activity-7429195425506779136-G9ll" class="read-more uiverse-button" target="_blank"><span>Read Post</span></a>
-                    </div>
-                </div>
-
-                <!-- Post: Dev & GitHub -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
-                                <time>Recently</time> • Game Dev & SysAdmin
-                            </span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>Choosing Game Development and System Administration 🚀</strong><br><br>
-                            Embracing Godot Engine and exploring the deep tech behind System Administration. Here's why I chose this specific path to mastery.
-                        </p>
-                        <a href="https://www.linkedin.com/posts/yuvaneshks_gamedevelopment-systemadministration-godotengine-activity-7421071544204009472-f5Jv" target="_blank" rel="noopener noreferrer" class="social-link-preview">
-                            <img src="https://api.microlink.io/?url=https://www.linkedin.com/posts/yuvaneshks_gamedevelopment-systemadministration-godotengine-activity-7421071544204009472-f5Jv&embed=image.url" alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">linkedin.com</small>
-                                <h4 class="social-preview-title">View on LinkedIn</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://www.linkedin.com/posts/yuvaneshks_gamedevelopment-systemadministration-godotengine-activity-7421071544204009472-f5Jv" class="read-more uiverse-button" target="_blank"><span>Read Post</span></a>
-                    </div>
-                </div>
-
-                <!-- Post 0: Caelestia Arch Linux Setup -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic"
-                            style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
-                                <time datetime="2025-01-01T10:00:00Z">Recently</time> • SysAdmin Portfolio
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <p><strong>Turning a "Potato" Laptop into a Linux Powerhouse 🚀</strong><br><br>
-                            They told me you can't do much with a government-issued Lenovo E41-25. I took that as a
-                            challenge.
-                            Meet <strong>"Caelestia"</strong> — A custom Arch Linux environment designed for
-                            speed.<br><br>
-
-                            🔧 <strong>The Technical Setup:</strong><br>
-                            • <strong>OS:</strong> Arch Linux (Minimal Install via CLI)<br>
-                            • <strong>Performance:</strong> Idle RAM usage &lt; 900MB<br>
-                            • <strong>Shell:</strong> Fish + Custom Bash Scripting<br><br>
-
-                            If you need a fast learner who can squeeze every drop of performance out of a server, let's
-                            connect!
-                        </p>
-
-                        <a href="https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-activity-7411089253058899969-WC6j"
-                            target="_blank" rel="noopener noreferrer" class="social-link-preview"
-                            style="display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center;">
-
-                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-                                <i class="fas fa-play-circle" style="font-size: 2.5rem; color: var(--accent-cyan);"></i>
-
-                                <div class="social-preview-content" style="padding: 0;">
-                                    <h4 class="social-preview-title" style="margin-bottom: 0.2rem;">Watch Full Video
-                                        Demo</h4>
-                                    <small class="social-preview-domain">Click to watch on LinkedIn</small>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card-footer">
-                        <a href="https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-activity-7411089253058899969-WC6j"
-                            class="read-more uiverse-button" target="_blank" rel="noopener noreferrer"><span>View
-                                Post</span></a>
-                    </div>
-                </div>
-
-                <!-- Post 1: Flutter -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
-                                <time datetime="2026-04-16">1d ago</time> • 100DaysOfFlutter
-                            </span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>𝗗𝗮𝘆 𝟮 𝗼𝗳 𝗺𝘆 #𝟭𝟬𝟬𝗗𝗮𝘆𝘀𝗢𝗳𝗙𝗹𝘂𝘁𝘁𝗲𝗿 𝗰𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲 is in the books! 📚</strong><br><br>
-                            Today was all about the 𝗪𝗶𝗱𝗴𝗲𝘁 𝗧𝗿𝗲𝗲 and moving from imperative to 𝗗𝗲𝗰𝗹𝗮𝗿𝗮𝘁𝗶𝘃𝗲 𝗨𝗜. Coming from Java, I'm used to manually updating views. In Flutter, I simply describe the UI state, and the framework handles the rest.<br><br>
-
-                            𝗜 𝗯𝘂𝗶𝗹𝘁 𝘁𝗵𝗲 𝗳𝗶𝗿𝘀𝘁 𝗿𝗲𝘂𝘀𝗮𝗯𝗹𝗲 "𝗟𝗘𝗚𝗢 𝗯𝗿𝗶𝗰𝗸" 𝗳𝗼𝗿 𝗺𝘆 𝗮𝗽𝗽 𝗧𝗿𝗮𝗰𝗸𝗶𝗳𝘆: 𝗮 𝗰𝘂𝘀𝘁𝗼𝗺 𝗦𝘁𝗮𝘁𝗲𝗹𝗲𝘀𝘀𝗪𝗶𝗱𝗴𝗲𝘁 𝗳𝗼𝗿 𝗵𝗮𝗯𝗶𝘁 𝗰𝗮𝗿𝗱𝘀.
-                        </p>
-                        <a href="https://www.linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" class="social-link-preview" style="display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; background: rgba(0, 0, 0, 0.2);">
-                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-                                <span class="material-symbols-outlined" style="font-size: 2.5rem; color: var(--accent-cyan);">article</span>
-                                <div class="social-preview-content" style="padding: 0; background: transparent;">
-                                    <h4 class="social-preview-title" style="margin-bottom: 0.2rem;">Read Full Post</h4>
-                                    <small class="social-preview-domain">Click to view on LinkedIn</small>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://www.linkedin.com/in/yuvaneshks/" class="read-more uiverse-button" target="_blank"><span>Read Post</span></a>
-                    </div>
-                </div>
-
-                <!-- Post 2: Game Off 2025 -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
-                                <time datetime="2026-03-17">1mo ago</time> • GitHub Game Off 2025
-                            </span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>🚀 𝗥𝗲𝘀𝘂𝗹𝘁𝘀 𝗮𝗿𝗲 𝗶𝗻!</strong><br><br>
-                            I recently submitted my first-ever complete game, 𝗪𝗮𝘃𝗲 𝗼𝗳 𝗙𝗮𝘁𝗲, to the GitHub Game Off 2025, placing #𝟯𝟲𝟭 out of 𝟳𝟭𝟲 global entries! 🌊⚔️<br><br>
-                            Building a 2D Metroidvania from scratch within a strict one-month deadline... was the ultimate stress test in 𝘁𝗶𝗺𝗲 𝗺𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 and 𝘀𝘆𝘀𝘁𝗲𝗺 𝗮𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲.
-                        </p>
-                        <a href="https://github.com/North-Abyss/wave-of-fate" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/wave-of-fate" alt="Preview" class="social-preview-image" loading="lazy" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">North-Abyss/wave-of-fate</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://www.linkedin.com/in/yuvaneshks/" class="read-more uiverse-button" target="_blank"><span>Read Post</span></a>
-                    </div>
-                </div>
-
-                <!-- Post 3: IDC NEXUS 26 -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
-                                <time datetime="2026-02-17">2mo ago</time> • Hackathon Event
-                            </span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>𝐈𝐃𝐂 𝐍𝐄𝐗𝐔𝐒 ’𝟐𝟔: 𝐌𝐈𝐒𝐒𝐈𝐎𝐍 𝐀𝐂𝐂𝐎𝐌𝐏𝐋𝐈𝐒𝐇𝐄𝐃!</strong><br><br>
-                            We have officially wrapped up the biggest tech convergence in the district at AMCET. Reflecting on those 24 hours of innovation, code, and community, I can proudly say we didn’t just organize a hackathon—we raised the standard.<br><br>
-                            𝐈𝐃𝐂 𝐀𝐌𝐂𝐄𝐓 — 𝐁𝐔𝐈𝐋𝐃. 𝐁𝐑𝐄𝐀𝐊. 𝐈𝐍𝐍𝐎𝐕𝐀𝐓𝐄.
-                        </p>
-                        <a href="https://www.linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" class="social-link-preview" style="display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; background: rgba(0, 0, 0, 0.2);">
-                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-                                <span class="material-symbols-outlined" style="font-size: 2.5rem; color: var(--accent-cyan);">article</span>
-                                <div class="social-preview-content" style="padding: 0; background: transparent;">
-                                    <h4 class="social-preview-title" style="margin-bottom: 0.2rem;">Read Full Post</h4>
-                                    <small class="social-preview-domain">Click to view on LinkedIn</small>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://www.linkedin.com/in/yuvaneshks/" class="read-more uiverse-button" target="_blank"><span>Read Post</span></a>
-                    </div>
-                </div>
-
-                <!-- Post 4: Databricks 14-days Challenge -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
-                                <time datetime="2026-02-17">2mo ago</time> • Databricks & AI
-                            </span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>🚀 𝗠𝗶𝘀𝘀𝗶𝗼𝗻 𝗔𝗰𝗰𝗼𝗺𝗽𝗹𝗶𝘀𝗵𝗲𝗱: 𝟭𝟰 𝗗𝗮𝘆𝘀 𝗼𝗳 𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀 & 𝗔𝗜 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱! 🏆</strong><br><br>
-                            I have officially crossed the finish line of the 𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀 𝟭𝟰 𝗗𝗮𝘆𝘀 𝗔𝗜 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲! What started two weeks ago as a simple "Hello World" in a notebook has evolved into a full-scale Data & AI implementation.<br><br>
-                            For the 𝗚𝗿𝗮𝗻𝗱 𝗙𝗶𝗻𝗮𝗹𝗲 (Day 14), I explored the frontier of 𝗔𝗜-𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗔𝗻𝗮𝗹𝘆𝘁𝗶𝗰𝘀 using Spark, MLflow, and LLMs.
-                        </p>
-                        <a href="https://www.linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" class="social-link-preview" style="display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; background: rgba(0, 0, 0, 0.2);">
-                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-                                <span class="material-symbols-outlined" style="font-size: 2.5rem; color: var(--accent-cyan);">article</span>
-                                <div class="social-preview-content" style="padding: 0; background: transparent;">
-                                    <h4 class="social-preview-title" style="margin-bottom: 0.2rem;">Read Full Post</h4>
-                                    <small class="social-preview-domain">Click to view on LinkedIn</small>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://www.linkedin.com/in/yuvaneshks/" class="read-more uiverse-button" target="_blank"><span>Read Post</span></a>
-                    </div>
-                </div>
-
-                <!-- Post 5: Google Antigravity -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
-                                <time datetime="2026-01-17">3mo ago</time> • AI Workshop
-                            </span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>Day 1 of 4: Crushing it at the Google Antigravity Workshop! 🚀👾</strong><br><br>
-                            I just wrapped up Day 1 of the Google Antigravity workshop, and honestly, the pace is insane. We aren't just learning theory—we are building real, deployable apps from scratch. ☁️ The Weather Star 💬 The Lore Bot 📂 Pixel Portfolio.
-                        </p>
-                        <a href="https://www.linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" class="social-link-preview" style="display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; background: rgba(0, 0, 0, 0.2);">
-                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-                                <span class="material-symbols-outlined" style="font-size: 2.5rem; color: var(--accent-cyan);">article</span>
-                                <div class="social-preview-content" style="padding: 0; background: transparent;">
-                                    <h4 class="social-preview-title" style="margin-bottom: 0.2rem;">Read Full Post</h4>
-                                    <small class="social-preview-domain">Click to view on LinkedIn</small>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://www.linkedin.com/in/yuvaneshks/" class="read-more uiverse-button" target="_blank"><span>Read Post</span></a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Credits Section -->
-        <section id="credits" class="section" style="text-align: center; margin-top: 4rem; padding-bottom: 2rem;">
-            <div class="social-icons-container">
-                <div class="glass-panel" style="display: inline-block; padding: 1rem 2rem;">
-                    <p>Designed & Built by <strong>Yuvanesh KS</strong></p>
-                    
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Toy Menu Button -->
-    <div class="toy-menu-container">
-        <button class="toy-menu-btn neon-icon" id="toyMenuBtn" aria-label="Secret Menu">
-            <span class="material-symbols-outlined" style="font-size: 2rem;">apps</span>
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Home">
+        <img src="https://avatars.githubusercontent.com/u/183628925?v=4"
+             alt="Yuvanesh KS avatar" class="nav__logo-avatar" width="38" height="38">
+        <span class="nav__logo-text">YUVANESH KS</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="Projects.html" class="nav__link">Projects</a></li>
+        <li><a href="Updates.html" class="nav__link active">Updates</a></li>
+        <li><a href="Contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <label class="theme-toggle" aria-label="Toggle light/dark mode">
+          <input type="checkbox" class="theme-toggle__input" id="themeToggle" aria-label="Switch between dark and light theme">
+          <span class="theme-toggle__track"></span>
+        </label>
+        <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="GitHub">
+          <i class="fab fa-github"></i></a>
+        <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer"
+           class="nav__icon" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+        <a href="mailto:yuvaneshkarunakaran@gmail.com" class="nav__icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://g.dev/NorthAbyss" target="_blank" rel="noopener noreferrer"
+           class="nav__icon" aria-label="Google Developer"><i class="fab fa-google"></i></a>
+        <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
-        <div class="toy-menu-items" id="toyMenuItems">
-            
-            <button class="toy-item" onclick="alert('Feature coming soon!')" title="Konami Code">
-                <i class="fas fa-space-shuttle"></i>
-            </button>
-        </div>
+      </div>
     </div>
+  </nav>
+  <nav class="nav__mobile" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="Projects.html" class="nav__mobile-link">Projects</a>
+    <a href="Updates.html" class="nav__mobile-link">Updates</a>
+    <a href="Contact.html" class="nav__mobile-link">Contact</a>
+  </nav>
 
-    <script src="script.js" defer></script>
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;" aria-hidden="true">
+        <div style="position:absolute;top:-100px;left:-100px;width:400px;height:400px;
+             background:var(--pink);border-radius:50%;filter:blur(100px);opacity:0.12;"></div>
+        <div style="position:absolute;bottom:-50px;right:-50px;width:300px;height:300px;
+             background:var(--violet);border-radius:50%;filter:blur(100px);opacity:0.12;"></div>
+      </div>
+      <div class="page-hero__inner container">
+        <div class="section-label" style="display:inline-flex; margin:0 auto var(--space-md);">
+          <i class="fab fa-linkedin"></i> Social Feed
+        </div>
+        <h1 class="section-title" style="font-family:var(--font-display);">
+          Latest <span class="accent">Updates</span>
+        </h1>
+        <p class="section-subtitle" style="margin:0 auto;">
+          LinkedIn posts, achievements, and community activity — straight from the field.
+        </p>
+      </div>
+    </section>
+
+    <!-- UPDATES GRID -->
+    <section class="section">
+      <div class="container">
+
+        <!-- LinkedIn CTA banner -->
+        <div style="
+          background: linear-gradient(135deg, rgba(var(--violet-rgb), 0.15), rgba(var(--pink-rgb), 0.1));
+          border: 1px solid var(--border-card);
+          border-radius: var(--radius-xl);
+          padding: var(--space-lg) var(--space-xl);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: var(--space-lg);
+          margin-bottom: var(--space-xl);
+          flex-wrap: wrap;
+          backdrop-filter: blur(12px);
+        " class="fade-up">
+          <div style="display:flex; align-items:center; gap:var(--space-md);">
+            <i class="fab fa-linkedin-in" style="font-size:2rem; color:var(--violet);"></i>
+            <div>
+              <div style="font-weight:700; color:var(--text-100); font-family:var(--font-heading);">
+                Follow me on LinkedIn
+              </div>
+              <div style="font-size:0.85rem; color:var(--text-muted);">
+                Stay updated with my latest projects, learnings, and opportunities.
+              </div>
+            </div>
+          </div>
+          <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
+             class="btn btn--primary btn--sm">
+            <i class="fab fa-linkedin-in"></i> Connect
+          </a>
+        </div>
+
+        <div class="updates__grid" id="updatesDataGrid">
+          <!-- Populated dynamically from _data/links.json by script.js -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__brand">YUVANESH KS</span>
+        <p class="footer__copy">© 2026 Yuvanesh KS. Designed & built from scratch.</p>
+        <nav class="footer__links" aria-label="Footer links">
+          <a href="index.html" class="footer__link">Home</a>
+          <a href="Projects.html" class="footer__link">Projects</a>
+          <a href="Updates.html" class="footer__link">Updates</a>
+          <a href="Contact.html" class="footer__link">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="_data/data.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>

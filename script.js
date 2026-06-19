@@ -1,216 +1,455 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const typingElement = document.querySelector('.typing-effect');
-    const roles = ["Linux Enthusiast", "Game Developer", "Godot Engine Enthusiast", "Open Source Contributor", "IDC Joint Secretary"];
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typeSpeed = 100;
+/* ============================================================
+   YUVANESH KS PORTFOLIO — script.js
+   Clean Vanilla JS: Nav, Theme, Scroll Animations,
+   Typed Effect, Filter Tabs, Contact Form
+   ============================================================ */
 
-    // Theme Toggle Logic
-    const themeCheckbox = document.getElementById('theme-checkbox');
+'use strict';
 
-    // Apply saved user theme after system default (system already applied in head script)
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
+// ── Helpers ──────────────────────────────────────────────────────────────────
+
+function $(selector, parent) {
+  return (parent || document).querySelector(selector);
+}
+
+function $$(selector, parent) {
+  return Array.from((parent || document).querySelectorAll(selector));
+}
+
+// ── Theme ─────────────────────────────────────────────────────────────────────
+
+function initTheme() {
+  var toggle = $('#themeToggle');
+  if (!toggle) return;
+
+  // Sync checkbox state with current theme on load
+  var current = document.documentElement.getAttribute('data-theme');
+  toggle.checked = (current === 'light');
+
+  toggle.addEventListener('change', function () {
+    var next = this.checked ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+
+  // Cross-tab sync: fires when another tab writes to localStorage
+  window.addEventListener('storage', function(e) {
+    if (e.key === 'theme' && e.newValue) {
+      document.documentElement.setAttribute('data-theme', e.newValue);
+      toggle.checked = (e.newValue === 'light');
     }
+  });
+}
 
-    // Ensure checkbox reflects the active theme (checked = dark)
-    const currentTheme = document.documentElement.getAttribute('data-theme') || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light');
-    themeCheckbox.checked = currentTheme === 'dark';
-    updateThemeIcon(currentTheme);
+// ── Nav: scroll + hamburger ───────────────────────────────────────────────────
 
-    themeCheckbox.addEventListener('change', () => {
-        const newTheme = themeCheckbox.checked ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
+function initNav() {
+  var nav         = $('#mainNav');
+  var hamburger   = $('#hamburgerBtn');
+  var mobileNav   = $('#mobileNav');
+
+  // Scroll shadow
+  window.addEventListener('scroll', function () {
+    if (!nav) return;
+    if (window.scrollY > 10) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // Hamburger
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function () {
+      var open = mobileNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(open));
     });
 
-    function updateThemeIcon(theme) {
-        if (theme === 'light') {
-            // Update header icons color for light mode
-            document.querySelectorAll('.header-contacts .social-icon').forEach(icon => {
-                icon.style.color = '#333';
-            });
-        } else {
-            // Update header icons color for dark mode
-            document.querySelectorAll('.header-contacts .social-icon').forEach(icon => {
-                icon.style.color = '#fff';
-            });
-        }
+    // Close on mobile link click
+    $$('.nav__mobile-link', mobileNav).forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileNav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Active link highlight
+  var links = $$('.nav__link');
+  var path  = window.location.pathname.split('/').pop() || 'index.html';
+  links.forEach(function (link) {
+    var href = link.getAttribute('href');
+    if (href && (href === path || href.startsWith(path.split('#')[0]))) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+// ── Typed Effect ──────────────────────────────────────────────────────────────
+
+function initTyped() {
+  var el = $('#typedText');
+  if (!el) return;
+
+  var phrases = [
+    'Software Engineer',
+    'Linux Power User',
+    'Cross-Platform Developer',
+    'AI-Integrated Backend Dev'
+  ];
+  var index    = 0;
+  var charIdx  = 0;
+  var deleting = false;
+  var pause    = false;
+
+  function tick() {
+    var phrase  = phrases[index];
+
+    if (!deleting) {
+      charIdx++;
+      el.textContent = phrase.slice(0, charIdx);
+      if (charIdx === phrase.length) {
+        pause = true;
+        setTimeout(function () {
+          pause = false;
+          deleting = true;
+          setTimeout(tick, 80);
+        }, 1800);
+        return;
+      }
+    } else {
+      charIdx--;
+      el.textContent = phrase.slice(0, charIdx);
+      if (charIdx === 0) {
+        deleting = false;
+        index = (index + 1) % phrases.length;
+      }
     }
 
-    let lastTime = 0;
-    function type(timestamp) {
-        if (!typingElement) return;
-        if (!lastTime) lastTime = timestamp;
+    setTimeout(tick, deleting ? 45 : 90);
+  }
 
-        const elapsed = timestamp - lastTime;
+  tick();
+}
 
-        if (elapsed > typeSpeed) {
-            const currentRole = roles[roleIndex];
+// ── Scroll Animations ─────────────────────────────────────────────────────────
 
-            if (isDeleting) {
-                typingElement.textContent = currentRole.substring(0, charIndex - 1);
-                charIndex--;
-                typeSpeed = 50;
-            } else {
-                typingElement.textContent = currentRole.substring(0, charIndex + 1);
-                charIndex++;
-                typeSpeed = 100;
-            }
+function initScrollAnimations() {
+  var targets = $$('.fade-up, .fade-in');
+  if (!targets.length) return;
 
-            if (!isDeleting && charIndex === currentRole.length) {
-                isDeleting = true;
-                typeSpeed = 2000;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                typeSpeed = 500;
-            }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-            lastTime = timestamp;
-        }
+  targets.forEach(function (el) {
+    io.observe(el);
+  });
+}
 
-        requestAnimationFrame(type);
-    }
+// ── Filter Tabs (Projects page) ───────────────────────────────────────────────
+// Uses event delegation so it works after initGitHubData() injects cards async.
 
-    requestAnimationFrame(type);
+function initFilterTabs() {
+  var tabs = $('#filterTabs');
+  var grid = $('#projectsGrid');
+  if (!tabs || !grid) return;
 
-    // Scroll Animations
-    const observerOptions = {
-        threshold: 0.2
-    };
+  // Remove any previously-attached listener to avoid duplicates
+  var oldTabs = tabs.cloneNode(true);
+  tabs.parentNode.replaceChild(oldTabs, tabs);
+  tabs = oldTabs;
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Optional: Stop observing once visible if you want it to only animate once
-                // observer.unobserve(entry.target);
-            }
+  tabs.addEventListener('click', function (e) {
+    var btn = e.target.closest('.filter-tab');
+    if (!btn) return;
+
+    $$('.filter-tab', tabs).forEach(function (t) {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+
+    var filter = btn.dataset.filter;
+
+    // Query cards live so dynamic cards are included
+    $$('.project-card', grid).forEach(function (card) {
+      var category = card.dataset.category || 'all';
+      var show = filter === 'all' || category === filter;
+
+      if (show) {
+        card.style.display = '';
+        card.classList.remove('visible');
+        requestAnimationFrame(function () {
+          card.classList.add('visible');
         });
-    }, observerOptions);
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+}
 
-    document.querySelectorAll('.glass-card, .section-title, .neon-button').forEach(el => {
-        el.classList.add('fade-in-section');
-        observer.observe(el);
+// ── Contact Form ──────────────────────────────────────────────────────────────
+
+function initContactForm() {
+  var form   = $('#contactForm');
+  var status = $('#formStatus');
+  var btn    = $('#submitBtn');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = new FormData(form);
+
+    // Quick client-side validation
+    var name    = data.get('name')   ? data.get('name').trim()    : '';
+    var email   = data.get('email')  ? data.get('email').trim()   : '';
+    var message = data.get('message')? data.get('message').trim() : '';
+
+    if (!name || !email || !message) {
+      showStatus('Please fill in all required fields.', 'var(--pink)');
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showStatus('Please enter a valid email address.', 'var(--pink)');
+      return;
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function (res) {
+      if (res.ok) {
+        showStatus("✅ Message sent! I'll get back to you soon.", 'var(--cyan)');
+        form.reset();
+      } else {
+        showStatus('❌ Something went wrong. Please email me directly.', 'var(--pink)');
+      }
+    })
+    .catch(function () {
+      showStatus('❌ Network error. Please email yuvaneshkarunakaran@gmail.com directly.', 'var(--pink)');
+    })
+    .finally(function () {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+    });
+  });
+
+  function showStatus(msg, color) {
+    if (!status) return;
+    status.textContent  = msg;
+    status.style.color  = color;
+    status.style.display = 'block';
+    setTimeout(function () {
+      status.style.display = 'none';
+    }, 6000);
+  }
+}
+
+// ── Smooth anchor scroll (for #hash links) ────────────────────────────────────
+
+function initAnchorScroll() {
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    var id  = link.getAttribute('href').slice(1);
+    var el  = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    var offset = (parseInt(getComputedStyle(document.documentElement)
+      .getPropertyValue('--nav-height')) || 72) + 16;
+    var top = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  });
+}
+
+// ── Dynamic Data Fetching ───────────────────────────────────────────────────
+//
+// getData() uses window.PORTFOLIO_DATA (set by data.js <script> tag) when
+// available — this works on file:// protocol locally.
+// Falls back to fetch('_data/links.json') when on a real server (GitHub Pages).
+
+function getData() {
+  if (window.PORTFOLIO_DATA) {
+    return Promise.resolve(window.PORTFOLIO_DATA);
+  }
+  return fetch('_data/links.json').then(function(res) {
+    if (!res.ok) throw new Error('fetch failed: ' + res.status);
+    return res.json();
+  });
+}
+
+async function initGitHubData() {
+  const grid = $('#projectsGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '<div style="text-align:center; padding: 2rem;"><i class="fas fa-spinner fa-spin fa-2x" style="color:var(--violet);"></i></div>';
+
+  try {
+    const data = await getData();
+    const repos = data.projects || [];
+
+    let html = '';
+    repos.forEach(repo => {
+      const filter   = repo.filter || 'all';
+      const category = repo.category || repo.filter || 'Project';
+      const tagsHtml = (repo.tags || []).map(t => `<span class="project-tag">${t}</span>`).join('');
+
+      // Pick accent color per filter
+      const accentMap = { game: 'var(--pink)', flutter: 'var(--cyan)', ai: 'var(--green)', systems: 'var(--violet)', web: 'var(--cyan)' };
+      const accent = accentMap[filter] || 'var(--violet)';
+
+      // Default fallback image if the OG image fails
+      const fallbackImg = "https://repository-images.githubusercontent.com/1216132192/329689bf-2daa-48e0-8c6b-e15e5208bab7";
+
+      html += `
+        <article class="project-card fade-up glass-panel" data-category="${filter}">
+          <img src="${repo.preview}" alt="${repo.name} preview" class="project-card__img" loading="lazy" width="600" height="180"
+               onerror="this.onerror=null; this.src='${fallbackImg}';">
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-tag" style="background: var(--bg-glass); color: ${accent}; border: 1px solid ${accent}; box-shadow: 0 0 8px ${accent}; opacity: 0.9;">${category}</span>
+              ${tagsHtml}
+            </div>
+            <h2 class="project-card__title">${repo.name}</h2>
+            <p class="project-card__desc">${repo.desc || 'No description provided.'}</p>
+            <div class="project-card__footer">
+              <a href="${repo.url}" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm uiverse-btn-glass">
+                <i class="fab fa-github"></i> Repository
+              </a>
+            </div>
+          </div>
+        </article>
+      `;
     });
 
-    // Matrix generation (deterministic: one pattern duplicated, constant cell size)
-    (function () {
-        const container = () => document.getElementById('jp-matrix') || document.querySelector('.jp-matrix');
-        const PATTERN = ["ア", "イ", "ウ", "エ", "オ", "カ", "キ", "ク", "ケ", "コ", "サ", "シ", "ス", "セ", "ソ", "タ", "チ", "ツ", "テ", "ト", "ナ", "ニ", "ヌ", "ネ", "ノ", "ハ", "ヒ", "フ", "ヘ", "ホ", "マ", "ミ", "ム", "メ", "モ", "ヤ", "ユ", "ヨ", "ラ", "リ", "ル", "レ", "ロ", "ワ", "ヲ", "ン", "ガ", "ギ", "グ", "ゲ", "ゴ", "ザ", "ジ", "ズ", "ゼ", "ゾ", "ダ", "ヂ", "ヅ", "デ", "ド", "バ", "ビ", "ブ", "ベ", "ボ", "パ", "ピ", "プ", "ペ", "ポ"];
+    // Add a GitHub profile CTA card at the end
+    html += `
+      <article class="project-card fade-up glass-panel" data-category="all"
+               style="cursor:pointer; align-items:center; justify-content:center; min-height:280px; text-align:center;"
+               onclick="window.open('https://github.com/North-Abyss','_blank')">
+        <div class="project-card__body"
+             style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; padding: 3rem 2rem;">
+          <i class="fab fa-github" style="font-size:3.5rem; color:var(--violet);"></i>
+          <h2 class="project-card__title">See All on GitHub</h2>
+          <p class="project-card__desc" style="text-align:center;">
+            More repositories, contributions, and experiments on my GitHub profile.
+          </p>
+          <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
+             class="btn btn--primary btn--sm">
+            <i class="fab fa-github"></i> Visit Profile
+          </a>
+        </div>
+      </article>
+    `;
 
-        function generateMatrix() {
-            const ct = container();
-            if (!ct) return;
-            const cs = getComputedStyle(ct).getPropertyValue('--cell-size') || '';
-            const cellSize = parseInt(cs, 10) || 44; // fixed cell fallback (44px per request)
-            const rect = ct.getBoundingClientRect();
-            const width = Math.max(0, Math.floor(rect.width));
-            const height = Math.max(0, Math.floor(rect.height));
-            const style = getComputedStyle(ct);
-            const paddingY = parseFloat(style.paddingTop || 0) + parseFloat(style.paddingBottom || 0);
-            const paddingX = parseFloat(style.paddingLeft || 0) + parseFloat(style.paddingRight || 0);
-            const usableWidth = Math.max(0, width - paddingX);
-            const usableHeight = Math.max(0, height - paddingY);
-            const cols = Math.max(1, Math.floor(usableWidth / cellSize));
-            const rows = Math.max(1, Math.floor(usableHeight / cellSize));
+    grid.innerHTML = html;
 
-            // Fill matrix continuously across rows (do not restart pattern each row)
-            const total = rows * cols;
-            let html = '';
-            for (let i = 0; i < total; i++) {
-                const ch = PATTERN[i % PATTERN.length];
-                html += `<span>${ch}</span>`;
-            }
+    // Re-init filter tabs AFTER cards are in the DOM
+    initFilterTabs();
+    // Trigger scroll animations for new elements
+    requestAnimationFrame(initScrollAnimations);
+  } catch (error) {
+    console.error('Failed to fetch project data:', error);
+    grid.innerHTML = '<div style="color:var(--pink); text-align:center; padding: 2rem;">Failed to load projects. <a href="https://github.com/North-Abyss" target="_blank" style="color:var(--violet);">View on GitHub →</a></div>';
+  }
+}
 
-            ct.innerHTML = html;
-        }
+async function initUpdatesData() {
+  const grid = $('#updatesDataGrid');
+  if (!grid) return;
 
-        let resizeTimer;
-        function debouncedGenerate() {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(generateMatrix, 120);
-        }
+  // Clear any hardcoded fallback cards before populating
+  grid.innerHTML = '<div style="text-align:center; padding: 2rem;"><i class="fas fa-spinner fa-spin fa-2x" style="color:var(--cyan);"></i></div>';
 
-        function scheduleMatrixGeneration() {
-            const run = () => {
-                if (document.fonts && document.fonts.ready) {
-                    document.fonts.ready.then(generateMatrix).catch(generateMatrix);
-                } else {
-                    generateMatrix();
-                }
+  try {
+    const data = await getData();
 
-                // Attach listeners after first generation to avoid overhead during initial load
-                window.addEventListener('resize', debouncedGenerate);
-                window.addEventListener('orientationchange', debouncedGenerate);
-            };
+    if (!data.linkedin_posts || !data.linkedin_posts.length) return;
 
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(run, { timeout: 1500 });
-            } else {
-                window.addEventListener('load', run);
-            }
-        }
+    let html = '';
+    data.linkedin_posts.forEach((post, index) => {
+      const delay = index * 80;
+      const previewImgUrl = `https://api.microlink.io/?url=${encodeURIComponent(post.url)}&embed=image.url`;
+      const iconHtml = post.icon ? `<span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.2rem; color: var(--violet); margin-right: 6px;">${post.icon}</span>` : '';
 
-        // Defer generation to idle time to reduce initial load/TTI impact
-        scheduleMatrixGeneration();
-
-        // Performance: Pause animation when off-screen
-        const matrixObserver = new IntersectionObserver((entries) => {
-            const ct = container();
-            if (!ct) return;
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    ct.classList.add('paused');
-                } else {
-                    ct.classList.remove('paused');
-                }
-            });
-        });
-
-        // Start observing once the container is available
-        const ct = container();
-        if (ct) matrixObserver.observe(ct);
-        else window.addEventListener('DOMContentLoaded', () => {
-            const c = container();
-            if (c) matrixObserver.observe(c);
-        });
-
-    })();
-
-    // Hide loader when window finishes loading resources
-    const tetrisOverlay = document.getElementById('tetrisOverlay');
-    const loaderBack = document.getElementById('loaderBackLayer');
-    window.addEventListener('load', () => {
-        if (tetrisOverlay) {
-            tetrisOverlay.classList.add('tetris-hidden');
-        }
-
-        // hide and remove the back layer as well
-        if (loaderBack) {
-            loaderBack.classList.add('hidden');
-        }
-
-        // remove from DOM after transition so these elements don't capture events
-        setTimeout(() => {
-            if (tetrisOverlay && tetrisOverlay.parentNode) tetrisOverlay.parentNode.removeChild(tetrisOverlay);
-            if (loaderBack && loaderBack.parentNode) loaderBack.parentNode.removeChild(loaderBack);
-        }, 400);
+      html += `
+        <article class="update-card fade-up glass-panel" data-delay="${delay}">
+          <div class="update-card__header">
+            <img src="https://avatars.githubusercontent.com/u/183628925?v=4" alt="Yuvanesh KS" class="update-card__avatar" width="44" height="44">
+            <div>
+              <div class="update-card__name">Yuvanesh KS</div>
+              <div class="update-card__meta">${post.meta || 'LinkedIn Update'}</div>
+            </div>
+            <span class="update-card__badge" style="background: var(--bg-glass); color: var(--cyan); border: 1px solid var(--cyan); box-shadow: 0 0 8px var(--cyan);">${post.tag || 'Update'}</span>
+          </div>
+          <div class="update-card__body">
+            <h3 class="update-card__title" style="margin-bottom: 8px; font-size: 1.1rem; color: var(--text-100);">${iconHtml}${post.title}</h3>
+            <p class="update-card__desc" style="font-size: 0.95rem; color: var(--text-300); line-height: 1.6;">${post.desc || ''}</p>
+            
+            <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="social-link-preview" style="display: block; margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); text-decoration: none; transition: transform 0.3s; background: var(--bg-surface);">
+                <img src="${previewImgUrl}" alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315" 
+                     onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/183628925?v=4';" 
+                     style="width: 100%; height: auto; aspect-ratio: 1200/630; object-fit: cover; display: block; border-bottom: 1px solid var(--border-subtle);">
+                <div class="social-preview-content" style="padding: 12px;">
+                    <small class="social-preview-domain" style="font-size: 0.75rem; color: var(--text-300); text-transform: lowercase; display: block; margin-bottom: 4px;">linkedin.com</small>
+                    <h4 class="social-preview-title" style="font-size: 0.95rem; font-weight: 600; color: var(--text-100); margin: 0;">View on LinkedIn</h4>
+                </div>
+            </a>
+          </div>
+          <div class="update-card__footer">
+            <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">
+              View Post <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </article>
+      `;
     });
-});
 
-// Toy Menu Button Logic
-document.addEventListener('DOMContentLoaded', () => {
-    const toyMenuBtn = document.getElementById('toyMenuBtn');
-    const toyMenuItems = document.getElementById('toyMenuItems');
+    html += `
+      <div class="update-card fade-up glass-panel" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 3rem 2rem; min-height: 100%;">
+        <span class="material-symbols-rounded" style="font-size: 3rem; color: var(--cyan); margin-bottom: 1rem;">open_in_new</span>
+        <h3 style="margin-bottom: 0.5rem; font-size: 1.25rem; color: var(--text-100);">See more on LinkedIn</h3>
+        <p style="color: var(--text-300); font-size: 0.95rem; margin-bottom: 1.5rem;">Connect with me to stay updated on my latest professional journey and projects.</p>
+        <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" class="btn btn--primary uiverse-btn-glass">
+          <i class="fab fa-linkedin-in"></i> View Profile
+        </a>
+      </div>
+    `;
 
-    if (toyMenuBtn && toyMenuItems) {
-        toyMenuBtn.addEventListener('click', () => {
-            toyMenuItems.classList.toggle('show');
-        });
-    }
+    grid.innerHTML = html;
+    requestAnimationFrame(initScrollAnimations);
+  } catch (error) {
+    console.error('Failed to load updates:', error);
+    grid.innerHTML = '<div style="color:var(--pink); text-align:center; padding: 2rem;">Could not load updates. <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" style="color:var(--violet);">View on LinkedIn →</a></div>';
+  }
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+
+document.addEventListener('DOMContentLoaded', function () {
+  initTheme();
+  initNav();
+  initTyped();
+  initScrollAnimations();
+  initFilterTabs();
+  initContactForm();
+  initAnchorScroll();
+  initGitHubData();
+  initUpdatesData();
 });

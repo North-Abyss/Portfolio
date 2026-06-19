@@ -1,675 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Yuvanesh KS Portfolio</title>
-
-    <!-- SEO & Metadata -->
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/183628925?v=4">
-    <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/183628925?v=4">
-
-    <!-- SEO & Metadata -->
-    <meta name="description"
-        content="Yuvanesh KS Projects - Explore my technical playground featuring GitHub repositories, Godot games, Python web apps, and Data Engineering dashboards.">
-    <meta name="keywords"
-        content="Yuvanesh KS Projects, GitHub Repositories, Godot Developer, Streamlit, Open Source, Hackathon">
-    <meta name="author" content="Yuvanesh KS">
-    <link rel="canonical" href="https://north-abyss.github.io/Portfolio/Projects.html">
-
-    <!-- Theme init: apply saved cross-page theme or system preferred -->
-    <script>
-        (function () {
-            try {
-                var savedTheme = localStorage.getItem('theme');
-                if (savedTheme) {
-                    document.documentElement.setAttribute('data-theme', savedTheme);
-                } else {
-                    var system = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
-                    document.documentElement.setAttribute('data-theme', system);
-                }
-            } catch (e) { /* ignore */ }
-        })();
-    </script>
-
-    <!-- JSON-LD Schema -->
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://north-abyss.github.io/Portfolio/#person",
-          "name": "Yuvanesh KS",
-          "alternateName": "NorthAbyss",
-          "jobTitle": ["System Administrator", "Game Developer"],
-          "url": "https://north-abyss.github.io/Portfolio/",
-          "image": "https://north-abyss.github.io/Portfolio/preview.png",
-          "sameAs": [
-            "https://www.linkedin.com/in/yuvaneshks/",
-            "https://github.com/North-Abyss",
-            "https://north-abyss.itch.io/"
-          ],
-          "alumniOf": "Annai Mira College of Engineering and Technology"
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://north-abyss.github.io/Portfolio/Projects.html#website",
-          "url": "https://north-abyss.github.io/Portfolio/Projects.html",
-          "name": "Yuvanesh KS Projects",
-          "description": "Explore the open-source projects, Godot games, and data engineering apps built by Yuvanesh KS.",
-          "publisher": {
-            "@id": "https://north-abyss.github.io/Portfolio/#person"
-          },
-          "inLanguage": "en-US"
-        }
-      ]
-    }
-    </script>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:site_name" content="Yuvanesh KS Portfolio">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://north-abyss.github.io/Portfolio/Projects.html">
-    <meta property="og:title" content="Yuvanesh KS | Open Source Projects">
-    <meta property="og:description"
-        content="Explore the technical playground of Yuvanesh KS: GitHub repositories, Godot games, and Python Web Apps.">
-    <meta property="og:image" content="https://north-abyss.github.io/Portfolio/preview.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://north-abyss.github.io/Portfolio/Projects.html">
-    <meta property="twitter:title" content="Yuvanesh KS | Open Source Projects">
-    <meta property="twitter:description"
-        content="Explore the technical playground of Yuvanesh KS: GitHub repositories, Godot games, and Python Web Apps.">
-    <meta property="twitter:image" content="https://north-abyss.github.io/Portfolio/preview.png">
-
-    <!-- Performance: Preconnect & Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
-            rel="stylesheet">
-    </noscript>
-
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap"
-            rel="stylesheet">
-    </noscript>
-
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
-
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-    <meta name="google-site-verification" content="HNZvXfhWbrig6mgzIRp-HQ3sCXLojGQZvWSeu7QEXT4" />
-
-    <!-- Performance: CSS -->
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="style.css">
-    </noscript>
-
-    <!-- Minimal inline glass overlay for loader back-layer -->
-    <style>
-        .loader-back-layer {
-            position: fixed;
-            inset: 0;
-            z-index: 9998;
-            pointer-events: none;
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            background: rgba(0, 0, 0, 0.48);
-            border: none
-        }
-
-        html[data-theme="light"] .loader-back-layer {
-            background: rgba(255, 255, 255, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.12)
-        }
-
-        html[data-theme="dark"] .loader-back-layer {
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.04)
-        }
-
-        .tetris-overlay {
-            background: transparent
-        }
-
-        .loader-back-layer.hidden {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 300ms ease, visibility 300ms ease
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Yuvanesh KS Portfolio</title>
+  <script>
+    (function(){
+      var t=localStorage.getItem('theme')||
+        (window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+      document.documentElement.setAttribute('data-theme',t);
+    })();
+  </script>
+  <meta name="description" content="Open-source projects, games, and applications built by Yuvanesh KS — SRE, Flutter Dev & Game Developer.">
+  <link rel="canonical" href="https://north-abyss.github.io/Portfolio/Projects.html">
+  <meta property="og:title" content="Projects | Yuvanesh KS">
+  <meta property="og:description" content="Wave of Fate, Trackify, AI Sugarcane Detection, and more.">
+  <meta property="og:image" content="https://north-abyss.github.io/Portfolio/preview.png">
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/183628925?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Loading overlay (Tetris) -->
-    <div class="loader-back-layer" id="loaderBackLayer" aria-hidden="true"></div>
-    <div class="tetris-overlay" id="tetrisOverlay" aria-hidden="false">
-        <div class="tetris-loader-root" role="status" aria-live="polite">
-            <div class="tetris-loader">
-                <span class="tetris-block">L</span>
-                <span class="tetris-block">O</span>
-                <span class="tetris-block">A</span>
-                <span class="tetris-block">D</span>
-                <span class="tetris-block">I</span>
-                <span class="tetris-block">N</span>
-                <span class="tetris-block">G</span>
-            </div>
-            <div class="tetris-loader-text">Loading</div>
-        </div>
-    </div>
 
-    <div class="background-container">
-        <!-- From Uiverse.io by solowzrd -->
-        
-
-    </div>
-
-    <!-- Sticky Header -->
-    <nav class="glass-nav">
-        <a href="#" class="logo" aria-label="Home">YUVANESH KS</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Projects.html">Projects</a></li>
-            <li><a href="Updates.html">Updates</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <div class="header-contacts" style="display: flex; gap: 1rem; align-items: center;">
-
-            <!-- BB-8 Theme Toggle -->
-            <label for="theme-checkbox" style="margin-right: 1rem;">
-                <input id="theme-checkbox" class="slider" type="checkbox" aria-label="Toggle theme">
-                <div class="switch">
-                    <div class="suns"></div>
-                    <div class="moons">
-                        <div class="star star-1"></div>
-                        <div class="star star-2"></div>
-                        <div class="star star-3"></div>
-                        <div class="star star-4"></div>
-                        <div class="star star-5"></div>
-                        <div class="first-moon"></div>
-                    </div>
-                    <div class="sand"></div>
-                    <div class="bb8">
-                        <div class="antennas">
-                            <div class="antenna short"></div>
-                            <div class="antenna long"></div>
-                        </div>
-                        <div class="head">
-                            <div class="stripe one"></div>
-                            <div class="stripe two"></div>
-                            <div class="eyes">
-                                <div class="eye one"></div>
-                                <div class="eye two"></div>
-                            </div>
-                            <div class="stripe detail">
-                                <div class="detail zero"></div>
-                                <div class="detail zero"></div>
-                                <div class="detail one"></div>
-                                <div class="detail two"></div>
-                                <div class="detail three"></div>
-                                <div class="detail four"></div>
-                                <div class="detail five"></div>
-                                <div class="detail five"></div>
-                            </div>
-                            <div class="stripe three"></div>
-                        </div>
-                        <div class="ball">
-                            <div class="lines one"></div>
-                            <div class="lines two"></div>
-                            <div class="ring one"></div>
-                            <div class="ring two"></div>
-                            <div class="ring three"></div>
-                        </div>
-                        <div class="shadow"></div>
-                    </div>
-                </div>
-            </label>
-
-            <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
-                aria-label="Open LinkedIn profile" class="social-icon neon-icon"
-                style="font-size: 1.2rem; color: #fff;"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-            <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
-                aria-label="Open GitHub profile" class="social-icon neon-icon"
-                style="font-size: 1.2rem; color: #fff;"><i class="fab fa-github" aria-hidden="true"></i></a>
-            <a href="mailto:yuvaneshkarunakaran@gmail.com" aria-label="Send email" class="social-icon neon-icon"
-                style="font-size: 1.2rem; color: #fff;"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-
-        </div>
-    </nav>
-
-    <main>
-
-        <section id="projects" class="hero-section" style="padding-top: 15vh; min-height: unset; padding-bottom: 2rem;">
-            <div class="hero-content float-animation">
-                <h1 class="glitch" data-text="GITHUB PROJECTS" style="font-size: 3rem;">GITHUB PROJECTS</h1>
-                <p>Welcome to my technical playground. Here are my recent repositories.</p>
-            </div>
-        </section>
-
-        <section class="section pt-0">
-            <div class="updates-grid">
-
-                <!-- Trackify-Flutter -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>Mobile App Development</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Trackify-Flutter</h3>
-                        <p>A habit-tracking mobile application built with Flutter, featuring custom theming and complex global state management.</p>
-                        <a href="https://github.com/North-Abyss/Trackify-Flutter" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/Trackify-Flutter" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">North-Abyss/Trackify-Flutter</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/Trackify-Flutter" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- 1st-GODOT-Game -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>Game Development</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">1st-GODOT-Game</h3>
-                        <p>A Vampire Survivor clone featuring procedural enemy generation and intense survival mechanics built in Godot 4.</p>
-                        <a href="https://github.com/North-Abyss/1st-GODOT-Game" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/1st-GODOT-Game" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">North-Abyss/1st-GODOT-Game</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/1st-GODOT-Game" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- 2D-crossplatform-RPG-Game -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>Game Development</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">2D-crossplatform-RPG-Game</h3>
-                        <p>A cross-platform 2D RPG game built to run on various operating systems, exploring deep game loops.</p>
-                        <a href="https://github.com/North-Abyss/2D-crossplatform-RPG-Game" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/2D-crossplatform-RPG-Game" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">North-Abyss/2D-crossplatform-RPG-Game</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/2D-crossplatform-RPG-Game" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- Digital Snack Arcade -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>Game Web App</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Digital Snack Arcade</h3>
-                        <p>A web-based retro arcade portal combining multiple games built natively with vanilla technologies.</p>
-                        <a href="https://github.com/North-Abyss/digital-snack-arcade" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/digital-snack-arcade" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">North-Abyss/digital-snack-arcade</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/digital-snack-arcade" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- Wave of Fate -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>Game Off 2025 Submission</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Wave of Fate 🌊</h3>
-                        <p>A 2D platformer. Features custom physics, parallax backgrounds, and web-based mechanics.</p>
-                        <a href="https://github.com/North-Abyss/wave-of-fate" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/wave-of-fate" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">North-Abyss/wave-of-fate</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/wave-of-fate" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- NM-AI-powered-disease-prediction -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>AI & Machine Learning</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">AI Disease Prediction</h3>
-                        <p>Transforming healthcare with AI by enabling early prediction of diseases like Heart Disease and Diabetes using machine learning models trained on patient data.</p>
-                        <a href="https://github.com/North-Abyss/NM-AI-powered-disease-prediction-based-on-patient-data" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/NM-AI-powered-disease-prediction-based-on-patient-data" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">NM-AI-powered-disease-prediction-based-on-patient-data</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/NM-AI-powered-disease-prediction-based-on-patient-data" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- AI-Sugarcane-Disease -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>Computer Vision</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">AI Sugarcane Disease Detection</h3>
-                        <p>AI-powered Flask application for early detection of sugarcane diseases (Ring Spot & Yellow Leaf) using YOLOv8 for image classification and TabNet.</p>
-                        <a href="https://github.com/North-Abyss/AI-Sugarcane-Disease-Ring-Spot-Yellow-Leaf-Prediction" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/AI-Sugarcane-Disease-Ring-Spot-Yellow-Leaf-Prediction" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">AI-Sugarcane-Disease...</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/AI-Sugarcane-Disease-Ring-Spot-Yellow-Leaf-Prediction" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- Wind-Energy Dashboard -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>Data Engineering</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Wind Energy Dashboard</h3>
-                        <p>Interactive map using OpenStreetMap tiles. City input fetches coordinates automatically, visualizing charts for wind speed and direction feasibility.</p>
-                        <a href="https://github.com/North-Abyss/Wind-Energy-Feasibility-Dashboard" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/Wind-Energy-Feasibility-Dashboard" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">Wind-Energy-Feasibility-Dashboard</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/Wind-Energy-Feasibility-Dashboard" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- Color Picker App -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>Python WebApp</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Color Picker App</h3>
-                        <p>An easy and simple UI for people to select and pick colors from images across all color formats. Built using Streamlit.</p>
-                        <a href="https://github.com/North-Abyss/Color-Picker-App-KSY" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/Color-Picker-App-KSY" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">Color-Picker-App-KSY</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/Color-Picker-App-KSY" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- Portfolio -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>Web Development</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Portfolio Web App</h3>
-                        <p>A personal portfolio website to showcase my projects, GitHub activity, and professional links.</p>
-                        <a href="https://github.com/North-Abyss/Portfolio" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/Portfolio" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">North-Abyss/Portfolio</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/Portfolio" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                 <!-- WebAR Prototype -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>AR Development</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">WebAR Prototype</h3>
-                        <p>Prototype implementing Augmented Reality concepts straight in the browser using HTML integrations.</p>
-                        <a href="https://github.com/North-Abyss/webar_prototype" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/webar_prototype" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">North-Abyss/webar_prototype</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/webar_prototype" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- Weather App UI/UX -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>UI/UX Design</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Weather Forecast App UI/UX</h3>
-                        <p>Minimal Weather App UI/UX case study designed in Figma.</p>
-                        <a href="https://github.com/North-Abyss/Weather-Forecast-App-UIUX" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/Weather-Forecast-App-UIUX" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">North-Abyss/Weather-Forecast-App-UIUX</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/Weather-Forecast-App-UIUX" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- Smart-Noise-Pollution -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>IoT & Data</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Smart-Noise-Pollution</h3>
-                        <p>A smart system to monitor, analyze, and mitigate noise pollution using data-driven insights.</p>
-                        <a href="https://github.com/North-Abyss/Smart-Noise-Pollution" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/Smart-Noise-Pollution" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">North-Abyss/Smart-Noise-Pollution</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/Smart-Noise-Pollution" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- AI-Chat-Support -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>AI & Chatbots</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">AI-Chat-Support</h3>
-                        <p>An intelligent AI-driven chat support system built to automate customer interactions and resolve queries rapidly.</p>
-                        <a href="https://github.com/North-Abyss/AI-Chat-Support" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/AI-Chat-Support" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">North-Abyss/AI-Chat-Support</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/AI-Chat-Support" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-                <!-- IT-6-Semester-Lab-Manual -->
-                <div class="linkedin-card glass-panel" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="profile-pic" style="background: url('https://github.com/North-Abyss.png') center/cover;"></div>
-                        <div class="profile-info">
-                            <h4>Yuvanesh KS</h4>
-                            <span>Documentation</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">IT-6-Semester-Lab-Manual</h3>
-                        <p>Comprehensive lab manual and source codes for the 6th Semester IT curriculum.</p>
-                        <a href="https://github.com/North-Abyss/IT-6-Semester-Lab-Manual" target="_blank" class="social-link-preview">
-                            <img src="https://opengraph.githubassets.com/1/North-Abyss/IT-6-Semester-Lab-Manual" alt="Preview" class="social-preview-image" loading="lazy" onerror="this.style.display='none';" width="600" height="160">
-                            <div class="social-preview-content">
-                                <small class="social-preview-domain">github.com</small>
-                                <h4 class="social-preview-title">North-Abyss/IT-6-Semester-Lab-Manual</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/North-Abyss/IT-6-Semester-Lab-Manual" target="_blank" class="read-more uiverse-button"><span>View on GitHub</span></a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Credits Section -->
-        <section id="credits" class="section" style="text-align: center; margin-top: 4rem; padding-bottom: 2rem;">
-            <div class="social-icons-container">
-                <div class="glass-panel" style="display: inline-block; padding: 1rem 2rem;">
-                    <p>Designed & Built by <strong>Yuvanesh KS</strong></p>
-                    
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Toy Menu Button -->
-    <div class="toy-menu-container">
-        <button class="toy-menu-btn neon-icon" id="toyMenuBtn" aria-label="Secret Menu">
-            <span class="material-symbols-outlined" style="font-size: 2rem;">apps</span>
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Home">
+        <img src="https://avatars.githubusercontent.com/u/183628925?v=4"
+             alt="Yuvanesh KS avatar" class="nav__logo-avatar" width="38" height="38">
+        <span class="nav__logo-text">YUVANESH KS</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="Projects.html" class="nav__link active">Projects</a></li>
+        <li><a href="Updates.html" class="nav__link">Updates</a></li>
+        <li><a href="Contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <label class="theme-toggle" aria-label="Toggle light/dark mode">
+          <input type="checkbox" class="theme-toggle__input" id="themeToggle" aria-label="Switch between dark and light theme">
+          <span class="theme-toggle__track"></span>
+        </label>
+        <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="GitHub">
+          <i class="fab fa-github"></i></a>
+        <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer"
+           class="nav__icon" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+        <a href="mailto:yuvaneshkarunakaran@gmail.com" class="nav__icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://g.dev/NorthAbyss" target="_blank" rel="noopener noreferrer"
+           class="nav__icon" aria-label="Google Developer"><i class="fab fa-google"></i></a>
+        <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
-        <div class="toy-menu-items" id="toyMenuItems">
-            
-            <button class="toy-item" onclick="alert('Feature coming soon!')" title="Konami Code">
-                <i class="fas fa-space-shuttle"></i>
-            </button>
-        </div>
+      </div>
     </div>
+  </nav>
+  <nav class="nav__mobile" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="Projects.html" class="nav__mobile-link">Projects</a>
+    <a href="Updates.html" class="nav__mobile-link">Updates</a>
+    <a href="Contact.html" class="nav__mobile-link">Contact</a>
+  </nav>
 
-    <script src="script.js" defer></script>
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero__blobs" aria-hidden="true"
+           style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
+        <div style="position:absolute;top:-100px;right:-100px;width:400px;height:400px;
+             background:var(--violet);border-radius:50%;filter:blur(100px);opacity:0.15;"></div>
+        <div style="position:absolute;bottom:-50px;left:-50px;width:300px;height:300px;
+             background:var(--cyan);border-radius:50%;filter:blur(100px);opacity:0.1;"></div>
+      </div>
+      <div class="page-hero__inner container">
+        <div class="section-label" style="display:inline-flex; margin:0 auto var(--space-md);">
+          <i class="fas fa-code"></i> My Work
+        </div>
+        <h1 class="section-title" style="font-family:var(--font-display);">
+          Open Source <span class="accent">Projects</span>
+        </h1>
+        <p class="section-subtitle" style="margin:0 auto;">
+          Games, tools, AI systems, and apps — built end-to-end with real engineering discipline.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Filter tabs -->
+        <div class="filter-tabs" id="filterTabs" role="tablist" aria-label="Filter projects by category">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-tab" data-filter="game" role="tab" aria-selected="false">Game Dev</button>
+          <button class="filter-tab" data-filter="flutter" role="tab" aria-selected="false">Flutter</button>
+          <button class="filter-tab" data-filter="ai" role="tab" aria-selected="false">AI/ML</button>
+          <button class="filter-tab" data-filter="systems" role="tab" aria-selected="false">Systems</button>
+          <button class="filter-tab" data-filter="web" role="tab" aria-selected="false">Web</button>
+        </div>
+
+        <div class="projects__grid" id="projectsGrid">
+          <!-- Populated dynamically from _data/links.json by script.js -->
+          <div style="text-align:center; padding: 3rem; grid-column: 1/-1;">
+            <i class="fas fa-spinner fa-spin fa-2x" style="color:var(--violet);"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__brand">YUVANESH KS</span>
+        <p class="footer__copy">© 2026 Yuvanesh KS. Designed & built from scratch.</p>
+        <nav class="footer__links" aria-label="Footer links">
+          <a href="index.html" class="footer__link">Home</a>
+          <a href="Projects.html" class="footer__link">Projects</a>
+          <a href="Updates.html" class="footer__link">Updates</a>
+          <a href="Contact.html" class="footer__link">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="_data/data.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
