@@ -1634,7 +1634,7 @@ ul, ol { list-style: none; }
 }
 
 @media (max-width: 768px) {
-  .nav__links { display: none; }
+  .nav__links, .nav__icon { display: none; }
   .nav__hamburger { display: flex; }
   .hero__name {
     font-size: clamp(1.5rem, 7vw, 2.6rem);
