@@ -507,6 +507,88 @@ async function initUpdatesData() {
   }
 }
 
+// ── Experience & Certifications ──────────────────────────────────────────────
+
+async function initExperienceData() {
+  const grid = $('#experienceDataGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '<div style="text-align:center; padding: 2rem;"><i class="fas fa-spinner fa-spin fa-2x" style="color:var(--violet);"></i></div>';
+
+  try {
+    const data = await getData();
+    if (!data.experience || !data.experience.length) return;
+
+    let html = '';
+    data.experience.forEach((item, index) => {
+      const delay = index * 100;
+      html += `
+        <div class="timeline__item fade-up" data-delay="${delay}">
+          <div class="timeline__date">${item.date}</div>
+          <div class="timeline__role">${item.role}</div>
+          <div class="timeline__org">${item.org}</div>
+          <p class="timeline__desc">${item.desc}</p>
+        </div>
+      `;
+    });
+
+    // We can also append Education if wanted
+    if (data.education && data.education.length) {
+      data.education.forEach((item, index) => {
+        const delay = (data.experience.length + index) * 100;
+        html += `
+          <div class="timeline__item fade-up" data-delay="${delay}">
+            <div class="timeline__date">${item.date}</div>
+            <div class="timeline__role">${item.degree}</div>
+            <div class="timeline__org">${item.school}</div>
+            <p class="timeline__desc">${item.desc}</p>
+          </div>
+        `;
+      });
+    }
+
+    grid.innerHTML = html;
+    requestAnimationFrame(initScrollAnimations);
+  } catch (error) {
+    console.error('Failed to load experience:', error);
+    grid.innerHTML = '<div style="color:var(--pink); text-align:center;">Could not load experience data.</div>';
+  }
+}
+
+async function initCertificationsData() {
+  const grid = $('#certificationsDataGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '<div style="text-align:center; padding: 2rem;"><i class="fas fa-spinner fa-spin fa-2x" style="color:var(--cyan);"></i></div>';
+
+  try {
+    const data = await getData();
+    if (!data.certifications || !data.certifications.length) return;
+
+    let html = '';
+    data.certifications.forEach((item, index) => {
+      const delay = index * 100;
+      const icon = item.icon || 'workspace_premium';
+      html += `
+        <div class="cert-card fade-up" data-delay="${delay}">
+          <div class="cert-card__icon"><span class="material-symbols-rounded">${icon}</span></div>
+          <div>
+            <div class="cert-card__title">${item.title}</div>
+            <div class="cert-card__issuer">${item.issuer}</div>
+            <div class="cert-card__date">${item.date}</div>
+          </div>
+        </div>
+      `;
+    });
+
+    grid.innerHTML = html;
+    requestAnimationFrame(initScrollAnimations);
+  } catch (error) {
+    console.error('Failed to load certifications:', error);
+    grid.innerHTML = '<div style="color:var(--pink); text-align:center;">Could not load certifications data.</div>';
+  }
+}
+
 // ── Boot ──────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -519,4 +601,6 @@ document.addEventListener('DOMContentLoaded', function () {
   initAnchorScroll();
   initGitHubData();
   initUpdatesData();
+  initExperienceData();
+  initCertificationsData();
 });

@@ -120,7 +120,82 @@ window.PORTFOLIO_DATA = {
       "url": "https://www.linkedin.com/in/yuvaneshks/",
       "meta": "3mo ago • AI Workshop",
       "tag": "Google"
+    }
+  ],
+
+  "experience": [
+    {
+      "role": "IDC AMCET Joint Secretary",
+      "org": "Indian Data Club",
+      "date": "Aug 2025 - Present",
+      "desc": "Selected as Joint Secretary for the AMCET Chapter of Indian Data Club (IDC), a pan-India student-driven community for Data & AI enthusiasts. Coordinating workshops, competitions, and community events."
     },
+    {
+      "role": "Green & Tech Intern – Batch 5",
+      "org": "1M1B · AICTE · Salesforce",
+      "date": "Aug 2025 - Oct 2025",
+      "desc": "Selected for Batch 5. Explored the intersection of green skills, technology, and climate action. Gained hands-on exposure to sustainability-driven tech projects."
+    },
+    {
+      "role": "SRE & Linux Systems Administrator",
+      "org": "Personal Home Lab · Enterprise-grade KVM/QEMU",
+      "date": "2025 – 2026 · Active",
+      "desc": "Architecting and managing an enterprise-grade KVM/QEMU hypervisor. Proficient in Docker, Bash scripting, Arch/Rocky/Ubuntu, and zero-downtime service configuration."
+    },
+    {
+      "role": "Game Developer",
+      "org": "GitHub Game Off 2025",
+      "date": "Nov 2025",
+      "desc": "Shipped Wave of Fate — a full 2D platformer using Godot Engine. Custom physics, parallax backgrounds, web export. Complete, compiled, delivered under deadline."
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "B.Tech Information Technology",
+      "school": "Annai Mira College of Engineering & Technology · Anna University",
+      "date": "2023 - 2027",
+      "desc": "CGPA: 8.45 · 2× SIH Participant · Databricks 14-Day AI Challenge · Adobe India · MPL · NASA Space Apps · GFG Vultr Hackathons."
+    }
+  ],
+
+  "certifications": [
+    {
+      "icon": "public",
+      "title": "NASA Space Apps Challenge",
+      "issuer": "NASA",
+      "date": "Oct 2024"
+    },
+    {
+      "icon": "emoji_events",
+      "title": "Smart India Hackathon (SIH 2023 & 2024)",
+      "issuer": "Govt. of India",
+      "date": "2023 - 2024"
+    },
+    {
+      "icon": "smart_toy",
+      "title": "Agrithon 2.0: AI for Agriculture",
+      "issuer": "VIT",
+      "date": "Aug 2025"
+    },
+    {
+      "icon": "cloud",
+      "title": "GFG x Vultr Hackathon",
+      "issuer": "GeeksforGeeks & Vultr",
+      "date": "Dec 2024"
+    },
+    {
+      "icon": "data_object",
+      "title": "Databricks 14-Day AI Challenge",
+      "issuer": "Databricks",
+      "date": "2025"
+    },
+    {
+      "icon": "cloud_done",
+      "title": "Oracle Cloud Fundamentals",
+      "issuer": "Oracle",
+      "date": "2025"
+    }
   ],
 
   /* ── Projects — synced from gh repo list North-Abyss --visibility=public ── */

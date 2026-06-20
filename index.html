@@ -71,10 +71,10 @@
         <span class="nav__logo-text">YUVANESH KS</span>
       </a>
       <ul class="nav__links" role="list">
-        <li><a href="index.html" class="nav__link active">Home</a></li>
-        <li><a href="Projects.html" class="nav__link">Projects</a></li>
-        <li><a href="Updates.html" class="nav__link">Updates</a></li>
-        <li><a href="Contact.html" class="nav__link">Contact</a></li>
+        <li><a href="/" class="nav__link active">Home</a></li>
+        <li><a href="/Projects" class="nav__link">Projects</a></li>
+        <li><a href="/Updates" class="nav__link">Updates</a></li>
+        <li><a href="/Contact" class="nav__link">Contact</a></li>
       </ul>
       <div class="nav__actions">
         <label class="theme-toggle" aria-label="Toggle light/dark mode">
@@ -98,10 +98,10 @@
   </nav>
 
   <nav class="nav__mobile" id="mobileNav" aria-label="Mobile navigation">
-    <a href="index.html" class="nav__mobile-link">Home</a>
-    <a href="Projects.html" class="nav__mobile-link">Projects</a>
-    <a href="Updates.html" class="nav__mobile-link">Updates</a>
-    <a href="Contact.html" class="nav__mobile-link">Contact</a>
+    <a href="/" class="nav__mobile-link">Home</a>
+    <a href="/Projects" class="nav__mobile-link">Projects</a>
+    <a href="/Updates" class="nav__mobile-link">Updates</a>
+    <a href="/Contact" class="nav__mobile-link">Contact</a>
     <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
       <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -142,10 +142,10 @@
           </p>
 
           <div class="hero__cta">
-            <a href="Projects.html" class="btn btn--outline uiverse-btn-glass">
+            <a href="/Projects" class="btn btn--outline uiverse-btn-glass">
               <span class="material-symbols-rounded">rocket_launch</span> View My Work
             </a>
-            <a href="Contact.html" class="btn btn--outline uiverse-btn-glass">
+            <a href="/Contact" class="btn btn--outline uiverse-btn-glass">
               <span class="material-symbols-rounded">send</span> Get In Touch
             </a>
           </div>
@@ -291,59 +291,8 @@
           Roles & <span class="accent">Journey</span>
         </h2>
 
-        <div class="timeline">
-
-          <div class="timeline__item fade-up">
-            <div class="timeline__date">Aug 2025 – Present</div>
-            <div class="timeline__role">Joint Secretary</div>
-            <div class="timeline__org">Indian Data Club · AMCET Chapter</div>
-            <p class="timeline__desc">
-              Selected as Joint Secretary for the IDC AMCET Chapter. Coordinating workshops, competitions,
-              and community events. Successfully orchestrated <strong>IDC Nexus 2026</strong> — a flagship
-              technical symposium engaging students in AI, ML, Cloud, and Analytics.
-            </p>
-          </div>
-
-          <div class="timeline__item fade-up" data-delay="100">
-            <div class="timeline__date">Aug 2025 – Oct 2025</div>
-            <div class="timeline__role">Green & Tech Intern — Batch 5</div>
-            <div class="timeline__org">1M1B · AICTE · Salesforce</div>
-            <p class="timeline__desc">
-              Selected for Batch 5. Explored the intersection of green skills, technology, and climate action.
-              Gained hands-on exposure to sustainability-driven tech projects under AICTE & Salesforce umbrella.
-            </p>
-          </div>
-
-          <div class="timeline__item fade-up" data-delay="200">
-            <div class="timeline__date">2025 – 2026 · Active</div>
-            <div class="timeline__role">SRE & Linux Systems Administrator</div>
-            <div class="timeline__org">Personal Home Lab · Enterprise-grade KVM/QEMU</div>
-            <p class="timeline__desc">
-              Architecting and managing an enterprise-grade KVM/QEMU hypervisor. Proficient in Docker,
-              Bash scripting, Arch/Rocky/Ubuntu, and zero-downtime service configuration.
-            </p>
-          </div>
-
-          <div class="timeline__item fade-up" data-delay="300">
-            <div class="timeline__date">Nov 2025</div>
-            <div class="timeline__role">Game Developer</div>
-            <div class="timeline__org">GitHub Game Off 2025</div>
-            <p class="timeline__desc">
-              Shipped <strong>"Wave of Fate"</strong> — a full 2D platformer using Godot Engine.
-              Custom physics, parallax backgrounds, web export. Complete, compiled, delivered under deadline.
-            </p>
-          </div>
-
-          <div class="timeline__item fade-up" data-delay="400">
-            <div class="timeline__date">2023 – 2027</div>
-            <div class="timeline__role">B.Tech Information Technology</div>
-            <div class="timeline__org">Annai Mira College of Engineering & Technology · Anna University</div>
-            <p class="timeline__desc">
-              CGPA: <strong>8.45</strong> · 2× SIH Participant · Databricks 14-Day AI Challenge ·
-              Adobe India · MPL · NASA Space Apps · GFG Vultr Hackathons.
-            </p>
-          </div>
-
+        <div class="timeline" id="experienceDataGrid">
+          <!-- Dynamic experience cards injected here by script.js -->
         </div>
       </div>
     </section>
@@ -436,7 +385,7 @@
         </div>
 
         <div style="text-align:center;margin-top:var(--space-xl);">
-          <a href="Projects.html" class="btn btn--ghost">
+          <a href="/Projects" class="btn btn--ghost">
             View All Projects <span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">arrow_forward</span>
           </a>
         </div>
@@ -453,62 +402,8 @@
           Certifications & <span class="accent">Achievements</span>
         </h2>
 
-        <div class="certs__grid">
-
-          <div class="cert-card fade-up">
-            <div class="cert-card__icon"><span class="material-symbols-rounded">public</span></div>
-            <div>
-              <div class="cert-card__title">NASA Space Apps Challenge</div>
-              <div class="cert-card__issuer">NASA</div>
-              <div class="cert-card__date">Collaborated on space-tech conceptual designs</div>
-            </div>
-          </div>
-
-          <div class="cert-card fade-up" data-delay="100">
-            <div class="cert-card__icon"><span class="material-symbols-rounded">emoji_events</span></div>
-            <div>
-              <div class="cert-card__title">Smart India Hackathon (SIH 2023 & 2024)</div>
-              <div class="cert-card__issuer">Govt. of India</div>
-              <div class="cert-card__date">Shortlisted in Round 1 for proposing government-tech solutions</div>
-            </div>
-          </div>
-
-          <div class="cert-card fade-up" data-delay="200">
-            <div class="cert-card__icon"><span class="material-symbols-rounded">smart_toy</span></div>
-            <div>
-              <div class="cert-card__title">Agrithon 2.0 — AI for Agriculture</div>
-              <div class="cert-card__issuer">VIT</div>
-              <div class="cert-card__date">Presented AI for Sugarcane Disease Management</div>
-            </div>
-          </div>
-
-          <div class="cert-card fade-up" data-delay="300">
-            <div class="cert-card__icon"><span class="material-symbols-rounded">cloud</span></div>
-            <div>
-              <div class="cert-card__title">GFG x Vultr Hackathon</div>
-              <div class="cert-card__issuer">GeeksforGeeks & Vultr</div>
-              <div class="cert-card__date">Developed a cloud-based open-source tool</div>
-            </div>
-          </div>
-
-          <div class="cert-card fade-up" data-delay="400">
-            <div class="cert-card__icon"><span class="material-symbols-rounded">data_object</span></div>
-            <div>
-              <div class="cert-card__title">Databricks 14-Day AI Challenge</div>
-              <div class="cert-card__issuer">Databricks</div>
-              <div class="cert-card__date">AI/ML & Data Engineering</div>
-            </div>
-          </div>
-
-          <div class="cert-card fade-up" data-delay="500">
-            <div class="cert-card__icon"><span class="material-symbols-rounded">cloud_done</span></div>
-            <div>
-              <div class="cert-card__title">Oracle Cloud Fundamentals</div>
-              <div class="cert-card__issuer">Oracle</div>
-              <div class="cert-card__date">Cloud Infrastructure</div>
-            </div>
-          </div>
-
+        <div class="certs__grid" id="certificationsDataGrid">
+          <!-- Dynamic cert cards injected here by script.js -->
         </div>
       </div>
     </section>
@@ -629,7 +524,7 @@
         </div>
 
         <div style="text-align:center;margin-top:var(--space-xl);">
-          <a href="Updates.html" class="btn btn--ghost">
+          <a href="/Updates" class="btn btn--ghost">
             See All Updates <span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.2em; margin-left: 4px;">arrow_forward</span>
           </a>
         </div>
@@ -647,10 +542,10 @@
         <span class="footer__brand">YUVANESH KS</span>
         <p class="footer__copy">© 2026 Yuvanesh KS. Designed & built from scratch.</p>
         <nav class="footer__links" aria-label="Footer links">
-          <a href="index.html" class="footer__link">Home</a>
-          <a href="Projects.html" class="footer__link">Projects</a>
-          <a href="Updates.html" class="footer__link">Updates</a>
-          <a href="Contact.html" class="footer__link">Contact</a>
+          <a href="/" class="footer__link">Home</a>
+          <a href="/Projects" class="footer__link">Projects</a>
+          <a href="/Updates" class="footer__link">Updates</a>
+          <a href="/Contact" class="footer__link">Contact</a>
         </nav>
       </div>
     </div>
