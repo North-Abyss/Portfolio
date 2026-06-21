@@ -604,3 +604,15 @@ document.addEventListener('DOMContentLoaded', function () {
   initExperienceData();
   initCertificationsData();
 });
+
+// Loading Screen
+window.addEventListener('load', () => {
+  const loader = document.getElementById('page-loader');
+  if (loader) {
+    // Add a tiny delay so the beautiful loader is visible briefly even on fast loads
+    setTimeout(() => {
+      loader.classList.add('hidden');
+      setTimeout(() => loader.style.display = 'none', 600);
+    }, 400);
+  }
+});

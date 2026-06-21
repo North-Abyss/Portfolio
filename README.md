@@ -27,10 +27,11 @@ The portfolio utilizes a multi-page routing structure for optimal SEO and perfor
 - **`Projects.html`**: The main repository gallery showcasing open-source game development and data engineering web apps.
 - **`Updates.html`**: A dedicated LinkedIn and social activity feed.
 - **`404.html`**: A native GitHub Pages catch-all error handling route.
-- **`issues.md`**: The official changelog, feature tracker, and SEO audit file.
+- **`Contact.html`**: Dedicated contact page with a static Formspree mailer integration.
 - **`style.css`**: The core styling engine containing all design logic and CSS variables.
-- **`script.js`**: Lightweight DOM logic for intersection observers and visual effect timings.
+- **`script.js`**: Lightweight DOM logic for intersection observers, theme toggling, and data hydration.
 - **`_config.yml`**: GitHub Pages / Jekyll configuration for automated SEO meta tag generation.
+- **`_data/`**: Centralized data repository (`data.js`, `links.json`) that dynamically powers the UI across all HTML pages.
 
 ---
 
@@ -39,25 +40,27 @@ The portfolio utilizes a multi-page routing structure for optimal SEO and perfor
 The site uses a responsive **Glassmorphism** UI pattern with a dynamically toggled dark/light theme engine utilizing `localStorage`.
 
 ### Theme Engine Details
-CSS custom variables in the `:root` pseudo-class control the entire aesthetic.
+CSS custom variables in the `:root` pseudo-class control the entire aesthetic. We use the **Neon Light Palette by Zedetta**.
 
 **Deep Space Theme (Dark Mode) - Default**
-- **Base Background (`--bg-deep`)**: `#05050a` (Pure deep space black)
-- **Gradient Start (`--bg-color`)**: `#0f0c29`
-- **Primary Accent (`--accent-cyan`)**: `#ff0055` (Neon Red/Pink)
-- **Secondary Accent (`--accent-purple`)**: `#0575E6` (Neon Blue)
-- **Text (`--text-primary`)**: `#ffffff` (Pure White)
+- **Base Background (`--bg-void`)**: `#0d0010` (Pure deep space black)
+- **Gradient Base (`--bg-surface`)**: `#1a0020` / `#37013a` (Plum)
+- **Primary Accent (`--violet`)**: `#af3dff` (Neon Violet)
+- **Secondary Accent (`--cyan`)**: `#55ffe1` (Electric Cyan)
+- **Highlights (`--pink` & `--green`)**: `#ff3b94`, `#a6fd29`
+- **Text (`--text-100`)**: `#ffffff` (Pure White)
 
 **Clean Theme (Light Mode)**
-- **Base Background (`--bg-deep`)**: `#f0f2f5` (Soft grey)
-- **Gradient Base (`--bg-color`)**: `#ffffff`
-- **Primary Text (`--text-primary`)**: `#1a1a1a` (Dark charcoal)
-- **Secondary Text (`--text-secondary`)**: `#4a4a4a`
+- **Base Background (`--bg-void`)**: `#f8f4ff` (Soft white)
+- **Gradient Base (`--bg-surface`)**: `#e8e0f8`
+- **Primary Accent (`--violet`)**: `#8a22d4` (Royal Purple)
+- **Secondary Accent (`--cyan`)**: `#00bba3` (Dark Teal)
+- **Primary Text (`--text-100`)**: `#1a0030` (Dark purple/charcoal)
 
 ### Key Visual Features
-* **Matrix Rain Background:** A mesmerizing, pure CSS/JS animated background pattern inspired by the Matrix code rain.
-* **Glassmorphism UI:** Translucent card designs with neon accents using `backdrop-filter: blur(15px)`.
-* **Dynamic Open Graph Previews:** Automated visual previews fetched via GitHub's Open Graph API (`opengraph.githubassets.com`).
+* **Morphic Neon Hero:** Advanced `backdrop-filter: blur(20px)` panels and animated gradients.
+* **Glassmorphism UI:** Translucent card designs with neon accents.
+* **Dynamic Open Graph Previews:** Automated visual previews for GitHub repos and robust `microlink.io` unfurling for LinkedIn posts.
 
 ---
 
