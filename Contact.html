@@ -23,7 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 <body>
   <div id="page-loader" class="page-loader">
@@ -121,7 +121,7 @@
     </div>
   </nav>
 
-  <main>
+  <main class="page-contact">
 
     <!-- Page Hero -->
     <section class="page-hero">
@@ -215,12 +215,12 @@
             ">
               <span style="width:8px;height:8px;background:var(--green);border-radius:50%;
                 box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite;"></span>
-              Available for Opportunities — 2026
+              Available for Opportunities
             </div>
           </div>
 
           <!-- Right: Contact Form -->
-          <div class="contact__form fade-up" data-delay="150">
+          <div class="contact__form fade-up" data-delay="150" style="padding: 2.5rem; background: var(--bg-card); border-radius: var(--radius-xl); border: 1px solid rgba(var(--theme-color-rgb), 0.4); box-shadow: 0 10px 40px rgba(var(--theme-color-rgb), 0.15), inset 0 0 30px rgba(var(--theme-color-rgb), 0.05); backdrop-filter: blur(12px);">
             <form
               action="https://formspree.io/f/YOUR_FORMSPREE_ID"
               method="POST"
@@ -256,7 +256,7 @@
                   rows="5" required></textarea>
               </div>
 
-              <button type="submit" class="btn btn--primary form__submit" id="submitBtn">
+              <button type="submit" class="btn form__submit" id="submitBtn" style="background: var(--grad-theme); color: #fff; border: none; box-shadow: 0 0 20px rgba(var(--theme-color-rgb), 0.5);">
                 <span class="material-symbols-rounded" style="vertical-align: middle; margin-right: 4px;">send</span> Send Message
               </button>
               <p id="formStatus"
@@ -275,7 +275,7 @@
     <div class="container">
       <div class="footer__inner">
         <span class="footer__brand">YUVANESH KS</span>
-        <p class="footer__copy">© 2026 Yuvanesh KS. Designed & built from scratch.</p>
+        <p class="footer__copy">© 2026 Yuvanesh KS. Designed & built by an AI tool.</p>
         <nav class="footer__links" aria-label="Footer links">
           <a href="index.html" class="footer__link">Home</a>
           <a href="Projects.html" class="footer__link">Projects</a>

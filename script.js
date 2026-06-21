@@ -605,7 +605,20 @@ document.addEventListener('DOMContentLoaded', function () {
   initCertificationsData();
 });
 
-// Loading Screen
+// Loading Screen Randomizer & Fade Out
+(function() {
+  // Randomize the start color immediately
+  const spinnerFaces = document.querySelectorAll('.spinner > div');
+  if (spinnerFaces.length > 0) {
+    // 6.4s total duration. 4 colors = 1.6s each.
+    const offsets = [0, -1.6, -3.2, -4.8];
+    const randomOffset = offsets[Math.floor(Math.random() * offsets.length)];
+    spinnerFaces.forEach(face => {
+      face.style.animationDelay = randomOffset + 's';
+    });
+  }
+})();
+
 window.addEventListener('load', () => {
   const loader = document.getElementById('page-loader');
   if (loader) {
