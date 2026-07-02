@@ -23,6 +23,25 @@ window.PORTFOLIO_DATA = {
 
   "linkedin_posts": [
     {
+      "id": 32,
+      "title": "Abyss Chat: Flutter WebRTC System Architecture",
+      "icon": "hub",
+      "desc": "Here is the source code : https://github.com/North-Abyss/abyss_chat and the live web build : https://north-abyss.github.io/abyss_chat",
+      "url": "https://www.linkedin.com/posts/yuvaneshks_flutter-webrtc-systemarchitecture-ugcPost-7477772650996490240-NPMW",
+      "video_frame": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7477772650996490240?compact=1\" height=\"399\" style=\"width: 100%; border: none; display: block;\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+      "meta": "Recently • System Architecture",
+      "tag": "Flutter"
+    },
+    {
+      "id": 31,
+      "title": "Turning an old laptop into a Personal Cloud ",
+      "icon": "cloud",
+      "desc": "Repurposed an aging Asus laptop (Intel Pentium, 4GB RAM) into a fully containerized, self-hosted developer environment using Umbrel OS, Docker, PocketBase, Nextcloud, and Tailscale.",
+      "url": "https://www.linkedin.com/posts/yuvaneshks_linux-homelab-docker-ugcPost-7476513643560394752-RYZt",
+      "meta": "Recently • System Infrastructure",
+      "tag": "SysAdmin"
+    },
+    {
       "id": 1,
       "title": "Joint Secretary | IDC AMCET Chapter",
       "icon": "celebration",
@@ -46,6 +65,7 @@ window.PORTFOLIO_DATA = {
       "icon": "dns",
       "desc": "A custom Linux virtualization environment built on KVM/QEMU, running Rocky Linux and Arch. Optimized for containerization and automated deployments.",
       "url": "https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-ugcPost-7411089191008301056-YVbU",
+      "video_frame": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7411089191008301056?compact=1\" height=\"399\" style=\"width: 100%; border: none; display: block;\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
       "meta": "Recently • System Administration",
       "tag": "SysAdmin"
     },
@@ -82,6 +102,7 @@ window.PORTFOLIO_DATA = {
       "icon": "laptop_windows",
       "desc": "They told me you can't do much with a government-issued Lenovo E41-25. I took that as a challenge. Meet 'Caelestia' — A custom Arch Linux environment designed for speed.",
       "url": "https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-activity-7411089253058899969-WC6j",
+      "video_frame": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:activity:7411089253058899969?compact=1\" height=\"399\" style=\"width: 100%; border: none; display: block;\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
       "meta": "Recently • SysAdmin Portfolio",
       "tag": "Linux"
     },
@@ -371,6 +392,15 @@ window.PORTFOLIO_DATA = {
 
   /* ── Projects — synced from gh repo list North-Abyss --visibility=public ── */
   "projects": [
+    {
+      "name": "abyss_chat",
+      "desc": "A modern, cross-platform Flutter application serving as a P2P WhatsApp-style clone using WebRTC and mDNS. Works completely offline.",
+      "url": "https://github.com/North-Abyss/abyss_chat",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/abyss_chat",
+      "category": "Flutter App",
+      "filter": "flutter",
+      "tags": ["Flutter", "WebRTC", "P2P", "Cross-Platform"]
+    },
     {
       "name": "Harmony-Music",
       "desc": "A high-performance, cross-platform music application built with Flutter and Dart — featuring custom audio engine, rich UI, and seamless playback.",

@@ -468,7 +468,11 @@ async function initUpdatesData() {
           <div class="update-card__body">
             <h3 class="update-card__title" style="margin-bottom: 8px; font-size: 1.1rem; color: var(--text-100);">${iconHtml}${post.title}</h3>
             <p class="update-card__desc" style="font-size: 0.95rem; color: var(--text-300); line-height: 1.6;">${post.desc || ''}</p>
-            
+            ${post.video_frame ? `
+            <div style="margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle);">
+              ${post.video_frame}
+            </div>
+            ` : `
             <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="social-link-preview" style="display: block; margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); text-decoration: none; transition: transform 0.3s; background: var(--bg-surface);">
                 <img src="${previewImgUrl}" alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315" 
                      onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/183628925?v=4';" 
@@ -478,6 +482,7 @@ async function initUpdatesData() {
                     <h4 class="social-preview-title" style="font-size: 0.95rem; font-weight: 600; color: var(--text-100); margin: 0;">View on LinkedIn</h4>
                 </div>
             </a>
+            `}
           </div>
           <div class="update-card__footer">
             <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">
