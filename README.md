@@ -11,9 +11,9 @@ A futuristic, highly interactive personal portfolio website designed for **Yuvan
 This portfolio features a "Deep Space" aesthetic with dynamic visual effects to showcase a transition from Game Development to Enterprise Infrastructure. It is designed to be **fast, responsive, and visually engaging** without relying on heavy frontend frameworks (no React, no jQuery).
 
 **Current Persona:**
-* **Role:** System Architect & Data Engineer 🐧🚀
-* **Focus:** Enterprise Linux (Rocky/Arch), Virtualization (KVM), and Big Data Pipelines (Databricks).
-* **Key Projects:** Enterprise Home Lab, Caelestia Shell, SDN Analysis.
+* **Role:** Software Engineer & System Administrator 🐧🚀
+* **Focus:** Enterprise Linux (Rocky/Arch), Containerization (Docker), and Cross-Platform App Development (Flutter/Dart).
+* **Key Projects:** Abyss Chat (P2P WebRTC), Enterprise Home Lab, Caelestia Arch Linux.
 
 ---
 
@@ -60,7 +60,7 @@ CSS custom variables in the `:root` pseudo-class control the entire aesthetic. W
 ### Key Visual Features
 * **Morphic Neon Hero:** Advanced `backdrop-filter: blur(20px)` panels and animated gradients.
 * **Glassmorphism UI:** Translucent card designs with neon accents.
-* **Dynamic Open Graph Previews:** Automated visual previews for GitHub repos and robust `microlink.io` unfurling for LinkedIn posts.
+* **Dynamic Media Previews:** Automated visual previews for GitHub repos, robust `microlink.io` unfurling for standard links, and **native inline video embeds** for interactive LinkedIn video posts.
 
 ---
 

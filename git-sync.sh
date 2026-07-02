@@ -21,7 +21,8 @@ git add .
 
 # Commit changes
 echo -e "${BLUE}Committing changes...${NC}"
-read -p "Enter commit message: " commit_message
+read -p "Enter commit message [Auto-sync: Update files]: " input_message
+commit_message="${input_message:-Auto-sync: Update files}"
 git commit -m "$commit_message" || echo "No changes to commit"
 
 # Fetch latest changes from remote
