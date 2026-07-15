@@ -317,6 +317,12 @@ window.PORTFOLIO_DATA = {
 
   "experience": [
     {
+      "role": "Flutter Internship Team Lead",
+      "org": "Starvik solution Pvt ltd",
+      "date": "Jun 2026 - Jul 2026",
+      "desc": "Engineered \"Abyss Chat,\" a highly sophisticated cross-platform decentralized P2P messaging and video-calling application using Flutter, WebRTC, mDNS LAN discovery, AES-GCM encryption, and Riverpod. Mentored the team on Flutter fundamentals, guiding them to build and deploy their own independent applications."
+    },
+    {
       "role": "IDC AMCET Joint Secretary",
       "org": "Indian Data Club",
       "date": "Aug 2025 - Present",
