@@ -37,29 +37,26 @@ The portfolio utilizes a multi-page routing structure for optimal SEO and perfor
 
 ## 🎨 Base Color Themes & Design
 
-The site uses a responsive **Glassmorphism** UI pattern with a dynamically toggled dark/light theme engine utilizing `localStorage`.
+The site uses a premium **Claymorphism** UI pattern with a dynamically toggled dark/light theme engine utilizing `localStorage`.
 
 ### Theme Engine Details
-CSS custom variables in the `:root` pseudo-class control the entire aesthetic. We use the **Neon Light Palette by Zedetta**.
+CSS custom variables in the `:root` pseudo-class control the entire aesthetic. We use the **High Gloss Mono** color palette.
 
-**Deep Space Theme (Dark Mode) - Default**
-- **Base Background (`--bg-void`)**: `#0d0010` (Pure deep space black)
-- **Gradient Base (`--bg-surface`)**: `#1a0020` / `#37013a` (Plum)
-- **Primary Accent (`--violet`)**: `#af3dff` (Neon Violet)
-- **Secondary Accent (`--cyan`)**: `#55ffe1` (Electric Cyan)
-- **Highlights (`--pink` & `--green`)**: `#ff3b94`, `#a6fd29`
+**Dark Mode - Default**
+- **Base Background (`--bg-void`)**: `#000000` (Pitch Black)
+- **Gradient Base (`--bg-surface`)**: `#1f1f1f`
 - **Text (`--text-100`)**: `#ffffff` (Pure White)
+- **Hover Shadow (Clay)**: Outer dark drop shadow with a visible white inner glow component.
 
-**Clean Theme (Light Mode)**
-- **Base Background (`--bg-void`)**: `#f8f4ff` (Soft white)
-- **Gradient Base (`--bg-surface`)**: `#e8e0f8`
-- **Primary Accent (`--violet`)**: `#8a22d4` (Royal Purple)
-- **Secondary Accent (`--cyan`)**: `#00bba3` (Dark Teal)
-- **Primary Text (`--text-100`)**: `#1a0030` (Dark purple/charcoal)
+**Light Mode**
+- **Base Background (`--bg-void`)**: `#ffffff` (Pure White)
+- **Gradient Base (`--bg-surface`)**: `#f0f0f0`
+- **Text (`--text-100`)**: `#000000` (Pitch Black)
+- **Hover Shadow (Clay)**: Outer light drop shadow with a visible black outer shadow component.
 
 ### Key Visual Features
-* **Morphic Neon Hero:** Advanced `backdrop-filter: blur(20px)` panels and animated gradients.
-* **Glassmorphism UI:** Translucent card designs with neon accents.
+* **Ambient Parallax Glow:** Massive drifting background spots (up to 600px wide, heavily blurred) that create a premium depth/parallax effect behind all content.
+* **Claymorphism UI:** Minimalist card designs with outline borders that transition to solid fills with dynamic clay hover shadows.
 * **Dynamic Media Previews:** Automated visual previews for GitHub repos, robust `microlink.io` unfurling for standard links, and **native inline video embeds** for interactive LinkedIn video posts.
 
 ---
