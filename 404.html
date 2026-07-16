@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 — Page Not Found | Yuvanesh KS</title>
   <script>
-    (function(){
-      var t=localStorage.getItem('theme')||
-        (window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
-      document.documentElement.setAttribute('data-theme',t);
+    (function () {
+      var t = localStorage.getItem('theme') ||
+        (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
   <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/183628925?v=4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css?v=2.0">
 </head>
+
 <body>
   <div id="page-loader" class="page-loader">
     <div class="spinner">
-      <div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </div>
 
   <!-- Ambient Glow Spots -->
-  <div class="ambient-spots" aria-hidden="true">
+  <div class="ambient-spot" aria-hidden="true">
     <div class="ambient-spot ambient-spot--1"></div>
     <div class="ambient-spot ambient-spot--2"></div>
     <div class="ambient-spot ambient-spot--3"></div>
@@ -39,8 +49,8 @@
   <nav class="nav" id="mainNav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo" aria-label="Home">
-        <img src="https://avatars.githubusercontent.com/u/183628925?v=4"
-             alt="Yuvanesh KS" class="nav__logo-avatar" width="38" height="38">
+        <img src="https://avatars.githubusercontent.com/u/183628925?v=4" alt="Yuvanesh KS" class="nav__logo-avatar"
+          width="38" height="38">
         <span class="nav__logo-text">YUVANESH KS</span>
       </a>
       <ul class="nav__links" role="list">
@@ -51,22 +61,24 @@
       </ul>
       <div class="nav__actions">
         <label class="theme-toggle" title="Toggle light/dark mode">
-          <input class="theme-toggle__checkbox" type="checkbox" id="themeToggle" aria-label="Switch between dark and light theme">
+          <input class="theme-toggle__checkbox" type="checkbox" id="themeToggle"
+            aria-label="Switch between dark and light theme">
           <div class="theme-toggle__container">
             <span class="material-symbols-rounded icon-moon">dark_mode</span>
             <span class="material-symbols-rounded icon-sun">light_mode</span>
             <div class="theme-toggle__circle"></div>
           </div>
         </label>
-        <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
-           class="nav__icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
-           class="nav__icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer"
-           class="nav__icon" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
-        <a href="mailto:yuvaneshkarunakaran@gmail.com" class="nav__icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://g.dev/NorthAbyss" target="_blank" rel="noopener noreferrer"
-           class="nav__icon" aria-label="Google Developer"><i class="fab fa-google"></i></a>
+        <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" class="nav__icon"
+          aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" class="nav__icon"
+          aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer" class="nav__icon"
+          aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+        <a href="mailto:yuvaneshkarunakaran@gmail.com" class="nav__icon" aria-label="Email"><i
+            class="fas fa-envelope"></i></a>
+        <a href="https://g.dev/NorthAbyss" target="_blank" rel="noopener noreferrer" class="nav__icon"
+          aria-label="Google Developer"><i class="fab fa-google"></i></a>
         <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -80,10 +92,14 @@
     <a href="Updates.html" class="nav__mobile-link">Updates</a>
     <a href="Contact.html" class="nav__mobile-link">Contact</a>
     <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
-      <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
-      <a href="mailto:yuvaneshkarunakaran@gmail.com" style="color: var(--text-100); font-size: 1.5rem;" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
+        style="color: var(--text-100); font-size: 1.5rem;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
+        style="color: var(--text-100); font-size: 1.5rem;" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer"
+        style="color: var(--text-100); font-size: 1.5rem;" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      <a href="mailto:yuvaneshkarunakaran@gmail.com" style="color: var(--text-100); font-size: 1.5rem;"
+        aria-label="Email"><i class="fas fa-envelope"></i></a>
     </div>
   </nav>
 
@@ -160,7 +176,7 @@
   <script>
     // Auto redirect after 15s
     var countdown = 15;
-    var timer = setInterval(function() {
+    var timer = setInterval(function () {
       countdown--;
       if (countdown <= 0) {
         clearInterval(timer);
@@ -170,4 +186,5 @@
   </script>
   <script src="script.js"></script>
 </body>
+
 </html>

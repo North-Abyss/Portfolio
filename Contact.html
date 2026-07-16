@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Yuvanesh KS Portfolio</title>
   <script>
-    (function(){
-      var t=localStorage.getItem('theme')||
-        (window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
-      document.documentElement.setAttribute('data-theme',t);
+    (function () {
+      var t = localStorage.getItem('theme') ||
+        (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
-  <meta name="description" content="Get in touch with Yuvanesh KS — open to SRE, DevOps, Flutter, and Software Engineering opportunities.">
+  <meta name="description"
+    content="Get in touch with Yuvanesh KS — open to SRE, DevOps, Flutter, and Software Engineering opportunities.">
   <link rel="canonical" href="https://north-abyss.github.io/Portfolio/Contact.html">
   <meta property="og:title" content="Contact | Yuvanesh KS">
   <meta property="og:image" content="https://north-abyss.github.io/Portfolio/preview.png">
@@ -20,20 +22,29 @@
   <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/183628925?v=4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css?v=2.0">
 </head>
+
 <body>
   <div id="page-loader" class="page-loader">
     <div class="spinner">
-      <div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </div>
 
   <!-- Ambient Glow Spots -->
-  <div class="ambient-spots" aria-hidden="true">
+  <div class="ambient-spot" aria-hidden="true">
     <div class="ambient-spot ambient-spot--1"></div>
     <div class="ambient-spot ambient-spot--2"></div>
     <div class="ambient-spot ambient-spot--3"></div>
@@ -45,8 +56,8 @@
   <nav class="nav" id="mainNav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo" aria-label="Home">
-        <img src="https://avatars.githubusercontent.com/u/183628925?v=4"
-             alt="Yuvanesh KS avatar" class="nav__logo-avatar" width="38" height="38">
+        <img src="https://avatars.githubusercontent.com/u/183628925?v=4" alt="Yuvanesh KS avatar"
+          class="nav__logo-avatar" width="38" height="38">
         <span class="nav__logo-text">YUVANESH KS</span>
       </a>
       <ul class="nav__links" role="list">
@@ -57,31 +68,31 @@
       </ul>
       <div class="nav__actions">
         <label class="theme-toggle" title="Toggle light/dark mode">
-          <input class="theme-toggle__checkbox" type="checkbox" id="themeToggle" aria-label="Switch between dark and light theme">
+          <input class="theme-toggle__checkbox" type="checkbox" id="themeToggle"
+            aria-label="Switch between dark and light theme">
           <div class="theme-toggle__container">
             <span class="material-symbols-rounded icon-moon">dark_mode</span>
             <span class="material-symbols-rounded icon-sun">light_mode</span>
             <div class="theme-toggle__circle"></div>
           </div>
         </label>
-        <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
-           class="nav__icon" aria-label="LinkedIn">
+        <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" class="nav__icon"
+          aria-label="LinkedIn">
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
-           class="nav__icon" aria-label="GitHub">
+        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" class="nav__icon"
+          aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer"
-           class="nav__icon" aria-label="Itch.io">
+        <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer" class="nav__icon"
+          aria-label="Itch.io">
           <i class="fab fa-itch-io"></i>
         </a>
-        <a href="mailto:yuvaneshkarunakaran@gmail.com"
-           class="nav__icon" aria-label="Email">
+        <a href="mailto:yuvaneshkarunakaran@gmail.com" class="nav__icon" aria-label="Email">
           <i class="fas fa-envelope"></i>
         </a>
-        <a href="https://g.dev/NorthAbyss" target="_blank" rel="noopener noreferrer"
-           class="nav__icon" aria-label="Google Developer">
+        <a href="https://g.dev/NorthAbyss" target="_blank" rel="noopener noreferrer" class="nav__icon"
+          aria-label="Google Developer">
           <i class="fab fa-google"></i>
         </a>
         <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
@@ -98,10 +109,14 @@
     <a href="Updates.html" class="nav__mobile-link">Updates</a>
     <a href="Contact.html" class="nav__mobile-link">Contact</a>
     <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
-      <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
-      <a href="mailto:yuvaneshkarunakaran@gmail.com" style="color: var(--text-100); font-size: 1.5rem;" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
+        style="color: var(--text-100); font-size: 1.5rem;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
+        style="color: var(--text-100); font-size: 1.5rem;" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer"
+        style="color: var(--text-100); font-size: 1.5rem;" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      <a href="mailto:yuvaneshkarunakaran@gmail.com" style="color: var(--text-100); font-size: 1.5rem;"
+        aria-label="Email"><i class="fas fa-envelope"></i></a>
     </div>
   </nav>
 
@@ -149,37 +164,41 @@
                   <div class="contact__link-label">Email</div>
                   <div class="contact__link-value">yuvaneshkarunakaran@gmail.com</div>
                 </div>
-                <i class="fas fa-chevron-right" style="margin-left:auto; color:var(--text-muted); font-size:0.75rem;"></i>
+                <i class="fas fa-chevron-right"
+                  style="margin-left:auto; color:var(--text-muted); font-size:0.75rem;"></i>
               </a>
 
               <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
-                 class="contact__link-item">
+                class="contact__link-item">
                 <div class="contact__link-icon"><i class="fab fa-linkedin-in"></i></div>
                 <div class="contact__link-text">
                   <div class="contact__link-label">LinkedIn</div>
                   <div class="contact__link-value">linkedin.com/in/yuvaneshks</div>
                 </div>
-                <i class="fas fa-external-link-alt" style="margin-left:auto; color:var(--text-muted); font-size:0.75rem;"></i>
+                <i class="fas fa-external-link-alt"
+                  style="margin-left:auto; color:var(--text-muted); font-size:0.75rem;"></i>
               </a>
 
               <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
-                 class="contact__link-item">
+                class="contact__link-item">
                 <div class="contact__link-icon"><i class="fab fa-github"></i></div>
                 <div class="contact__link-text">
                   <div class="contact__link-label">GitHub</div>
                   <div class="contact__link-value">github.com/North-Abyss</div>
                 </div>
-                <i class="fas fa-external-link-alt" style="margin-left:auto; color:var(--text-muted); font-size:0.75rem;"></i>
+                <i class="fas fa-external-link-alt"
+                  style="margin-left:auto; color:var(--text-muted); font-size:0.75rem;"></i>
               </a>
 
               <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer"
-                 class="contact__link-item">
+                class="contact__link-item">
                 <div class="contact__link-icon"><span class="material-symbols-rounded">sports_esports</span></div>
                 <div class="contact__link-text">
                   <div class="contact__link-label">Itch.io</div>
                   <div class="contact__link-value">north-abyss.itch.io</div>
                 </div>
-                <i class="fas fa-external-link-alt" style="margin-left:auto; color:var(--text-muted); font-size:0.75rem;"></i>
+                <i class="fas fa-external-link-alt"
+                  style="margin-left:auto; color:var(--text-muted); font-size:0.75rem;"></i>
               </a>
             </div>
 
@@ -204,47 +223,39 @@
           </div>
 
           <!-- Right: Contact Form -->
-          <div class="contact__form fade-up" data-delay="150" style="padding: 2.5rem; background: var(--bg-card); border-radius: var(--radius-xl); border: 1px solid var(--border-card); box-shadow: none; backdrop-filter: blur(12px);">
-            <form
-              action="https://formspree.io/f/YOUR_FORMSPREE_ID"
-              method="POST"
-              id="contactForm"
-              novalidate>
+          <div class="contact__form fade-up" data-delay="150"
+            style="padding: 2.5rem; background: var(--bg-card); border-radius: var(--radius-xl); border: 1px solid var(--border-card); box-shadow: none; backdrop-filter: blur(12px);">
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="contactForm" novalidate>
 
               <div class="form__group">
                 <label class="form__label" for="contactName">Name</label>
-                <input type="text" id="contactName" name="name"
-                  class="form__input" placeholder="Your full name"
+                <input type="text" id="contactName" name="name" class="form__input" placeholder="Your full name"
                   required autocomplete="name">
               </div>
 
               <div class="form__group">
                 <label class="form__label" for="contactEmail">Email</label>
-                <input type="email" id="contactEmail" name="email"
-                  class="form__input" placeholder="you@company.com"
+                <input type="email" id="contactEmail" name="email" class="form__input" placeholder="you@company.com"
                   required autocomplete="email">
               </div>
 
               <div class="form__group">
                 <label class="form__label" for="contactSubject">Subject</label>
-                <input type="text" id="contactSubject" name="subject"
-                  class="form__input"
+                <input type="text" id="contactSubject" name="subject" class="form__input"
                   placeholder="Internship / Collaboration / General">
               </div>
 
               <div class="form__group">
                 <label class="form__label" for="contactMsg">Message</label>
-                <textarea id="contactMsg" name="message"
-                  class="form__textarea"
-                  placeholder="Tell me about the opportunity or project…"
-                  rows="5" required></textarea>
+                <textarea id="contactMsg" name="message" class="form__textarea"
+                  placeholder="Tell me about the opportunity or project…" rows="5" required></textarea>
               </div>
 
               <button type="submit" class="btn btn--primary form__submit" id="submitBtn">
                 <span class="material-symbols-rounded">send</span> Send Message
               </button>
               <p id="formStatus"
-                 style="text-align:center;margin-top:1rem;font-size:0.875rem;color:var(--text-300);display:none;"></p>
+                style="text-align:center;margin-top:1rem;font-size:0.875rem;color:var(--text-300);display:none;"></p>
             </form>
           </div>
 
@@ -272,4 +283,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

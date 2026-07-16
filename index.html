@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,18 @@
 
   <!-- Flash-free theme -->
   <script>
-    (function(){
-      var t=localStorage.getItem('theme')||
-        (window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
-      document.documentElement.setAttribute('data-theme',t);
+    (function () {
+      var t = localStorage.getItem('theme') ||
+        (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
 
   <!-- SEO -->
-  <meta name="description" content="Yuvanesh KS — SRE & Linux Systems Admin, Flutter Developer & Game Dev. B.Tech IT '27 at AMCET. Professional portfolio.">
-  <meta name="keywords" content="Yuvanesh KS, NorthAbyss, SRE, Linux, Flutter, Portfolio, System Administrator, Game Developer, Godot, AMCET">
+  <meta name="description"
+    content="Yuvanesh KS — SRE & Linux Systems Admin, Flutter Developer & Game Dev. B.Tech IT '27 at AMCET. Professional portfolio.">
+  <meta name="keywords"
+    content="Yuvanesh KS, NorthAbyss, SRE, Linux, Flutter, Portfolio, System Administrator, Game Developer, Godot, AMCET">
   <meta name="author" content="Yuvanesh KS">
   <link rel="canonical" href="https://north-abyss.github.io/Portfolio/">
   <meta name="google-site-verification" content="HNZvXfhWbrig6mgzIRp-HQ3sCXLojGQZvWSeu7QEXT4">
@@ -25,7 +28,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://north-abyss.github.io/Portfolio/">
   <meta property="og:title" content="Yuvanesh KS | SRE & Software Developer">
-  <meta property="og:description" content="Site Reliability Engineer, Linux Admin, Flutter Developer. Explore projects, experience and updates.">
+  <meta property="og:description"
+    content="Site Reliability Engineer, Linux Admin, Flutter Developer. Explore projects, experience and updates.">
   <meta property="og:image" content="https://north-abyss.github.io/Portfolio/preview.png">
   <meta property="og:site_name" content="Yuvanesh KS Portfolio">
   <meta name="twitter:card" content="summary_large_image">
@@ -38,8 +42,11 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css?v=2.0">
 
@@ -63,12 +70,17 @@
 <body>
   <div id="page-loader" class="page-loader">
     <div class="spinner">
-      <div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </div>
 
   <!-- Ambient Glow Spots -->
-  <div class="ambient-spots" aria-hidden="true">
+  <div class="ambient-spot" >
     <div class="ambient-spot ambient-spot--1"></div>
     <div class="ambient-spot ambient-spot--2"></div>
     <div class="ambient-spot ambient-spot--3"></div>
@@ -80,8 +92,8 @@
   <nav class="nav" id="mainNav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo" aria-label="Home">
-        <img src="https://avatars.githubusercontent.com/u/183628925?v=4"
-             alt="Yuvanesh KS" class="nav__logo-avatar" width="38" height="38">
+        <img src="https://avatars.githubusercontent.com/u/183628925?v=4" alt="Yuvanesh KS" class="nav__logo-avatar"
+          width="38" height="38">
         <span class="nav__logo-text">YUVANESH KS</span>
       </a>
       <ul class="nav__links" role="list">
@@ -92,22 +104,24 @@
       </ul>
       <div class="nav__actions">
         <label class="theme-toggle" title="Toggle light/dark mode">
-          <input class="theme-toggle__checkbox" type="checkbox" id="themeToggle" aria-label="Switch between dark and light theme">
+          <input class="theme-toggle__checkbox" type="checkbox" id="themeToggle"
+            aria-label="Switch between dark and light theme">
           <div class="theme-toggle__container">
             <span class="material-symbols-rounded icon-moon">dark_mode</span>
             <span class="material-symbols-rounded icon-sun">light_mode</span>
             <div class="theme-toggle__circle"></div>
           </div>
         </label>
-        <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
-           class="nav__icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
-           class="nav__icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer"
-           class="nav__icon" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
-        <a href="mailto:yuvaneshkarunakaran@gmail.com" class="nav__icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://g.dev/NorthAbyss" target="_blank" rel="noopener noreferrer"
-           class="nav__icon" aria-label="Google Developer"><i class="fab fa-google"></i></a>
+        <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" class="nav__icon"
+          aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" class="nav__icon"
+          aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer" class="nav__icon"
+          aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+        <a href="mailto:yuvaneshkarunakaran@gmail.com" class="nav__icon" aria-label="Email"><i
+            class="fas fa-envelope"></i></a>
+        <a href="https://g.dev/NorthAbyss" target="_blank" rel="noopener noreferrer" class="nav__icon"
+          aria-label="Google Developer"><i class="fab fa-google"></i></a>
         <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -121,79 +135,79 @@
     <a href="Updates.html" class="nav__mobile-link">Updates</a>
     <a href="Contact.html" class="nav__mobile-link">Contact</a>
     <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
-      <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
-      <a href="mailto:yuvaneshkarunakaran@gmail.com" style="color: var(--text-100); font-size: 1.5rem;" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
+        style="color: var(--text-100); font-size: 1.5rem;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
+        style="color: var(--text-100); font-size: 1.5rem;" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://north-abyss.itch.io/" target="_blank" rel="noopener noreferrer"
+        style="color: var(--text-100); font-size: 1.5rem;" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      <a href="mailto:yuvaneshkarunakaran@gmail.com" style="color: var(--text-100); font-size: 1.5rem;"
+        aria-label="Email"><i class="fas fa-envelope"></i></a>
     </div>
   </nav>
 
   <main>
 
     <!-- ════════════════════ HERO ════════════════════ -->
-    <section class="hero" id="hero" aria-label="Introduction">
-      <div class="blob blob--1" aria-hidden="true"></div>
-      <div class="blob blob--2" aria-hidden="true"></div>
-      <div class="blob blob--3" aria-hidden="true"></div>
-      
+    <section class="hero" id="hero">
       <div class="container hero__morphic-panel">
         <div class="hero__inner">
 
-        <!-- Left -->
-        <div class="hero__content">
-          <div class="hero__label">
-            <span>Available for Opportunities</span>
+          <!-- Left -->
+          <div class="hero__content">
+            <div class="hero__label">
+              <span>Available for Opportunities</span>
+            </div>
+
+            <h1 class="hero__name">
+              <span class="text-gradient">Yuvanesh KS</span>
+            </h1>
+
+            <p class="hero__roles">
+              <span class="typed-text" id="typedText"></span><span class="cursor" aria-hidden="true"></span>
+            </p>
+
+            <p class="hero__desc">
+              Versatile B.Tech IT student specializing in full-cycle software development.
+              Bridging the gap between scalable Linux infrastructure, AI-integrated backends,
+              and responsive cross-platform mobile apps.
+            </p>
+
+            <div class="hero__cta">
+              <a href="Projects.html" class="btn btn--outline uiverse-btn-glass">
+                <span class="material-symbols-rounded">rocket_launch</span> View My Work
+              </a>
+              <a href="Contact.html" class="btn btn--outline uiverse-btn-glass">
+                <span class="material-symbols-rounded">send</span> Get In Touch
+              </a>
+            </div>
           </div>
 
-          <h1 class="hero__name">
-            <span class="text-gradient">Yuvanesh KS</span>
-          </h1>
+          <!-- Right -->
+          <div class="hero__visual">
+            <div class="hero__avatar-wrap" aria-hidden="true">
+              <div class="hero__avatar-ring"></div>
+              <img src="https://avatars.githubusercontent.com/u/183628925?v=4" alt="Yuvanesh KS" class="hero__avatar"
+                width="240" height="240" loading="eager">
+            </div>
 
-          <p class="hero__roles">
-            <span class="typed-text" id="typedText"></span><span class="cursor" aria-hidden="true"></span>
-          </p>
-
-          <p class="hero__desc">
-            Versatile B.Tech IT student specializing in full-cycle software development.
-            Bridging the gap between scalable Linux infrastructure, AI-integrated backends,
-            and responsive cross-platform mobile apps.
-          </p>
-
-          <div class="hero__cta">
-            <a href="Projects.html" class="btn btn--outline uiverse-btn-glass">
-              <span class="material-symbols-rounded">rocket_launch</span> View My Work
-            </a>
-            <a href="Contact.html" class="btn btn--outline uiverse-btn-glass">
-              <span class="material-symbols-rounded">send</span> Get In Touch
-            </a>
+            <div class="hero__stats" aria-label="Quick stats">
+              <div class="hero__stat fade-up" data-delay="100">
+                <div class="hero__stat-value">25+</div>
+                <div class="hero__stat-label">Flutter Days</div>
+              </div>
+              <div class="hero__stat fade-up" data-delay="200">
+                <div class="hero__stat-value">6+</div>
+                <div class="hero__stat-label">Hackathons</div>
+              </div>
+              <div class="hero__stat fade-up" data-delay="300">
+                <div class="hero__stat-value">8.26</div>
+                <div class="hero__stat-label">CGPA</div>
+              </div>
+            </div>
           </div>
+
         </div>
-
-        <!-- Right -->
-        <div class="hero__visual">
-          <div class="hero__avatar-wrap" aria-hidden="true">
-            <div class="hero__avatar-ring"></div>
-            <img src="https://avatars.githubusercontent.com/u/183628925?v=4"
-                 alt="Yuvanesh KS" class="hero__avatar" width="240" height="240" loading="eager">
-          </div>
-
-          <div class="hero__stats" aria-label="Quick stats">
-            <div class="hero__stat fade-up" data-delay="100">
-              <div class="hero__stat-value">25+</div>
-              <div class="hero__stat-label">Flutter Days</div>
-            </div>
-            <div class="hero__stat fade-up" data-delay="200">
-              <div class="hero__stat-value">6+</div>
-              <div class="hero__stat-label">Hackathons</div>
-            </div>
-            <div class="hero__stat fade-up" data-delay="300">
-              <div class="hero__stat-value">8.26</div>
-              <div class="hero__stat-label">CGPA</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
       </div>
     </section>
 
@@ -202,24 +216,32 @@
     <!-- ════════════════════ ABOUT ════════════════════ -->
     <section class="section" id="about" aria-labelledby="about-heading">
       <div class="container">
-        <div class="section-label"><span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.1em; margin-right: 4px;">person</span> About Me</div>
+        <div class="section-label"><span class="material-symbols-rounded"
+            style="vertical-align: middle; font-size: 1.1em; margin-right: 4px;">person</span> About Me</div>
         <h2 class="section-title" id="about-heading">
           Terminal-Native <span class="accent">Problem Solver</span>
         </h2>
-        <p class="section-subtitle">Building resilient systems, shipping real products, and continuously levelling up.</p>
+        <p class="section-subtitle">Building resilient systems, shipping real products, and continuously levelling up.
+        </p>
 
         <div class="about__grid">
           <div class="about__text fade-up">
-            <p>I'm a <strong>versatile B.Tech IT student</strong> specializing in full-cycle software development. My expertise lies in bridging the gap between scalable <strong>Linux infrastructure</strong>, AI-integrated backends (Python/Flask), and responsive cross-platform mobile applications (Flutter/Dart).</p>
-            <p>Beyond architecture, I have a proven track record of leading technical communities and delivering rapid, production-ready prototypes for fast-paced environments. My game <em>Wave of Fate</em> shipped for GitHub Game Off 2025, and I've architected enterprise-level KVM/QEMU home labs.</p>
-            <p>Currently pursuing B.Tech IT at <strong>AMCET (Anna University)</strong>, CGPA 8.26, while building real-world experience through internships, hackathons, and open-source.</p>
+            <p>I'm a <strong>versatile B.Tech IT student</strong> specializing in full-cycle software development. My
+              expertise lies in bridging the gap between scalable <strong>Linux infrastructure</strong>, AI-integrated
+              backends (Python/Flask), and responsive cross-platform mobile applications (Flutter/Dart).</p>
+            <p>Beyond architecture, I have a proven track record of leading technical communities and delivering rapid,
+              production-ready prototypes for fast-paced environments. My game <em>Wave of Fate</em> shipped for GitHub
+              Game Off 2025, and I've architected enterprise-level KVM/QEMU home labs.</p>
+            <p>Currently pursuing B.Tech IT at <strong>AMCET (Anna University)</strong>, CGPA 8.26, while building
+              real-world experience through internships, hackathons, and open-source.</p>
 
             <div class="about__highlights">
               <div class="highlight-item fade-up" data-delay="100">
                 <div class="highlight-item__icon"><span class="material-symbols-rounded">terminal</span></div>
                 <div>
                   <div class="highlight-item__title">Infrastructure & DevOps</div>
-                  <div class="highlight-item__desc">Linux (Arch, Rocky, Ubuntu) · Docker · Bash Scripting · KVM/QEMU</div>
+                  <div class="highlight-item__desc">Linux (Arch, Rocky, Ubuntu) · Docker · Bash Scripting · KVM/QEMU
+                  </div>
                 </div>
               </div>
 
@@ -227,7 +249,8 @@
                 <div class="highlight-item__icon"><span class="material-symbols-rounded">dns</span></div>
                 <div>
                   <div class="highlight-item__title">Backend & Cloud</div>
-                  <div class="highlight-item__desc">Python, Flask · Oracle Cloud (OCI) · Firebase · REST APIs · Google Gemini</div>
+                  <div class="highlight-item__desc">Python, Flask · Oracle Cloud (OCI) · Firebase · REST APIs · Google
+                    Gemini</div>
                 </div>
               </div>
 
@@ -290,7 +313,7 @@
             </div>
             <div style="margin-top: 2rem;">
               <a href="mailto:yuvaneshkarunakaran@gmail.com?subject=Resume%20Request&body=Hi%20Yuvanesh%2C%0A%0ACould%20you%20share%20your%20resume%3F"
-                 class="btn btn--outline uiverse-btn-glass">
+                class="btn btn--outline uiverse-btn-glass">
                 <span class="material-symbols-rounded">description</span> Request Resume
               </a>
             </div>
@@ -304,7 +327,8 @@
     <!-- ════════════════════ EXPERIENCE ════════════════════ -->
     <section class="section" id="experience" aria-labelledby="exp-heading">
       <div class="container">
-        <div class="section-label"><span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.1em; margin-right: 4px;">work</span> Experience</div>
+        <div class="section-label"><span class="material-symbols-rounded"
+            style="vertical-align: middle; font-size: 1.1em; margin-right: 4px;">work</span> Experience</div>
         <h2 class="section-title" id="exp-heading">
           Roles & <span class="accent">Journey</span>
         </h2>
@@ -320,7 +344,8 @@
     <!-- ════════════════════ PROJECTS ════════════════════ -->
     <section class="section" id="projects" aria-labelledby="proj-heading">
       <div class="container">
-        <div class="section-label"><span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.1em; margin-right: 4px;">code</span> Projects</div>
+        <div class="section-label"><span class="material-symbols-rounded"
+            style="vertical-align: middle; font-size: 1.1em; margin-right: 4px;">code</span> Projects</div>
         <h2 class="section-title" id="proj-heading">
           Featured <span class="accent">Work</span>
         </h2>
@@ -329,8 +354,8 @@
         <div class="projects__grid">
 
           <article class="project-card fade-up">
-            <img src="https://opengraph.githubassets.com/1/North-Abyss/abyss_chat"
-                 alt="Abyss Chat" class="project-card__img" loading="lazy" width="600" height="180">
+            <img src="https://opengraph.githubassets.com/1/North-Abyss/abyss_chat" alt="Abyss Chat"
+              class="project-card__img" loading="lazy" width="600" height="180">
             <div class="project-card__body">
               <div class="project-card__tags">
                 <span class="project-tag">Flutter</span>
@@ -339,11 +364,12 @@
               </div>
               <h3 class="project-card__title">Abyss Chat 💬</h3>
               <p class="project-card__desc">
-                A cross-platform WhatsApp-style clone using WebRTC and mDNS to connect peers without a central server. Features End-to-End Encryption, Group Calls, and Material 3 design.
+                A cross-platform WhatsApp-style clone using WebRTC and mDNS to connect peers without a central server.
+                Features End-to-End Encryption, Group Calls, and Material 3 design.
               </p>
               <div class="project-card__footer">
-                <a href="https://github.com/North-Abyss/abyss_chat"
-                   target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
+                <a href="https://github.com/North-Abyss/abyss_chat" target="_blank" rel="noopener noreferrer"
+                  class="btn btn--outline btn--sm">
                   <i class="fab fa-github"></i> Source Code
                 </a>
                 <span style="font-size:0.78rem;color:var(--text-muted);">2026</span>
@@ -352,8 +378,8 @@
           </article>
 
           <article class="project-card fade-up">
-            <img src="https://opengraph.githubassets.com/1/North-Abyss/wave-of-fate"
-                 alt="Wave of Fate" class="project-card__img" loading="lazy" width="600" height="180">
+            <img src="https://opengraph.githubassets.com/1/North-Abyss/wave-of-fate" alt="Wave of Fate"
+              class="project-card__img" loading="lazy" width="600" height="180">
             <div class="project-card__body">
               <div class="project-card__tags">
                 <span class="project-tag">Godot Engine</span>
@@ -366,8 +392,8 @@
                 full web-export. Complete product shipped solo under competition deadline.
               </p>
               <div class="project-card__footer">
-                <a href="https://github.com/North-Abyss/wave-of-fate"
-                   target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
+                <a href="https://github.com/North-Abyss/wave-of-fate" target="_blank" rel="noopener noreferrer"
+                  class="btn btn--outline btn--sm">
                   <i class="fab fa-github"></i> Source Code
                 </a>
                 <span style="font-size:0.78rem;color:var(--text-muted);">Nov 2025</span>
@@ -376,8 +402,8 @@
           </article>
 
           <article class="project-card fade-up" data-delay="100">
-            <img src="https://opengraph.githubassets.com/1/North-Abyss/Trackify-Flutter"
-                 alt="Trackify Flutter app" class="project-card__img" loading="lazy" width="600" height="180">
+            <img src="https://opengraph.githubassets.com/1/North-Abyss/Trackify-Flutter" alt="Trackify Flutter app"
+              class="project-card__img" loading="lazy" width="600" height="180">
             <div class="project-card__body">
               <div class="project-card__tags">
                 <span class="project-tag">Flutter</span>
@@ -391,7 +417,7 @@
               </p>
               <div class="project-card__footer">
                 <a href="https://github.com/North-Abyss/Trackify-Flutter" target="_blank" rel="noopener noreferrer"
-                   class="btn btn--outline btn--sm">
+                  class="btn btn--outline btn--sm">
                   <i class="fab fa-github"></i> Source Code
                 </a>
                 <span style="font-size:0.78rem;color:var(--text-muted);">2026</span>
@@ -400,8 +426,9 @@
           </article>
 
           <article class="project-card fade-up" data-delay="200">
-            <img src="https://opengraph.githubassets.com/1/North-Abyss/AI-Sugarcane-Disease-Ring-Spot-Yellow-Leaf-Prediction"
-                 alt="AI Sugarcane" class="project-card__img" loading="lazy" width="600" height="180">
+            <img
+              src="https://opengraph.githubassets.com/1/North-Abyss/AI-Sugarcane-Disease-Ring-Spot-Yellow-Leaf-Prediction"
+              alt="AI Sugarcane" class="project-card__img" loading="lazy" width="600" height="180">
             <div class="project-card__body">
               <div class="project-card__tags">
                 <span class="project-tag">YOLOv8</span>
@@ -414,8 +441,8 @@
                 Streamlit web UI for upload-based inference. Demonstrated at Agrithon 2.0, VIT.
               </p>
               <div class="project-card__footer">
-                <a href="https://github.com/North-Abyss/AI-Sugarcane-Disease-Ring-Spot-Yellow-Leaf-Prediction" target="_blank" rel="noopener noreferrer"
-                   class="btn btn--outline btn--sm">
+                <a href="https://github.com/North-Abyss/AI-Sugarcane-Disease-Ring-Spot-Yellow-Leaf-Prediction"
+                  target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
                   <i class="fab fa-github"></i> Source Code
                 </a>
                 <span style="font-size:0.78rem;color:var(--text-muted);">Aug 2025</span>
@@ -427,7 +454,8 @@
 
         <div style="text-align:center;margin-top:var(--space-xl);">
           <a href="Projects.html" class="btn btn--ghost">
-            View All Projects <span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">arrow_forward</span>
+            View All Projects <span class="material-symbols-rounded"
+              style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">arrow_forward</span>
           </a>
         </div>
       </div>
@@ -438,7 +466,8 @@
     <!-- ════════════════════ CERTIFICATIONS ════════════════════ -->
     <section class="section" id="certifications" aria-labelledby="cert-heading">
       <div class="container">
-        <div class="section-label"><span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.1em; margin-right: 4px;">emoji_events</span> Recognition</div>
+        <div class="section-label"><span class="material-symbols-rounded"
+            style="vertical-align: middle; font-size: 1.1em; margin-right: 4px;">emoji_events</span> Recognition</div>
         <h2 class="section-title" id="cert-heading">
           Certifications & <span class="accent">Achievements</span>
         </h2>
@@ -454,7 +483,8 @@
     <!-- ════════════════════ UPDATES / LINKEDIN ════════════════════ -->
     <section class="section" id="updates" aria-labelledby="upd-heading">
       <div class="container">
-        <div class="section-label"><span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.1em; margin-right: 4px;">article</span> Latest Updates</div>
+        <div class="section-label"><span class="material-symbols-rounded"
+            style="vertical-align: middle; font-size: 1.1em; margin-right: 4px;">article</span> Latest Updates</div>
         <h2 class="section-title" id="upd-heading">
           What I've Been <span class="accent">Shipping</span>
         </h2>
@@ -464,8 +494,8 @@
 
           <article class="update-card fade-up">
             <div class="update-card__header">
-              <img src="https://avatars.githubusercontent.com/u/183628925?v=4"
-                   alt="Yuvanesh KS" class="update-card__avatar" width="44" height="44">
+              <img src="https://avatars.githubusercontent.com/u/183628925?v=4" alt="Yuvanesh KS"
+                class="update-card__avatar" width="44" height="44">
               <div>
                 <div class="update-card__name">Yuvanesh KS</div>
                 <div class="update-card__meta">Recently · System Architecture</div>
@@ -474,26 +504,33 @@
             </div>
             <div class="update-card__body">
               <p class="update-card__text">
-                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">hub</span> Abyss Chat: Flutter WebRTC System Architecture</strong><br>
-                Here is the source code : https://github.com/North-Abyss/abyss_chat and the live web build : https://north-abyss.github.io/abyss_chat
+                <strong><span class="material-symbols-rounded"
+                    style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">hub</span> Abyss Chat:
+                  Flutter WebRTC System Architecture</strong><br>
+                Here is the source code : https://github.com/North-Abyss/abyss_chat and the live web build :
+                https://north-abyss.github.io/abyss_chat
               </p>
 
-            <div style="margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); background: var(--bg-surface);">
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7477772650996490240?compact=1" height="399" style="width: 100%; border: none; display: block;" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-            </div>
+              <div
+                style="margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); background: var(--bg-surface);">
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7477772650996490240?compact=1"
+                  height="399" style="width: 100%; border: none; display: block;" frameborder="0" allowfullscreen=""
+                  title="Embedded post"></iframe>
+              </div>
             </div>
             <div class="update-card__footer">
               <a href="https://www.linkedin.com/posts/yuvaneshks_flutter-webrtc-systemarchitecture-ugcPost-7477772650996490240-NPMW"
-                 target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">
-                Read on LinkedIn <span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">open_in_new</span>
+                target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">
+                Read on LinkedIn <span class="material-symbols-rounded"
+                  style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">open_in_new</span>
               </a>
             </div>
           </article>
 
           <article class="update-card fade-up" data-delay="100">
             <div class="update-card__header">
-              <img src="https://avatars.githubusercontent.com/u/183628925?v=4"
-                   alt="Yuvanesh KS" class="update-card__avatar" width="44" height="44">
+              <img src="https://avatars.githubusercontent.com/u/183628925?v=4" alt="Yuvanesh KS"
+                class="update-card__avatar" width="44" height="44">
               <div>
                 <div class="update-card__name">Yuvanesh KS</div>
                 <div class="update-card__meta">Recently · #100DaysOfFlutter</div>
@@ -502,33 +539,43 @@
             </div>
             <div class="update-card__body">
               <p class="update-card__text">
-                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">smartphone</span> Day 35 of #100DaysOfFlutter!</strong><br>
+                <strong><span class="material-symbols-rounded"
+                    style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">smartphone</span> Day 35
+                  of #100DaysOfFlutter!</strong><br>
                 Continuing the journey deep into Flutter and Dart. Cross-platform apps with seamless UIs
                 and Riverpod state management. Every day ships something new.
               </p>
 
-            <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7466138185643859968" target="_blank" rel="noopener noreferrer" class="social-link-preview" style="display: block; margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); text-decoration: none; transition: transform 0.3s; background: var(--bg-surface);">
-                <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn%253Ali%253Ashare%253A7466138185643859968&embed=image.url" alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315" 
-                     onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/183628925?v=4';" 
-                     style="width: 100%; height: auto; aspect-ratio: 1200/630; object-fit: cover; display: block; border-bottom: 1px solid var(--border-subtle);">
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7466138185643859968" target="_blank"
+                rel="noopener noreferrer" class="social-link-preview"
+                style="display: block; margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); text-decoration: none; transition: transform 0.3s; background: var(--bg-surface);">
+                <img
+                  src="https://api.microlink.io/?url=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn%253Ali%253Ashare%253A7466138185643859968&embed=image.url"
+                  alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315"
+                  onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/183628925?v=4';"
+                  style="width: 100%; height: auto; aspect-ratio: 1200/630; object-fit: cover; display: block; border-bottom: 1px solid var(--border-subtle);">
                 <div class="social-preview-content" style="padding: 12px;">
-                    <small class="social-preview-domain" style="font-size: 0.75rem; color: var(--text-300); text-transform: lowercase; display: block; margin-bottom: 4px;">linkedin.com</small>
-                    <h4 class="social-preview-title" style="font-size: 0.95rem; font-weight: 600; color: var(--text-100); margin: 0;">View on LinkedIn</h4>
+                  <small class="social-preview-domain"
+                    style="font-size: 0.75rem; color: var(--text-300); text-transform: lowercase; display: block; margin-bottom: 4px;">linkedin.com</small>
+                  <h4 class="social-preview-title"
+                    style="font-size: 0.95rem; font-weight: 600; color: var(--text-100); margin: 0;">View on LinkedIn
+                  </h4>
                 </div>
-            </a>
+              </a>
             </div>
             <div class="update-card__footer">
-              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7466138185643859968"
-                 target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">
-                Read on LinkedIn <span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">open_in_new</span>
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7466138185643859968" target="_blank"
+                rel="noopener noreferrer" class="btn btn--ghost btn--sm">
+                Read on LinkedIn <span class="material-symbols-rounded"
+                  style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">open_in_new</span>
               </a>
             </div>
           </article>
 
           <article class="update-card fade-up" data-delay="100">
             <div class="update-card__header">
-              <img src="https://avatars.githubusercontent.com/u/183628925?v=4"
-                   alt="Yuvanesh KS" class="update-card__avatar" width="44" height="44">
+              <img src="https://avatars.githubusercontent.com/u/183628925?v=4" alt="Yuvanesh KS"
+                class="update-card__avatar" width="44" height="44">
               <div>
                 <div class="update-card__name">Yuvanesh KS</div>
                 <div class="update-card__meta">IDC AMCET · Event Coordination</div>
@@ -537,33 +584,43 @@
             </div>
             <div class="update-card__body">
               <p class="update-card__text">
-                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">celebration</span> Joint Secretary | IDC AMCET Chapter</strong><br>
+                <strong><span class="material-symbols-rounded"
+                    style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">celebration</span> Joint
+                  Secretary | IDC AMCET Chapter</strong><br>
                 Spearheading a pan-India student-driven community focused on Data Science and AI.
                 Coordinating technical workshops and coding competitions to foster peer learning.
               </p>
 
-            <a href="https://www.linkedin.com/posts/yuvaneshks_idcnexus2026-idcnexus26-amcet-activity-7429195425506779136-G9ll" target="_blank" rel="noopener noreferrer" class="social-link-preview" style="display: block; margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); text-decoration: none; transition: transform 0.3s; background: var(--bg-surface);">
-                <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.linkedin.com%2Fposts%2Fyuvaneshks_idcnexus2026-idcnexus26-amcet-activity-7429195425506779136-G9ll&embed=image.url" alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315" 
-                     onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/183628925?v=4';" 
-                     style="width: 100%; height: auto; aspect-ratio: 1200/630; object-fit: cover; display: block; border-bottom: 1px solid var(--border-subtle);">
+              <a href="https://www.linkedin.com/posts/yuvaneshks_idcnexus2026-idcnexus26-amcet-activity-7429195425506779136-G9ll"
+                target="_blank" rel="noopener noreferrer" class="social-link-preview"
+                style="display: block; margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); text-decoration: none; transition: transform 0.3s; background: var(--bg-surface);">
+                <img
+                  src="https://api.microlink.io/?url=https%3A%2F%2Fwww.linkedin.com%2Fposts%2Fyuvaneshks_idcnexus2026-idcnexus26-amcet-activity-7429195425506779136-G9ll&embed=image.url"
+                  alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315"
+                  onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/183628925?v=4';"
+                  style="width: 100%; height: auto; aspect-ratio: 1200/630; object-fit: cover; display: block; border-bottom: 1px solid var(--border-subtle);">
                 <div class="social-preview-content" style="padding: 12px;">
-                    <small class="social-preview-domain" style="font-size: 0.75rem; color: var(--text-300); text-transform: lowercase; display: block; margin-bottom: 4px;">linkedin.com</small>
-                    <h4 class="social-preview-title" style="font-size: 0.95rem; font-weight: 600; color: var(--text-100); margin: 0;">View on LinkedIn</h4>
+                  <small class="social-preview-domain"
+                    style="font-size: 0.75rem; color: var(--text-300); text-transform: lowercase; display: block; margin-bottom: 4px;">linkedin.com</small>
+                  <h4 class="social-preview-title"
+                    style="font-size: 0.95rem; font-weight: 600; color: var(--text-100); margin: 0;">View on LinkedIn
+                  </h4>
                 </div>
-            </a>
+              </a>
             </div>
             <div class="update-card__footer">
               <a href="https://www.linkedin.com/posts/yuvaneshks_idcnexus2026-idcnexus26-amcet-activity-7429195425506779136-G9ll"
-                 target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">
-                Read on LinkedIn <span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">open_in_new</span>
+                target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">
+                Read on LinkedIn <span class="material-symbols-rounded"
+                  style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">open_in_new</span>
               </a>
             </div>
           </article>
 
           <article class="update-card fade-up" data-delay="200">
             <div class="update-card__header">
-              <img src="https://avatars.githubusercontent.com/u/183628925?v=4"
-                   alt="Yuvanesh KS" class="update-card__avatar" width="44" height="44">
+              <img src="https://avatars.githubusercontent.com/u/183628925?v=4" alt="Yuvanesh KS"
+                class="update-card__avatar" width="44" height="44">
               <div>
                 <div class="update-card__name">Yuvanesh KS</div>
                 <div class="update-card__meta">Linux · SysAdmin</div>
@@ -572,27 +629,33 @@
             </div>
             <div class="update-card__body">
               <p class="update-card__text">
-                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">laptop_windows</span> Turning a "Potato" Laptop into a Linux Powerhouse</strong><br>
+                <strong><span class="material-symbols-rounded"
+                    style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">laptop_windows</span>
+                  Turning a "Potato" Laptop into a Linux Powerhouse</strong><br>
                 Meet <em>Caelestia</em> — my custom Arch Linux on a Lenovo E41-25.
                 Idle RAM &lt; 900MB. Terminal-native. They said it can't be done.
               </p>
 
-            <div style="margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); background: var(--bg-surface);">
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7411089253058899969?compact=1" height="399" style="width: 100%; border: none; display: block;" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-            </div>
+              <div
+                style="margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); background: var(--bg-surface);">
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7411089253058899969?compact=1"
+                  height="399" style="width: 100%; border: none; display: block;" frameborder="0" allowfullscreen=""
+                  title="Embedded post"></iframe>
+              </div>
             </div>
             <div class="update-card__footer">
               <a href="https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-activity-7411089253058899969-WC6j"
-                 target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">
-                Read on LinkedIn <span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">open_in_new</span>
+                target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">
+                Read on LinkedIn <span class="material-symbols-rounded"
+                  style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">open_in_new</span>
               </a>
             </div>
           </article>
 
           <article class="update-card fade-up" data-delay="300">
-        <div class="update-card__header">
-              <img src="https://avatars.githubusercontent.com/u/183628925?v=4"
-                   alt="Yuvanesh KS" class="update-card__avatar" width="44" height="44">
+            <div class="update-card__header">
+              <img src="https://avatars.githubusercontent.com/u/183628925?v=4" alt="Yuvanesh KS"
+                class="update-card__avatar" width="44" height="44">
               <div>
                 <div class="update-card__name">Yuvanesh KS</div>
                 <div class="update-card__meta">1M1B · AICTE · Salesforce</div>
@@ -601,25 +664,35 @@
             </div>
             <div class="update-card__body">
               <p class="update-card__text">
-                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">eco</span> Green & Tech Intern | 1M1B Foundation</strong><br>
+                <strong><span class="material-symbols-rounded"
+                    style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">eco</span> Green & Tech
+                  Intern | 1M1B Foundation</strong><br>
                 Selected for Batch 5 in collaboration with AICTE and Salesforce. Developed sustainability-driven
                 project prototypes using Python to analyze environmental impact data.
               </p>
 
-            <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7396879722007371776" target="_blank" rel="noopener noreferrer" class="social-link-preview" style="display: block; margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); text-decoration: none; transition: transform 0.3s; background: var(--bg-surface);">
-                <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn%253Ali%253AugcPost%253A7396879722007371776&embed=image.url" alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315" 
-                     onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/183628925?v=4';" 
-                     style="width: 100%; height: auto; aspect-ratio: 1200/630; object-fit: cover; display: block; border-bottom: 1px solid var(--border-subtle);">
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7396879722007371776" target="_blank"
+                rel="noopener noreferrer" class="social-link-preview"
+                style="display: block; margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); text-decoration: none; transition: transform 0.3s; background: var(--bg-surface);">
+                <img
+                  src="https://api.microlink.io/?url=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn%253Ali%253AugcPost%253A7396879722007371776&embed=image.url"
+                  alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315"
+                  onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/183628925?v=4';"
+                  style="width: 100%; height: auto; aspect-ratio: 1200/630; object-fit: cover; display: block; border-bottom: 1px solid var(--border-subtle);">
                 <div class="social-preview-content" style="padding: 12px;">
-                    <small class="social-preview-domain" style="font-size: 0.75rem; color: var(--text-300); text-transform: lowercase; display: block; margin-bottom: 4px;">linkedin.com</small>
-                    <h4 class="social-preview-title" style="font-size: 0.95rem; font-weight: 600; color: var(--text-100); margin: 0;">View on LinkedIn</h4>
+                  <small class="social-preview-domain"
+                    style="font-size: 0.75rem; color: var(--text-300); text-transform: lowercase; display: block; margin-bottom: 4px;">linkedin.com</small>
+                  <h4 class="social-preview-title"
+                    style="font-size: 0.95rem; font-weight: 600; color: var(--text-100); margin: 0;">View on LinkedIn
+                  </h4>
                 </div>
-            </a>
+              </a>
             </div>
             <div class="update-card__footer">
-              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7396879722007371776"
-                 target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">
-                Read on LinkedIn <span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">open_in_new</span>
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7396879722007371776" target="_blank"
+                rel="noopener noreferrer" class="btn btn--ghost btn--sm">
+                Read on LinkedIn <span class="material-symbols-rounded"
+                  style="vertical-align: middle; font-size: 1.1em; margin-left: 4px;">open_in_new</span>
               </a>
             </div>
           </article>
@@ -628,7 +701,8 @@
 
         <div style="text-align:center;margin-top:var(--space-xl);">
           <a href="Updates.html" class="btn btn--ghost">
-            See All Updates <span class="material-symbols-rounded" style="vertical-align: middle; font-size: 1.2em; margin-left: 4px;">arrow_forward</span>
+            See All Updates <span class="material-symbols-rounded"
+              style="vertical-align: middle; font-size: 1.2em; margin-left: 4px;">arrow_forward</span>
           </a>
         </div>
       </div>
@@ -657,4 +731,5 @@
   <script src="_data/data.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
