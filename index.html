@@ -67,6 +67,15 @@
     </div>
   </div>
 
+  <!-- Ambient Glow Spots -->
+  <div class="ambient-spots" aria-hidden="true">
+    <div class="ambient-spot ambient-spot--1"></div>
+    <div class="ambient-spot ambient-spot--2"></div>
+    <div class="ambient-spot ambient-spot--3"></div>
+    <div class="ambient-spot ambient-spot--4"></div>
+    <div class="ambient-spot ambient-spot--5"></div>
+  </div>
+
   <!-- ════════════════════ NAV ════════════════════ -->
   <nav class="nav" id="mainNav">
     <div class="nav__inner">
@@ -82,39 +91,14 @@
         <li><a href="Contact.html" class="nav__link">Contact</a></li>
       </ul>
       <div class="nav__actions">
-        <label class="bb8-toggle" title="Toggle light/dark mode">
-  <input class="bb8-toggle__checkbox" type="checkbox" id="themeToggle" aria-label="Switch between dark and light theme">
-  <div class="bb8-toggle__container">
-    <div class="bb8-toggle__scenery">
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="tatto-1"></div>
-      <div class="tatto-2"></div>
-      <div class="gomrassen"></div>
-      <div class="hermes"></div>
-      <div class="chenini"></div>
-      <div class="bb8-toggle__cloud"></div>
-      <div class="bb8-toggle__cloud"></div>
-      <div class="bb8-toggle__cloud"></div>
-    </div>
-    <div class="bb8">
-      <div class="bb8__head-container">
-        <div class="bb8__antenna"></div>
-        <div class="bb8__antenna"></div>
-        <div class="bb8__head"></div>
-      </div>
-      <div class="bb8__body"></div>
-    </div>
-    <div class="artificial__hidden">
-      <div class="bb8__shadow"></div>
-    </div>
-  </div>
-</label>
+        <label class="theme-toggle" title="Toggle light/dark mode">
+          <input class="theme-toggle__checkbox" type="checkbox" id="themeToggle" aria-label="Switch between dark and light theme">
+          <div class="theme-toggle__container">
+            <span class="material-symbols-rounded icon-moon">dark_mode</span>
+            <span class="material-symbols-rounded icon-sun">light_mode</span>
+            <div class="theme-toggle__circle"></div>
+          </div>
+        </label>
         <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
            class="nav__icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer"
@@ -306,8 +290,8 @@
             </div>
             <div style="margin-top: 2rem;">
               <a href="mailto:yuvaneshkarunakaran@gmail.com?subject=Resume%20Request&body=Hi%20Yuvanesh%2C%0A%0ACould%20you%20share%20your%20resume%3F"
-                 class="btn btn--primary">
-                <span class="material-symbols-rounded" style="vertical-align: middle; margin-right: 4px;">description</span> Request Resume
+                 class="btn btn--outline uiverse-btn-glass">
+                <span class="material-symbols-rounded">description</span> Request Resume
               </a>
             </div>
           </div>
@@ -490,7 +474,7 @@
             </div>
             <div class="update-card__body">
               <p class="update-card__text">
-                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--violet); margin-right: 4px;">hub</span> Abyss Chat: Flutter WebRTC System Architecture</strong><br>
+                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">hub</span> Abyss Chat: Flutter WebRTC System Architecture</strong><br>
                 Here is the source code : https://github.com/North-Abyss/abyss_chat and the live web build : https://north-abyss.github.io/abyss_chat
               </p>
 
@@ -518,7 +502,7 @@
             </div>
             <div class="update-card__body">
               <p class="update-card__text">
-                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--violet); margin-right: 4px;">smartphone</span> Day 35 of #100DaysOfFlutter!</strong><br>
+                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">smartphone</span> Day 35 of #100DaysOfFlutter!</strong><br>
                 Continuing the journey deep into Flutter and Dart. Cross-platform apps with seamless UIs
                 and Riverpod state management. Every day ships something new.
               </p>
@@ -553,7 +537,7 @@
             </div>
             <div class="update-card__body">
               <p class="update-card__text">
-                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--violet); margin-right: 4px;">celebration</span> Joint Secretary | IDC AMCET Chapter</strong><br>
+                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">celebration</span> Joint Secretary | IDC AMCET Chapter</strong><br>
                 Spearheading a pan-India student-driven community focused on Data Science and AI.
                 Coordinating technical workshops and coding competitions to foster peer learning.
               </p>
@@ -588,7 +572,7 @@
             </div>
             <div class="update-card__body">
               <p class="update-card__text">
-                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--violet); margin-right: 4px;">laptop_windows</span> Turning a "Potato" Laptop into a Linux Powerhouse</strong><br>
+                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">laptop_windows</span> Turning a "Potato" Laptop into a Linux Powerhouse</strong><br>
                 Meet <em>Caelestia</em> — my custom Arch Linux on a Lenovo E41-25.
                 Idle RAM &lt; 900MB. Terminal-native. They said it can't be done.
               </p>
@@ -617,7 +601,7 @@
             </div>
             <div class="update-card__body">
               <p class="update-card__text">
-                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--violet); margin-right: 4px;">eco</span> Green & Tech Intern | 1M1B Foundation</strong><br>
+                <strong><span class="material-symbols-rounded" style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">eco</span> Green & Tech Intern | 1M1B Foundation</strong><br>
                 Selected for Batch 5 in collaboration with AICTE and Salesforce. Developed sustainability-driven
                 project prototypes using Python to analyze environmental impact data.
               </p>

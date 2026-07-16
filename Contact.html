@@ -32,6 +32,15 @@
     </div>
   </div>
 
+  <!-- Ambient Glow Spots -->
+  <div class="ambient-spots" aria-hidden="true">
+    <div class="ambient-spot ambient-spot--1"></div>
+    <div class="ambient-spot ambient-spot--2"></div>
+    <div class="ambient-spot ambient-spot--3"></div>
+    <div class="ambient-spot ambient-spot--4"></div>
+    <div class="ambient-spot ambient-spot--5"></div>
+  </div>
+
   <!-- ═══════════════════════════ NAV ═══════════════════════════ -->
   <nav class="nav" id="mainNav">
     <div class="nav__inner">
@@ -47,39 +56,14 @@
         <li><a href="Contact.html" class="nav__link active">Contact</a></li>
       </ul>
       <div class="nav__actions">
-        <label class="bb8-toggle" title="Toggle light/dark mode">
-  <input class="bb8-toggle__checkbox" type="checkbox" id="themeToggle" aria-label="Switch between dark and light theme">
-  <div class="bb8-toggle__container">
-    <div class="bb8-toggle__scenery">
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="tatto-1"></div>
-      <div class="tatto-2"></div>
-      <div class="gomrassen"></div>
-      <div class="hermes"></div>
-      <div class="chenini"></div>
-      <div class="bb8-toggle__cloud"></div>
-      <div class="bb8-toggle__cloud"></div>
-      <div class="bb8-toggle__cloud"></div>
-    </div>
-    <div class="bb8">
-      <div class="bb8__head-container">
-        <div class="bb8__antenna"></div>
-        <div class="bb8__antenna"></div>
-        <div class="bb8__head"></div>
-      </div>
-      <div class="bb8__body"></div>
-    </div>
-    <div class="artificial__hidden">
-      <div class="bb8__shadow"></div>
-    </div>
-  </div>
-</label>
+        <label class="theme-toggle" title="Toggle light/dark mode">
+          <input class="theme-toggle__checkbox" type="checkbox" id="themeToggle" aria-label="Switch between dark and light theme">
+          <div class="theme-toggle__container">
+            <span class="material-symbols-rounded icon-moon">dark_mode</span>
+            <span class="material-symbols-rounded icon-sun">light_mode</span>
+            <div class="theme-toggle__circle"></div>
+          </div>
+        </label>
         <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer"
            class="nav__icon" aria-label="LinkedIn">
           <i class="fab fa-linkedin-in"></i>
@@ -127,9 +111,9 @@
     <section class="page-hero">
       <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;" aria-hidden="true">
         <div style="position:absolute;top:-120px;right:-100px;width:500px;height:500px;
-             background:var(--cyan);border-radius:50%;filter:blur(120px);opacity:0.10;"></div>
+             background:var(--text-100);border-radius:50%;filter:blur(120px);opacity:0.04;"></div>
         <div style="position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;
-             background:var(--violet);border-radius:50%;filter:blur(100px);opacity:0.12;"></div>
+             background:var(--text-100);border-radius:50%;filter:blur(100px);opacity:0.03;"></div>
       </div>
       <div class="page-hero__inner container">
         <div class="section-label" style="display:inline-flex; margin:0 auto var(--space-md);">
@@ -205,22 +189,22 @@
               display: inline-flex;
               align-items: center;
               gap: var(--space-sm);
-              background: rgba(var(--green-rgb), 0.08);
-              border: 1px solid rgba(var(--green-rgb), 0.3);
+              background: rgba(var(--theme-color-rgb), 0.05);
+              border: 1px solid var(--border-card);
               border-radius: var(--radius-full);
               padding: 0.6rem 1.2rem;
               font-size: 0.85rem;
-              color: var(--green);
+              color: var(--text-100);
               font-weight: 600;
             ">
-              <span style="width:8px;height:8px;background:var(--green);border-radius:50%;
-                box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite;"></span>
+              <span style="width:8px;height:8px;background:var(--text-100);border-radius:50%;
+                box-shadow:none;animation:pulse 2s ease-in-out infinite;"></span>
               Available for Opportunities
             </div>
           </div>
 
           <!-- Right: Contact Form -->
-          <div class="contact__form fade-up" data-delay="150" style="padding: 2.5rem; background: var(--bg-card); border-radius: var(--radius-xl); border: 1px solid rgba(var(--theme-color-rgb), 0.4); box-shadow: 0 10px 40px rgba(var(--theme-color-rgb), 0.15), inset 0 0 30px rgba(var(--theme-color-rgb), 0.05); backdrop-filter: blur(12px);">
+          <div class="contact__form fade-up" data-delay="150" style="padding: 2.5rem; background: var(--bg-card); border-radius: var(--radius-xl); border: 1px solid var(--border-card); box-shadow: none; backdrop-filter: blur(12px);">
             <form
               action="https://formspree.io/f/YOUR_FORMSPREE_ID"
               method="POST"
@@ -256,11 +240,11 @@
                   rows="5" required></textarea>
               </div>
 
-              <button type="submit" class="btn form__submit" id="submitBtn" style="background: var(--grad-theme); color: #fff; border: none; box-shadow: 0 0 20px rgba(var(--theme-color-rgb), 0.5);">
-                <span class="material-symbols-rounded" style="vertical-align: middle; margin-right: 4px;">send</span> Send Message
+              <button type="submit" class="btn btn--primary form__submit" id="submitBtn">
+                <span class="material-symbols-rounded">send</span> Send Message
               </button>
               <p id="formStatus"
-                 style="text-align:center;margin-top:1rem;font-size:0.875rem;color:var(--cyan);display:none;"></p>
+                 style="text-align:center;margin-top:1rem;font-size:0.875rem;color:var(--text-300);display:none;"></p>
             </form>
           </div>
 

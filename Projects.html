@@ -31,6 +31,15 @@
     </div>
   </div>
 
+  <!-- Ambient Glow Spots -->
+  <div class="ambient-spots" aria-hidden="true">
+    <div class="ambient-spot ambient-spot--1"></div>
+    <div class="ambient-spot ambient-spot--2"></div>
+    <div class="ambient-spot ambient-spot--3"></div>
+    <div class="ambient-spot ambient-spot--4"></div>
+    <div class="ambient-spot ambient-spot--5"></div>
+  </div>
+
   <!-- NAV -->
   <nav class="nav" id="mainNav">
     <div class="nav__inner">
@@ -46,39 +55,14 @@
         <li><a href="Contact.html" class="nav__link">Contact</a></li>
       </ul>
       <div class="nav__actions">
-        <label class="bb8-toggle" title="Toggle light/dark mode">
-  <input class="bb8-toggle__checkbox" type="checkbox" id="themeToggle" aria-label="Switch between dark and light theme">
-  <div class="bb8-toggle__container">
-    <div class="bb8-toggle__scenery">
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="bb8-toggle__star"></div>
-      <div class="tatto-1"></div>
-      <div class="tatto-2"></div>
-      <div class="gomrassen"></div>
-      <div class="hermes"></div>
-      <div class="chenini"></div>
-      <div class="bb8-toggle__cloud"></div>
-      <div class="bb8-toggle__cloud"></div>
-      <div class="bb8-toggle__cloud"></div>
-    </div>
-    <div class="bb8">
-      <div class="bb8__head-container">
-        <div class="bb8__antenna"></div>
-        <div class="bb8__antenna"></div>
-        <div class="bb8__head"></div>
-      </div>
-      <div class="bb8__body"></div>
-    </div>
-    <div class="artificial__hidden">
-      <div class="bb8__shadow"></div>
-    </div>
-  </div>
-</label>
+        <label class="theme-toggle" title="Toggle light/dark mode">
+          <input class="theme-toggle__checkbox" type="checkbox" id="themeToggle" aria-label="Switch between dark and light theme">
+          <div class="theme-toggle__container">
+            <span class="material-symbols-rounded icon-moon">dark_mode</span>
+            <span class="material-symbols-rounded icon-sun">light_mode</span>
+            <div class="theme-toggle__circle"></div>
+          </div>
+        </label>
         <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="LinkedIn">
           <i class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/North-Abyss" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="GitHub">
@@ -114,9 +98,9 @@
       <div class="page-hero__blobs" aria-hidden="true"
            style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
         <div style="position:absolute;top:-100px;right:-100px;width:400px;height:400px;
-             background:var(--violet);border-radius:50%;filter:blur(100px);opacity:0.15;"></div>
+             background:var(--text-100);border-radius:50%;filter:blur(100px);opacity:0.04;"></div>
         <div style="position:absolute;bottom:-50px;left:-50px;width:300px;height:300px;
-             background:var(--cyan);border-radius:50%;filter:blur(100px);opacity:0.1;"></div>
+             background:var(--text-100);border-radius:50%;filter:blur(100px);opacity:0.03;"></div>
       </div>
       <div class="page-hero__inner container">
         <div class="section-label" style="display:inline-flex; margin:0 auto var(--space-md);">
@@ -148,7 +132,7 @@
         <div class="projects__grid" id="projectsGrid">
           <!-- Populated dynamically from _data/links.json by script.js -->
           <div style="text-align:center; padding: 3rem; grid-column: 1/-1;">
-            <i class="fas fa-spinner fa-spin fa-2x" style="color:var(--violet);"></i>
+            <i class="fas fa-spinner fa-spin fa-2x" style="color:var(--text-300);"></i>
           </div>
         </div>
       </div>
