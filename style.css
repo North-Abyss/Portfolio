@@ -331,13 +331,12 @@ ol {
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid rgba(var(--theme-color-rgb), 0.12);
   transition: all var(--transition);
 }
 
 [data-theme="light"] .nav {
   background: rgba(255, 255, 255, 0.95);
-  border-bottom-color: rgba(0, 0, 0, 0.06);
 }
 
 .nav.scrolled {
@@ -2148,7 +2147,7 @@ ol {
    ============================== */
 
 .footer {
-  border-top: 1px solid var(--border-subtle);
+  border-top: none;
   padding: var(--space-xl) 0;
 }
 
@@ -2239,11 +2238,16 @@ ol {
   transition-delay: 0.6s;
 }
 
-/* Gradient dividers */
+/* Gradient dividers (deprecated, using borders instead) */
 .section-divider {
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--border-glow), transparent);
-  margin: 0;
+  display: none;
+}
+
+/* ── Layout Outline Separators ── */
+#hero,
+.page-hero,
+.section {
+  border-bottom: 1px solid rgba(var(--theme-color-rgb), 0.12);
 }
 
 /* ── ==============================
