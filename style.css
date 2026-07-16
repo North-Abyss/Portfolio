@@ -331,7 +331,7 @@ ol {
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(var(--theme-color-rgb), 0.12);
+  border-bottom: 1px solid rgba(var(--theme-color-rgb));
   transition: all var(--transition);
 }
 
@@ -2147,8 +2147,8 @@ ol {
    ============================== */
 
 .footer {
-  border-top: none;
   padding: var(--space-xl) 0;
+  border-top: 1px solid rgba(var(--theme-color-rgb));
 }
 
 .footer__inner {
@@ -2247,7 +2247,7 @@ ol {
 #hero,
 .page-hero,
 .section {
-  border-bottom: 1px solid rgba(var(--theme-color-rgb), 0.12);
+  border-bottom: 1px solid rgba(var(--theme-color-rgb));
 }
 
 /* ── ==============================
@@ -2255,6 +2255,8 @@ ol {
    ============================== */
 
 .page-hero {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
   padding: calc(var(--nav-height) + var(--space-2xl)) 0 var(--space-2xl);
   background: var(--grad-hero);
   position: relative;
@@ -2279,6 +2281,7 @@ ol {
 .page-hero__inner {
   position: relative;
   z-index: 1;
+  border-bottom: 1px solid rgba(var(--theme-color-rgb));
 }
 
 /* Filter tabs */
