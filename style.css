@@ -2734,14 +2734,14 @@ ol {
 .ambient-spot {
   position: absolute;
   border-radius: 50%;
-  background: var(--text-100);
-  filter: blur(120px);
-  opacity: 0.15;
+  background: radial-gradient(circle, var(--text-100) 0%, transparent 65%);
+  filter: blur(60px);
+  opacity: 0.25;
   will-change: transform;
 }
 
 [data-theme="light"] .ambient-spot {
-  opacity: 0.08;
+  opacity: 0.12;
 }
 
 .ambient-spot--1 {
