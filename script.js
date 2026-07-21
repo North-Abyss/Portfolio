@@ -377,11 +377,11 @@ async function initGitHubData() {
       const accent = accentMap[filter] || 'var(--violet)';
 
       // Default fallback image if the OG image fails
-      const fallbackImg = "https://repository-images.githubusercontent.com/1216132192/329689bf-2daa-48e0-8c6b-e15e5208bab7";
+      const fallbackImg = "Assets/Github-placholder.png";
 
       html += `
         <article class="project-card fade-up glass-panel" data-category="${filter}">
-          <img src="${repo.preview}" alt="${repo.name} preview" class="project-card__img" loading="lazy" width="600" height="180"
+          <img src="Assets/Github-placholder.png" data-src="${repo.preview}" alt="${repo.name} preview" class="project-card__img lazy-img" loading="lazy" width="600" height="180"
                onerror="this.onerror=null; this.src='${fallbackImg}';">
           <div class="project-card__body">
             <div class="project-card__tags">
@@ -425,7 +425,10 @@ async function initGitHubData() {
     // Re-init filter tabs AFTER cards are in the DOM
     initFilterTabs();
     // Trigger scroll animations for new elements
-    requestAnimationFrame(initScrollAnimations);
+    requestAnimationFrame(() => {
+      initScrollAnimations();
+      initLazyLoading();
+    });
   } catch (error) {
     console.error('Failed to fetch project data:', error);
     grid.innerHTML = '<div style="color:var(--pink); text-align:center; padding: 2rem;">Failed to load projects. <a href="https://github.com/North-Abyss" target="_blank" style="color:var(--violet);">View on GitHub →</a></div>';
@@ -474,8 +477,8 @@ async function initUpdatesData() {
             </div>
             ` : `
             <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="social-link-preview" style="display: block; margin-top: 1rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle); text-decoration: none; transition: transform 0.3s; background: var(--bg-surface);">
-                <img src="${previewImgUrl}" alt="Preview" class="social-preview-image" loading="lazy" width="600" height="315" 
-                     onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/183628925?v=4';" 
+                <img src="Assets/Linkedin-Placeholder.png" data-src="${previewImgUrl}" alt="Preview" class="social-preview-image lazy-img" loading="lazy" width="600" height="315" 
+                     onerror="this.onerror=null; this.src='Assets/Linkedin-Placeholder.png';" 
                      style="width: 100%; height: auto; aspect-ratio: 1200/630; object-fit: cover; display: block; border-bottom: 1px solid var(--border-subtle);">
                 <div class="social-preview-content" style="padding: 12px;">
                     <small class="social-preview-domain" style="font-size: 0.75rem; color: var(--text-300); text-transform: lowercase; display: block; margin-bottom: 4px;">linkedin.com</small>
@@ -505,7 +508,10 @@ async function initUpdatesData() {
     `;
 
     grid.innerHTML = html;
-    requestAnimationFrame(initScrollAnimations);
+    requestAnimationFrame(() => {
+      initScrollAnimations();
+      initLazyLoading();
+    });
   } catch (error) {
     console.error('Failed to load updates:', error);
     grid.innerHTML = '<div style="color:var(--pink); text-align:center; padding: 2rem;">Could not load updates. <a href="https://linkedin.com/in/yuvaneshks/" target="_blank" style="color:var(--violet);">View on LinkedIn →</a></div>';
@@ -594,6 +600,42 @@ async function initCertificationsData() {
   }
 }
 
+// ── Lazy Loading ──────────────────────────────────────────────────────────────
+
+function initLazyLoading() {
+  const lazyImages = $$('img.lazy-img');
+  if (!lazyImages.length) return;
+
+  const imageObserver = new IntersectionObserver(function(entries, observer) {
+    let delayCounter = 0;
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        
+        const loadImg = () => {
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.classList.remove('lazy-img');
+          }
+        };
+
+        if (navigator.onLine) {
+          setTimeout(loadImg, delayCounter * 150);
+          delayCounter++;
+        } else {
+          window.addEventListener('online', loadImg, { once: true });
+        }
+        
+        observer.unobserve(img);
+      }
+    });
+  }, { rootMargin: '0px 0px 50px 0px' });
+
+  lazyImages.forEach(function(img) {
+    imageObserver.observe(img);
+  });
+}
+
 // ── Boot ──────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -608,6 +650,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initUpdatesData();
   initExperienceData();
   initCertificationsData();
+  initLazyLoading();
 });
 
 // Loading Screen Randomizer & Fade Out

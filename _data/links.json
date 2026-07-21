@@ -12,6 +12,16 @@
   },
   "linkedin_posts": [
     {
+      "id": 33,
+      "title": "Flutter WebRTC Networking",
+      "icon": "hub",
+      "desc": "Deep dive into Flutter WebRTC and networking.",
+      "url": "https://www.linkedin.com/posts/yuvaneshks_flutterdev-webrtc-networking-ugcPost-7483893959782727680-Hpvr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE7By-QBr100PF5EAeArxGNm6_wna-8_NHI",
+      "video_frame": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7483893959782727680?compact=1\" height=\"399\" style=\"width: 100%; border: none; display: block;\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+      "meta": "Recently • Flutter & WebRTC",
+      "tag": "Flutter"
+    },
+    {
       "id": 32,
       "title": "Abyss Chat: Flutter WebRTC System Architecture",
       "icon": "hub",
