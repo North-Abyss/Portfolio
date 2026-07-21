@@ -271,29 +271,27 @@ function initContactForm() {
       return;
     }
 
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+    var targetEmail = "yuvaneshkarunakaran@gmail.com";
+    var mailSubject = data.get('subject') ? data.get('subject').trim() : 'Contact from Portfolio';
+    
+    var mailBody = "Name: " + name + "\n";
+    mailBody += "Email: " + email + "\n\n";
+    mailBody += "Message:\n" + message;
 
-    fetch(form.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(function (res) {
-      if (res.ok) {
-        showStatus("✅ Message sent! I'll get back to you soon.", 'var(--cyan)');
-        form.reset();
-      } else {
-        showStatus('❌ Something went wrong. Please email me directly.', 'var(--pink)');
-      }
-    })
-    .catch(function () {
-      showStatus('❌ Network error. Please email yuvaneshkarunakaran@gmail.com directly.', 'var(--pink)');
-    })
-    .finally(function () {
+    var mailtoLink = "mailto:" + targetEmail + 
+                     "?subject=" + encodeURIComponent(mailSubject) + 
+                     "&body=" + encodeURIComponent(mailBody);
+
+    // Open local email client
+    window.location.href = mailtoLink;
+
+    showStatus("Opening your email client...", 'var(--cyan)');
+    
+    setTimeout(function() {
       btn.disabled = false;
-      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-    });
+      btn.innerHTML = '<span class="material-symbols-rounded">send</span> Send Message';
+      form.reset();
+    }, 2000);
   });
 
   function showStatus(msg, color) {
