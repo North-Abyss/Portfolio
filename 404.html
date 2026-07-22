@@ -56,6 +56,7 @@
       <ul class="nav__links" role="list">
         <li><a href="index.html" class="nav__link">Home</a></li>
         <li><a href="Projects.html" class="nav__link">Projects</a></li>
+        <li><a href="Commercial.html" class="nav__link">Commercial</a></li>
         <li><a href="Updates.html" class="nav__link">Updates</a></li>
         <li><a href="Contact.html" class="nav__link">Contact</a></li>
       </ul>
@@ -79,7 +80,8 @@
             class="fas fa-envelope"></i></a>
         <a href="https://g.dev/NorthAbyss" target="_blank" rel="noopener noreferrer" class="nav__icon"
           aria-label="Google Developer"><i class="fab fa-google"></i></a>
-        <a href="https://play.google.com/store/apps/dev?id=6266791743011523139&pli" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="Google Play"><i class="fab fa-google-play"></i></a>
+        <a href="https://play.google.com/store/apps/dev?id=6266791743011523139&pli" target="_blank"
+          rel="noopener noreferrer" class="nav__icon" aria-label="Google Play"><i class="fab fa-google-play"></i></a>
         <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -90,6 +92,7 @@
   <nav class="nav__mobile" id="mobileNav" aria-label="Mobile navigation">
     <a href="index.html" class="nav__mobile-link">Home</a>
     <a href="Projects.html" class="nav__mobile-link">Projects</a>
+    <a href="Commercial.html" class="nav__mobile-link">Commercial</a>
     <a href="Updates.html" class="nav__mobile-link">Updates</a>
     <a href="Contact.html" class="nav__mobile-link">Contact</a>
     <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
@@ -101,7 +104,9 @@
         style="color: var(--text-100); font-size: 1.5rem;" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
       <a href="mailto:yuvaneshkarunakaran@gmail.com" style="color: var(--text-100); font-size: 1.5rem;"
         aria-label="Email"><i class="fas fa-envelope"></i></a>
-    <a href="https://play.google.com/store/apps/dev?id=6266791743011523139&pli" target="_blank" rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="Google Play"><i class="fab fa-google-play"></i></a>
+      <a href="https://play.google.com/store/apps/dev?id=6266791743011523139&pli" target="_blank"
+        rel="noopener noreferrer" style="color: var(--text-100); font-size: 1.5rem;" aria-label="Google Play"><i
+          class="fab fa-google-play"></i></a>
     </div>
   </nav>
 
@@ -155,7 +160,8 @@
         curl -I <span style="color:var(--text-100);">this-url</span><br>
         <span style="color:var(--text-100); font-weight:700;">HTTP/1.1 404 Not Found</span><br>
         <span style="color:var(--text-muted);">Content-Type: text/html</span><br>
-        <span style="color:var(--text-300);">→ Redirecting to safety...</span>
+        <span style="color:var(--text-300);">→ Redirecting to safety in <span id="redirectCountdown"
+            style="display:inline-flex; align-items:center; font-weight:700; color:var(--text-100); background:var(--bg-surface); padding:2px 10px; border-radius:12px; border:1px solid var(--border-card); margin:0 4px;">15s</span>...</span>
       </div>
     </div>
   </div>
@@ -168,6 +174,7 @@
         <nav class="footer__links" aria-label="Footer links">
           <a href="index.html" class="footer__link">Home</a>
           <a href="Projects.html" class="footer__link">Projects</a>
+          <a href="Commercial.html" class="footer__link">Commercial</a>
           <a href="Updates.html" class="footer__link">Updates</a>
           <a href="Contact.html" class="footer__link">Contact</a>
         </nav>
@@ -176,10 +183,14 @@
   </footer>
 
   <script>
-    // Auto redirect after 15s
+    // Auto redirect countdown timer
     var countdown = 15;
+    var countEl = document.getElementById('redirectCountdown');
     var timer = setInterval(function () {
       countdown--;
+      if (countEl) {
+        countEl.textContent = countdown + 's';
+      }
       if (countdown <= 0) {
         clearInterval(timer);
         window.location.href = 'index.html';

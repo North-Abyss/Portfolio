@@ -634,6 +634,102 @@ function initLazyLoading() {
   });
 }
 
+// ── Commercial Data Renderer ──────────────────────────────────────────────
+
+async function initCommercialData() {
+  const grid = $('#commercialProjectsGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '<div style="text-align:center; padding: 2rem; grid-column: 1 / -1;"><i class="fas fa-spinner fa-spin fa-2x" style="color:var(--text-100);"></i></div>';
+
+  try {
+    const data = await getData();
+    if (!data.commercial_projects || !data.commercial_projects.length) {
+      grid.innerHTML = '<div style="text-align:center; padding: 2rem; color: var(--text-300); grid-column: 1 / -1;">No commercial projects found.</div>';
+      return;
+    }
+
+    let html = '';
+    data.commercial_projects.forEach((item, index) => {
+      const delay = index * 100;
+      const icon = item.icon || 'dns';
+      const techTags = item.tech ? item.tech.map(t => `<span class="project-tag">${t}</span>`).join('') : '';
+
+      let focusHtml = '';
+      if (item.focus_areas && item.focus_areas.length) {
+        focusHtml = `
+          <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px dashed var(--border-subtle);">
+            <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-300); margin-bottom: 0.65rem;">
+              Focus Areas & Infrastructure
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.45rem;">
+              ${item.focus_areas.map(fa => `
+                <li style="font-size: 0.84rem; color: var(--text-200); display: flex; align-items: flex-start; gap: 8px; line-height: 1.45;">
+                  <span class="material-symbols-rounded" style="font-size: 1rem; color: var(--text-100); margin-top: 1px;">check_circle</span>
+                  <span>${fa}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+        `;
+      }
+
+        const isGithub = item.verification_url && item.verification_url.includes('github.com');
+        const btnIcon = isGithub ? 'code' : 'badge';
+        const btnText = isGithub ? 'View on GitHub →' : 'Developer Proof →';
+
+        html += `
+          <article class="project-card fade-up" data-delay="${delay}" style="display: flex; flex-direction: column;">
+            <div style="padding: 1.75rem 1.75rem 0.75rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <div style="background: var(--bg-surface); border: 1px solid var(--border-card); padding: 12px; border-radius: 14px; color: var(--text-100); display: flex; align-items: center; justify-content: center;">
+                <span class="material-symbols-rounded" style="font-size: 1.8rem;">${icon}</span>
+              </div>
+              <span style="font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.85rem; border-radius: 20px; background: var(--bg-surface); color: var(--text-100); border: 1px solid var(--border-card);">
+                ${item.status}
+              </span>
+            </div>
+
+            <div class="project-card__body" style="padding: 0 1.75rem 1.75rem; display: flex; flex-direction: column; flex: 1;">
+              <div style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-300); margin-bottom: 0.35rem;">
+                ${item.client}
+              </div>
+              <h3 class="project-card__title" style="margin-bottom: 0.5rem;">${item.name}</h3>
+              <div style="font-size: 0.85rem; color: var(--text-100); font-weight: 600; margin-bottom: 0.85rem; display: flex; align-items: center; gap: 6px;">
+                <span class="material-symbols-rounded" style="font-size: 1rem;">cloud</span> ${item.role}
+              </div>
+              <p class="project-card__desc" style="margin-bottom: 1.25rem;">${item.desc}</p>
+
+              ${focusHtml}
+
+              <div class="project-card__tags" style="margin-top: 1rem;">
+                ${techTags}
+              </div>
+              
+              <div style="margin-top: auto; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+                <a href="${item.verification_url}" target="_blank" rel="noopener noreferrer" class="btn btn--outline uiverse-btn-glass" style="font-size: 0.8rem; padding: 0.4rem 0.9rem;">
+                  <span class="material-symbols-rounded" style="font-size: 1rem; margin-right: 4px;">${btnIcon}</span> ${btnText}
+                </a>
+                ${item.client_url && item.client_url !== item.verification_url ? `
+                  <a href="${item.client_url}" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; color: var(--text-200); text-decoration: underline;">
+                    Official Site
+                  </a>
+                ` : ''}
+              </div>
+            </div>
+          </article>
+        `;
+    });
+
+    grid.innerHTML = html;
+    requestAnimationFrame(() => {
+      initScrollAnimations();
+    });
+  } catch (error) {
+    console.error('Failed to load commercial projects:', error);
+    grid.innerHTML = '<div style="color:var(--pink); text-align:center; grid-column: 1 / -1;">Could not load commercial projects.</div>';
+  }
+}
+
 // ── Boot ──────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -648,6 +744,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initUpdatesData();
   initExperienceData();
   initCertificationsData();
+  initCommercialData();
   initLazyLoading();
 });
 

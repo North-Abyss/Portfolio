@@ -570,5 +570,52 @@ window.PORTFOLIO_DATA = {
       "filter": "web",
       "tags": ["Figma", "UI/UX", "Design System"]
     }
+  ],
+
+  /* ── Commercial & Real Released Projects ── */
+  "commercial_projects": [
+    {
+      "id": "trackify-commercial",
+      "name": "Trackify — Habit Tracker",
+      "client": "Released Commercial Application",
+      "client_url": "https://github.com/North-Abyss/Trackify-Flutter",
+      "verification_url": "https://github.com/North-Abyss/Trackify-Flutter",
+      "role": "Lead Cross-Platform Developer & DevOps",
+      "status": "Released Across 4 Platforms",
+      "category": "Cross-Platform Product",
+      "icon": "layers",
+      "desc": "High-performance, privacy-first commercial habit tracking application deployed across Web, Android, Linux, and Windows. Built with Riverpod 2.0 reactive state management, custom high-gloss claymorphic UI system, persistent encrypted local storage (Hive DB), and automated multi-platform release CI/CD builds.",
+      "tech": ["Flutter", "Dart", "Riverpod 2.0", "Hive Local DB", "Claymorphic UI", "Multi-OS CI/CD"],
+      "focus_areas": [
+        "Cross-platform state management & reactive architecture",
+        "Encrypted local database & offline persistence",
+        "Automated release builds across Web, Mobile & Desktop"
+      ],
+      "confidentiality": "Proprietary Architecture & Released Commercial Build",
+      "is_verified": true
+    },
+    {
+      "id": "abyss-chat-commercial",
+      "name": "Abyss Chat — P2P Network",
+      "client": "North-Abyss (GitHub)",
+      "client_url": "https://github.com/North-Abyss/abyss_chat",
+      "verification_url": "https://github.com/North-Abyss/abyss_chat",
+      "role": "System Architect & Lead Developer",
+      "status": "Released & Deployed",
+      "category": "Decentralized WebRTC P2P Communications",
+      "icon": "hub",
+      "desc": "Cross-platform decentralized P2P messaging and live video/audio calling application. Enables offline local network peer discovery via mDNS, encrypted messaging, and zero-server data retention with end-to-end AES-GCM encryption.",
+      "tech": ["Flutter", "WebRTC P2P", "mDNS Discovery", "AES-GCM Encryption", "Riverpod", "Socket Signaling"],
+      "focus_areas": [
+        "Decentralized WebRTC audio/video call orchestration",
+        "mDNS local network peer discovery without central server",
+        "End-to-end AES-GCM payload encryption & protocol security"
+      ],
+      "confidentiality": "Enterprise Peer-to-Peer Protocol & Application Release",
+      "is_verified": true
+    }
   ]
 };
+
+
+
