@@ -124,9 +124,9 @@ function initTyped() {
 
   var phrases = [
     'Software Engineer',
-    'Linux Power User',
-    'Cross-Platform Developer',
-    'AI-Integrated Backend Dev'
+    'Cloud & Linux Infrastructure',
+    'Cross-Platform App Dev',
+    'Java • Python • Docker • CI/CD'
   ];
   var index    = 0;
   var charIdx  = 0;

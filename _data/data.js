@@ -345,7 +345,7 @@ window.PORTFOLIO_DATA = {
       "desc": "Selected for Batch 5. Explored the intersection of green skills, technology, and climate action. Gained hands-on exposure to sustainability-driven tech projects."
     },
     {
-      "role": "SRE & Linux Systems Administrator",
+      "role": "Software Engineer (Cloud & Linux Infrastructure)",
       "org": "Personal Home Lab · Enterprise-grade KVM/QEMU",
       "date": "2025 – 2026 · Active",
       "desc": "Architecting and managing an enterprise-grade KVM/QEMU hypervisor. Proficient in Docker, Bash scripting, Arch/Rocky/Ubuntu, and zero-downtime service configuration."
