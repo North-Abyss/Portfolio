@@ -705,12 +705,22 @@ async function initCommercialData() {
                 ${techTags}
               </div>
               
-              <div style="margin-top: auto; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+              <div style="margin-top: auto; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
                 <a href="${item.verification_url}" target="_blank" rel="noopener noreferrer" class="btn btn--outline uiverse-btn-glass" style="font-size: 0.8rem; padding: 0.4rem 0.9rem;">
                   <span class="material-symbols-rounded" style="font-size: 1rem; margin-right: 4px;">${btnIcon}</span> ${btnText}
                 </a>
+                ${item.web_url ? `
+                <a href="${item.web_url}" target="_blank" rel="noopener noreferrer" class="btn btn--outline uiverse-btn-glass" style="font-size: 0.8rem; padding: 0.4rem 0.9rem;">
+                  <span class="material-symbols-rounded" style="font-size: 1rem; margin-right: 4px;">language</span> Web App →
+                </a>
+                ` : ''}
+                ${item.playstore_url ? `
+                <a href="${item.playstore_url}" target="_blank" rel="noopener noreferrer" class="btn btn--outline uiverse-btn-glass" style="font-size: 0.8rem; padding: 0.4rem 0.9rem;">
+                  <i class="fab fa-google-play" style="margin-right: 4px; font-size: 0.9rem;"></i> Play Store →
+                </a>
+                ` : ''}
                 ${item.client_url && item.client_url !== item.verification_url ? `
-                  <a href="${item.client_url}" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; color: var(--text-200); text-decoration: underline;">
+                  <a href="${item.client_url}" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; color: var(--text-200); text-decoration: underline; margin-left: auto;">
                     Official Site
                   </a>
                 ` : ''}
