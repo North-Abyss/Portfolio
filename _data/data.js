@@ -23,6 +23,25 @@ window.PORTFOLIO_DATA = {
 
   "linkedin_posts": [
     {
+      "id": 35,
+      "title": "VIT 2026 Game Jam - REVORA",
+      "icon": "sports_esports",
+      "desc": "Just wrapped up an intense 48-hour sprint for the Vellore Institute of Technology 2026 Game Jam. Proud to present our submission: REVORA - Wheel of war ⚔️",
+      "url": "https://lnkd.in/p/dhF4MbzB",
+      "video_frame": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7496033175836631041?compact=1\" height=\"399\" style=\"width: 100%; border: none; display: block;\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+      "meta": "Recently • Game Jam",
+      "tag": "GameDev"
+    },
+    {
+      "id": 34,
+      "title": "From IT Student to Published Developer! 🚀📱",
+      "icon": "rocket_launch",
+      "desc": "I am incredibly proud to announce that my app, Abyss Chat, has cleared Google's strict review pipelines and achieved a 100% Production Rollout on the Google Play Store! A massive milestone turning late-night debugging into a published product.",
+      "url": "https://lnkd.in/p/dRK4gpyK",
+      "meta": "Recently • Play Store Release",
+      "tag": "GooglePlay"
+    },
+    {
       "id": 33,
       "title": "Flutter WebRTC Networking",
       "icon": "hub",
@@ -369,6 +388,12 @@ window.PORTFOLIO_DATA = {
 
   "certifications": [
     {
+      "icon": "sports_esports",
+      "title": "VIT 2026 Game Jam (GDAI)",
+      "issuer": "Vellore Institute of Technology",
+      "date": "Aug 2026"
+    },
+    {
       "icon": "public",
       "title": "NASA Space Apps Challenge",
       "issuer": "NASA",
@@ -408,6 +433,15 @@ window.PORTFOLIO_DATA = {
 
   /* ── Projects — synced from gh repo list North-Abyss --visibility=public ── */
   "projects": [
+    {
+      "name": "2026-vit-game-jams",
+      "desc": "REVORA - Wheel of war ⚔️. A game built in 48 hours for the VIT 2026 Game Jam. Features an endless Fight -> Gather -> Progress -> Loop gameplay cycle built in Godot 4.x HTML5 Web Export.",
+      "url": "https://github.com/North-Abyss/2026-vit-game-jams",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/2026-vit-game-jams",
+      "category": "Game Jam",
+      "filter": "game",
+      "tags": ["Godot 4", "GameDev", "Game Jam"]
+    },
     {
       "name": "abyss_chat",
       "desc": "A modern, cross-platform Flutter application serving as a P2P WhatsApp-style clone using WebRTC and mDNS. Works completely offline.",
