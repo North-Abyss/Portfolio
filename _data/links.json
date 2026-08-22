@@ -337,6 +337,7 @@
       "name": "2026-vit-game-jams",
       "desc": "REVORA - Wheel of war ⚔️. A game built in 48 hours for the VIT 2026 Game Jam. Features an endless Fight -> Gather -> Progress -> Loop gameplay cycle built in Godot 4.x HTML5 Web Export.",
       "url": "https://github.com/North-Abyss/2026-vit-game-jams",
+      "web_url": "https://north-abyss.github.io/2026-vit-game-jams/",
       "preview": "https://opengraph.githubassets.com/1/North-Abyss/2026-vit-game-jams",
       "category": "Game Jam",
       "filter": "game",
