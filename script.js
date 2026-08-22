@@ -388,7 +388,7 @@ async function initGitHubData() {
             </div>
             <h2 class="project-card__title">${repo.name}</h2>
             <p class="project-card__desc">${repo.desc || 'No description provided.'}</p>
-            <div class="project-card__footer" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <div class="project-card__footer" style="display: flex; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap;">
               <a href="${repo.url}" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm uiverse-btn-glass">
                 <i class="fab fa-github"></i> Repository
               </a>
