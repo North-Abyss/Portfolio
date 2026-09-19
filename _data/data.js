@@ -23,6 +23,26 @@ window.PORTFOLIO_DATA = {
 
   "linkedin_posts": [
     {
+      "id": 37,
+      "title": "Open-Sourced Q-Ternary VQC",
+      "icon": "memory",
+      "desc": "I just open-sourced the Q-Ternary VQC: a Hybrid Quantum-Classical pipeline trained on real-world clinical tabular data, running flawlessly on a standard CPU. I broke the memory bottleneck by abandoning binary entirely for 3-level Qutrits.",
+      "url": "https://www.linkedin.com/posts/yuvaneshks_quantumcomputing-machinelearning-qml-activity-7507089604248928256-JHtP",
+      "video_frame": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7507089603280080897?compact=1\" height=\"399\" style=\"width: 100%; border: none; display: block;\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+      "meta": "Recently • Quantum Computing",
+      "tag": "Quantum"
+    },
+    {
+      "id": 36,
+      "title": "Hardware Hacking at Yi Future 6.0",
+      "icon": "developer_board",
+      "desc": "2 Days of Innovation, Hardware Hacking, and Rapid Problem-Solving at Yi Future 6.0! Built a rugged, internet-independent solution: an Offline RFID Attendance & Task Logger.",
+      "url": "https://www.linkedin.com/posts/yuvaneshks_youngindians-yiyuva-cii-activity-7505846872033497088-LkPg",
+      "video_frame": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7505846868573196289?compact=1\" height=\"399\" style=\"width: 100%; border: none; display: block;\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+      "meta": "Recently • Hardware Hackathon",
+      "tag": "Hardware"
+    },
+    {
       "id": 35,
       "title": "VIT 2026 Game Jam - REVORA",
       "icon": "sports_esports",
@@ -388,6 +408,12 @@ window.PORTFOLIO_DATA = {
 
   "certifications": [
     {
+      "icon": "developer_board",
+      "title": "Finalist - Yi Future 6.0 Hackathon",
+      "issuer": "Adhiyamaan College of Engineering, Hosur",
+      "date": "Sep 2026"
+    },
+    {
       "icon": "sports_esports",
       "title": "VIT 2026 Game Jam (GDAI)",
       "issuer": "Vellore Institute of Technology",
@@ -433,6 +459,24 @@ window.PORTFOLIO_DATA = {
 
   /* ── Projects — synced from gh repo list North-Abyss --visibility=public ── */
   "projects": [
+    {
+      "name": "Q-Ternary-VQC",
+      "desc": "First open-source qutrit (d=3) variational quantum classifier for tabular data. Lossless 2³→3² binary-to-ternary compression, CSUM ring entanglement, and SHAP explainability. 72 parameters. Built with PennyLane + PyTorch.",
+      "url": "https://github.com/North-Abyss/Q-Ternary-VQC",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/Q-Ternary-VQC",
+      "category": "Quantum Computing",
+      "filter": "ai",
+      "tags": ["PennyLane", "PyTorch", "Qutrit", "Quantum"]
+    },
+    {
+      "name": "smart-trap",
+      "desc": "Statutory Municipal Architecture for Resource-Recovery & Tracking via Tax-Linked Recycling & Neighborhood Accountability Policy (SMART-TRAP).",
+      "url": "https://github.com/North-Abyss/smart-trap",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/smart-trap",
+      "category": "Hardware / IoT",
+      "filter": "systems",
+      "tags": ["IoT", "Hardware", "Smart City"]
+    },
     {
       "name": "2026-vit-game-jams",
       "desc": "REVORA - Wheel of war ⚔️. A game built in 48 hours for the VIT 2026 Game Jam. Features an endless Fight -> Gather -> Progress -> Loop gameplay cycle built in Godot 4.x HTML5 Web Export.",
