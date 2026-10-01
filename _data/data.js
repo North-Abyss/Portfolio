@@ -23,6 +23,16 @@ window.PORTFOLIO_DATA = {
 
   "linkedin_posts": [
     {
+      "id": 38,
+      "title": "Logarithmic Qudit Compression: A 72-Parameter Q-Ternary VQC",
+      "icon": "article",
+      "desc": "Published an in-depth article on how Near-term Quantum Machine Learning (QML) is fundamentally constrained by spatial dimensionality, and how Q-Ternary VQC solves this using Logarithmic Qudit Compression.",
+      "url": "https://lnkd.in/p/gmgFS84P",
+      "video_frame": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:activity:7507469895534657536?compact=1\" height=\"399\" style=\"width: 100%; border: none; display: block;\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+      "meta": "Recently • Article",
+      "tag": "Quantum"
+    },
+    {
       "id": 37,
       "title": "Open-Sourced Q-Ternary VQC",
       "icon": "memory",
@@ -699,6 +709,27 @@ window.PORTFOLIO_DATA = {
         "End-to-end AES-GCM payload encryption & protocol security"
       ],
       "confidentiality": "Enterprise Peer-to-Peer Protocol & Application Release",
+      "is_verified": true
+    },
+    {
+      "id": "q-ternary-vqc-research",
+      "name": "Q-Ternary-VQC — Quantum Research",
+      "client": "Innovation in IT Research",
+      "client_url": "https://www.linkedin.com/pulse/logarithmic-qudit-compression-72-parameter-q-ternary-vqc-yuvanesh-ks-t6hqc/",
+      "verification_url": "https://github.com/North-Abyss/Q-Ternary-VQC",
+      "web_url": "https://lnkd.in/p/gmgFS84P",
+      "role": "Lead Researcher & Quantum Engineer",
+      "status": "Published Innovation",
+      "category": "Quantum Machine Learning",
+      "icon": "science",
+      "desc": "First open-source qutrit (d=3) variational quantum classifier for tabular data. Breaking the memory bottleneck in near-term Quantum Machine Learning by abandoning binary entirely for 3-level Qutrits.",
+      "tech": ["PennyLane", "PyTorch", "Qutrit (d=3)", "Quantum Computing", "Logarithmic Qudit Compression"],
+      "focus_areas": [
+        "Lossless 2³→3² binary-to-ternary feature compression",
+        "72-Parameter Hybrid Quantum-Classical architecture",
+        "CSUM ring entanglement & SHAP explainability"
+      ],
+      "confidentiality": "Open-Source Research Publication",
       "is_verified": true
     }
   ]

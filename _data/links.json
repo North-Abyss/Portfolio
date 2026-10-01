@@ -12,6 +12,16 @@
   },
   "linkedin_posts": [
     {
+      "id": 38,
+      "title": "Logarithmic Qudit Compression: A 72-Parameter Q-Ternary VQC",
+      "icon": "article",
+      "desc": "Published an in-depth article on how Near-term Quantum Machine Learning (QML) is fundamentally constrained by spatial dimensionality, and how Q-Ternary VQC solves this using Logarithmic Qudit Compression.",
+      "url": "https://lnkd.in/p/gmgFS84P",
+      "video_frame": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:activity:7507469895534657536?compact=1\" height=\"399\" style=\"width: 100%; border: none; display: block;\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+      "meta": "Recently • Article",
+      "tag": "Quantum"
+    },
+    {
       "id": 37,
       "title": "Open-Sourced Q-Ternary VQC",
       "icon": "memory",
