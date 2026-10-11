@@ -12,7 +12,7 @@ window.PORTFOLIO_DATA = {
   "profile": {
     "name": "Yuvanesh KS",
     "alias": "NorthAbyss",
-    "tagline": "Software Engineer | Linux Power User | Cross-Platform Developer | B.Tech IT '27",
+    "tagline": "Linux, Networking & Systems Software | Cross-Platform Flutter Apps | B.Tech IT '27",
     "email": "yuvaneshkarunakaran@gmail.com",
     "github": "https://github.com/North-Abyss",
     "linkedin": "https://www.linkedin.com/in/yuvaneshks/",
@@ -379,7 +379,7 @@ window.PORTFOLIO_DATA = {
       "role": "Flutter Internship Team Lead",
       "org": "Starvik solution Pvt ltd",
       "date": "Jun 2026 - Jul 2026",
-      "desc": "Engineered \"Abyss Chat,\" a highly sophisticated cross-platform decentralized P2P messaging and video-calling application using Flutter, WebRTC, mDNS LAN discovery, AES-GCM encryption, and Riverpod. Mentored the team on Flutter fundamentals, guiding them to build and deploy their own independent applications."
+      "desc": "Engineered \"Abyss Chat,\" a cross-platform decentralized P2P messaging and video-calling application using Flutter, WebRTC, mDNS LAN discovery, AES-GCM encryption, and Riverpod. Built production server infrastructure, Git CI/CD deployment pipelines, Bunny.net CDN integration, and mentored interns on cross-platform application architecture."
     },
     {
       "role": "IDC AMCET Joint Secretary",
@@ -394,16 +394,10 @@ window.PORTFOLIO_DATA = {
       "desc": "Selected for Batch 5. Explored the intersection of green skills, technology, and climate action. Gained hands-on exposure to sustainability-driven tech projects."
     },
     {
-      "role": "Software Engineer (Cloud & Linux Infrastructure)",
-      "org": "Personal Home Lab · Enterprise-grade KVM/QEMU",
-      "date": "2025 – 2026 · Active",
-      "desc": "Architecting and managing an enterprise-grade KVM/QEMU hypervisor. Proficient in Docker, Bash scripting, Arch/Rocky/Ubuntu, and zero-downtime service configuration."
-    },
-    {
-      "role": "Game Developer",
-      "org": "GitHub Game Off 2025",
-      "date": "Nov 2025",
-      "desc": "Shipped Wave of Fate — a full 2D platformer using Godot Engine. Custom physics, parallax backgrounds, web export. Complete, compiled, delivered under deadline."
+      "role": "Project: Virtualization Home Lab",
+      "org": "Personal Project · KVM/QEMU",
+      "date": "2025 – 2026",
+      "desc": "Experimental home lab environment configured with KVM/QEMU, Docker, Bash scripting, and Linux (Arch/Rocky/Ubuntu) to explore virtualization, containerization, and self-hosted networking."
     }
   ],
 
@@ -412,7 +406,7 @@ window.PORTFOLIO_DATA = {
       "degree": "B.Tech Information Technology",
       "school": "Annai Mira College of Engineering & Technology · Anna University",
       "date": "2023 - 2027",
-      "desc": "CGPA: 8.45 · 2× SIH Participant · Databricks 14-Day AI Challenge · Adobe India · MPL · NASA Space Apps · GFG Vultr Hackathons."
+      "desc": "CGPA: 8.26 · 2× SIH Participant · Databricks 14-Day AI Challenge · NASA Space Apps · GFG Vultr Hackathons."
     }
   ],
 
@@ -471,7 +465,7 @@ window.PORTFOLIO_DATA = {
   "projects": [
     {
       "name": "Q-Ternary-VQC",
-      "desc": "First open-source qutrit (d=3) variational quantum classifier for tabular data. Lossless 2³→3² binary-to-ternary compression, CSUM ring entanglement, and SHAP explainability. 72 parameters. Built with PennyLane + PyTorch.",
+      "desc": "Open-source qutrit (d=3) variational quantum classifier for tabular data. Lossless 2³→3² binary-to-ternary compression, CSUM ring entanglement, and SHAP explainability. 72 parameters. Built with PennyLane + PyTorch.",
       "url": "https://github.com/North-Abyss/Q-Ternary-VQC",
       "preview": "https://opengraph.githubassets.com/1/North-Abyss/Q-Ternary-VQC",
       "category": "Quantum Computing",
@@ -499,41 +493,41 @@ window.PORTFOLIO_DATA = {
     },
     {
       "name": "abyss_chat",
-      "desc": "A modern, cross-platform Flutter application serving as a P2P WhatsApp-style clone using WebRTC and mDNS. Works completely offline.",
+      "desc": "A cross-platform Flutter application for decentralized P2P messaging and video calling using WebRTC, PeerJS signaling, mDNS LAN discovery, and AES-GCM encryption. Builds for Web and Android. Available on Google Play.",
       "url": "https://github.com/North-Abyss/abyss_chat",
       "web_url": "https://north-abyss.github.io/abyss_chat/",
       "preview": "https://opengraph.githubassets.com/1/North-Abyss/abyss_chat",
       "category": "Flutter App",
       "filter": "flutter",
-      "tags": ["Flutter", "WebRTC", "P2P", "Cross-Platform"]
+      "tags": ["Flutter", "WebRTC", "P2P", "Riverpod"]
     },
     {
       "name": "Harmony-Music",
-      "desc": "A high-performance, cross-platform music application built with Flutter and Dart — featuring custom audio engine, rich UI, and seamless playback.",
+      "desc": "Cross-platform music streaming app built with Flutter and Dart — Fork and learning exploration of anandnet/Harmony-Music with rich UI and media playback.",
       "url": "https://github.com/North-Abyss/Harmony-Music",
       "preview": "https://opengraph.githubassets.com/e065f148dd5b451faa653020262ccf5d057f3827fc564eac610caefd976139d1/North-Abyss/Harmony-Music",
       "category": "Flutter App",
       "filter": "flutter",
-      "tags": ["Flutter", "Dart", "Audio", "Cross-Platform"]
+      "tags": ["Flutter", "Dart", "Fork", "Cross-Platform"]
     },
     {
       "name": "Trackify-Flutter",
-      "desc": "A high-performance, cross-platform habit tracking application built with Flutter. Features Riverpod state management, custom theming engine, and persistent local storage.",
+      "desc": "Cross-platform habit tracking application built as part of #100DaysOfFlutter. Features Provider state management, custom theming engine, and persistent storage via SharedPreferences. Builds available for Web, Android, Windows, and Linux.",
       "url": "https://github.com/North-Abyss/Trackify-Flutter",
       "web_url": "https://north-abyss.github.io/Trackify-Flutter/",
       "preview": "https://repository-images.githubusercontent.com/1216132192/329689bf-2daa-48e0-8c6b-e15e5208bab7",
       "category": "Flutter App",
       "filter": "flutter",
-      "tags": ["Flutter", "Dart", "Riverpod", "Cross-Platform"]
+      "tags": ["Flutter", "Dart", "Provider", "Cross-Platform"]
     },
     {
       "name": "wave-of-fate",
-      "desc": "A fully playable 2D platformer submitted for GitHub Game Off 2025. Features custom physics engine, parallax scrolling, dynamic audio, and full web-export. Ranked #361 of 716 global entries.",
+      "desc": "A fully playable 2D Metroidvania-style action platformer submitted for GitHub Game Off 2025. Built with Godot Engine, custom physics, parallax scrolling, dynamic audio, and full web-export. Ranked #361 of 716 global entries.",
       "url": "https://github.com/North-Abyss/wave-of-fate",
       "preview": "https://opengraph.githubassets.com/b7126df7bb5a900607c49294443f6b55ae5b0f5462d75cece7eda2a47094460a/North-Abyss/wave-of-fate",
       "category": "Game Off 2025",
       "filter": "game",
-      "tags": ["Godot Engine", "GDScript", "2D Platformer"]
+      "tags": ["Godot Engine", "GDScript", "2D Action Platformer"]
     },
     {
       "name": "1st-GODOT-Game",
@@ -546,12 +540,12 @@ window.PORTFOLIO_DATA = {
     },
     {
       "name": "2D-crossplatform-RPG-Game",
-      "desc": "A cross-platform multi-player/single-player RPG which can run on any low-end device. Built with Java, uses local LAN with online support coming soon.",
+      "desc": "A cross-platform multiplayer/single-player eco-guardian themed RPG built with Java, featuring Vultr cloud services and local LAN multiplayer support.",
       "url": "https://github.com/North-Abyss/2D-crossplatform-RPG-Game",
       "preview": "https://opengraph.githubassets.com/2ca71e0c61e25a7f62b39f451e92ee3c5af6f3a006d5bf62f380b243b8e6ff23/North-Abyss/2D-crossplatform-RPG-Game",
       "category": "Game Development",
       "filter": "game",
-      "tags": ["Java", "RPG", "Cross-Platform", "LAN"]
+      "tags": ["Java", "Vultr", "RPG", "Cross-Platform"]
     },
     {
       "name": "digital-snack-arcade",
@@ -619,16 +613,16 @@ window.PORTFOLIO_DATA = {
     },
     {
       "name": "antigravity-brain-web",
-      "desc": "Web frontend for the Antigravity AI assistant's persistent brain — knowledge graph interface, session explorer, and context-aware response augmentation.",
+      "desc": "Experimental web interface and visualization tool for Antigravity AI conversation graphs and brain artifacts.",
       "url": "https://github.com/North-Abyss/antigravity-brain-web",
       "preview": "https://opengraph.githubassets.com/e065f148dd5b451faa653020262ccf5d057f3827fc564eac610caefd976139d1/North-Abyss/antigravity-brain-web",
       "category": "Web / AI Tool",
       "filter": "web",
-      "tags": ["CSS", "HTML", "AI", "Web"]
+      "tags": ["HTML5", "CSS3", "Experimental", "AI Tool"]
     },
     {
       "name": "Portfolio",
-      "desc": "This portfolio — built entirely from scratch with zero frameworks. Pure Vanilla HTML, CSS, and JavaScript with dark/light theming, scroll animations, and GitHub Pages hosting.",
+      "desc": "This portfolio — built with vanilla HTML, CSS, and JavaScript with zero frameworks. Features dark/light theming, scroll animations, dynamic data layer, and GitHub Pages hosting.",
       "url": "https://github.com/North-Abyss/Portfolio",
       "web_url": "https://north-abyss.github.io/Portfolio/",
       "preview": "https://opengraph.githubassets.com/5af80be7f2ca86a5e6b16c5897e706abab88f81022c879b351f19f1634aadbc7/North-Abyss/Portfolio",
@@ -667,62 +661,105 @@ window.PORTFOLIO_DATA = {
   ],
 
   /* ── Commercial & Real Released Projects ── */
+  /* TODO: Add future verified client work and customer testimonial case studies here */
   "commercial_projects": [
+    {
+      "id": "starvik-website-infra",
+      "name": "Starvik Solution — Corporate Website",
+      "client": "Starvik Solution Pvt Ltd",
+      "client_url": "https://github.com/North-Abyss",
+      "verification_url": "https://github.com/North-Abyss",
+      "role": "Backend & Infrastructure Engineer",
+      "status": "Deployed & Live",
+      "category": "Client Web & Server Infrastructure",
+      "icon": "language",
+      "desc": "Engineered production server infrastructure, automated Git CI/CD deployment pipelines, Bunny.net CDN integration, backend services, and production environment configurations for the Starvik corporate website.",
+      "tech": ["Linux Server", "Git CI/CD", "Bunny.net CDN", "Backend Architecture", "Environment & Secrets", "DevOps"],
+      "focus_areas": [
+        "Production server configuration & environment management",
+        "Automated Git CI/CD deployment pipelines",
+        "Bunny.net CDN edge storage and media delivery",
+        "Backend service setup & operational reliability"
+      ],
+      "confidentiality": "Client Platform & Infrastructure Deployment",
+      "is_verified": true
+    },
+    {
+      "id": "starvik-developer-portal",
+      "name": "Starvik Solution — Developer Portal",
+      "client": "Starvik Solution Pvt Ltd",
+      "client_url": "https://github.com/North-Abyss",
+      "verification_url": "https://github.com/North-Abyss",
+      "role": "Backend & Systems Infrastructure",
+      "status": "Deployed & Live",
+      "category": "Developer Platform Infrastructure",
+      "icon": "terminal",
+      "desc": "Configured developer portal backend services, continuous Git CI/CD delivery, Bunny.net edge storage, and secure environment secret shielding.",
+      "tech": ["Backend Services", "Git CI/CD", "Bunny.net CDN", "Linux SysAdmin", "Secrets Management"],
+      "focus_areas": [
+        "Developer portal backend & environment architecture",
+        "Git CI/CD automated deployment workflow",
+        "Bunny.net edge caching and storage integration",
+        "Production environment isolation and security"
+      ],
+      "confidentiality": "Developer Platform Infrastructure",
+      "is_verified": true
+    },
     {
       "id": "trackify-commercial",
       "name": "Trackify — Habit Tracker",
-      "client": "Released Commercial Application",
+      "client": "Open-Source Released Product",
       "client_url": "https://github.com/North-Abyss/Trackify-Flutter",
       "verification_url": "https://github.com/North-Abyss/Trackify-Flutter",
       "web_url": "https://north-abyss.github.io/Trackify-Flutter/",
-      "role": "Lead Cross-Platform Developer & DevOps",
+      "role": "Solo Developer & Creator",
       "status": "Released Across 4 Platforms",
-      "category": "Cross-Platform Product",
+      "category": "Cross-Platform Productivity Product",
       "icon": "layers",
-      "desc": "High-performance, privacy-first commercial habit tracking application deployed across Web, Android, Linux, and Windows. Built with Riverpod 2.0 reactive state management, custom high-gloss claymorphic UI system, persistent encrypted local storage (Hive DB), and automated multi-platform release CI/CD builds.",
-      "tech": ["Flutter", "Dart", "Riverpod 2.0", "Hive Local DB", "Claymorphic UI", "Multi-OS CI/CD"],
+      "desc": "High-performance, privacy-first habit tracking application deployed across Web, Android, Linux, and Windows. Built with Flutter, Provider reactive state management, custom high-gloss claymorphic UI system, persistent storage via SharedPreferences, and automated multi-platform release CI/CD builds.",
+      "tech": ["Flutter", "Dart", "Provider", "SharedPreferences", "Claymorphic UI", "Multi-OS CI/CD"],
       "focus_areas": [
-        "Cross-platform state management & reactive architecture",
-        "Encrypted local database & offline persistence",
+        "Cross-platform state management with Provider",
+        "Local storage & offline-first persistence with SharedPreferences",
         "Automated release builds across Web, Mobile & Desktop"
       ],
-      "confidentiality": "Proprietary Architecture & Released Commercial Build",
+      "confidentiality": "Open-Source Released Application",
       "is_verified": true
     },
     {
       "id": "abyss-chat-commercial",
       "name": "Abyss Chat — P2P Network",
-      "client": "North-Abyss (GitHub)",
+      "client": "North-Abyss (Google Play & Web)",
       "client_url": "https://github.com/North-Abyss/abyss_chat",
       "verification_url": "https://github.com/North-Abyss/abyss_chat",
       "web_url": "https://north-abyss.github.io/abyss_chat/",
       "playstore_url": "https://play.google.com/store/apps/details?id=com.abyss.chat",
       "role": "System Architect & Lead Developer",
-      "status": "Released & Deployed",
+      "status": "Live on Google Play & Web",
       "category": "Decentralized WebRTC P2P Communications",
       "icon": "hub",
-      "desc": "Cross-platform decentralized P2P messaging and live video/audio calling application. Enables offline local network peer discovery via mDNS, encrypted messaging, and zero-server data retention with end-to-end AES-GCM encryption.",
-      "tech": ["Flutter", "WebRTC P2P", "mDNS Discovery", "AES-GCM Encryption", "Riverpod", "Socket Signaling"],
+      "desc": "Cross-platform decentralized P2P messaging and live video/audio calling application. Connects peers directly without a central message server using PeerJS signaling, STUN-only fallback, local mDNS discovery, and end-to-end AES-GCM encryption.",
+      "tech": ["Flutter", "WebRTC P2P", "mDNS Discovery", "AES-GCM Encryption", "Riverpod", "PeerJS Signaling", "STUN"],
       "focus_areas": [
-        "Decentralized WebRTC audio/video call orchestration",
-        "mDNS local network peer discovery without central server",
+        "Decentralized WebRTC audio/video call orchestration with STUN fallback",
+        "mDNS local network peer discovery without central servers",
         "End-to-end AES-GCM payload encryption & protocol security"
       ],
-      "confidentiality": "Enterprise Peer-to-Peer Protocol & Application Release",
+      "confidentiality": "Open-Source P2P Protocol & Google Play Release",
       "is_verified": true
     },
     {
       "id": "q-ternary-vqc-research",
       "name": "Q-Ternary-VQC — Quantum Research",
-      "client": "Innovation in IT Research",
+      "client": "Open-Source Quantum Research",
       "client_url": "https://www.linkedin.com/pulse/logarithmic-qudit-compression-72-parameter-q-ternary-vqc-yuvanesh-ks-t6hqc/",
       "verification_url": "https://github.com/North-Abyss/Q-Ternary-VQC",
       "web_url": "https://lnkd.in/p/gmgFS84P",
-      "role": "Lead Researcher & Quantum Engineer",
-      "status": "Published Innovation",
+      "role": "Developer & Author",
+      "status": "Open-Source with LinkedIn Article",
       "category": "Quantum Machine Learning",
       "icon": "science",
-      "desc": "First open-source qutrit (d=3) variational quantum classifier for tabular data. Breaking the memory bottleneck in near-term Quantum Machine Learning by abandoning binary entirely for 3-level Qutrits.",
+      "desc": "Open-source qutrit (d=3) variational quantum classifier for tabular data. Addresses the memory bottleneck in near-term Quantum Machine Learning by abandoning binary for 3-level Qutrits using Logarithmic Qudit Compression.",
       "tech": ["PennyLane", "PyTorch", "Qutrit (d=3)", "Quantum Computing", "Logarithmic Qudit Compression"],
       "focus_areas": [
         "Lossless 2³→3² binary-to-ternary feature compression",

@@ -99,7 +99,7 @@
       <ul class="nav__links" role="list">
         <li><a href="index.html" class="nav__link active">Home</a></li>
         <li><a href="Projects.html" class="nav__link">Projects</a></li>
-        <li><a href="Commercial.html" class="nav__link">Commercial</a></li>
+        <li><a href="Commercial.html" class="nav__link">Released Products</a></li>
         <li><a href="Updates.html" class="nav__link">Updates</a></li>
         <li><a href="Contact.html" class="nav__link">Contact</a></li>
       </ul>
@@ -135,7 +135,7 @@
   <nav class="nav__mobile" id="mobileNav" aria-label="Mobile navigation">
     <a href="index.html" class="nav__mobile-link">Home</a>
     <a href="Projects.html" class="nav__mobile-link">Projects</a>
-    <a href="Commercial.html" class="nav__mobile-link">Commercial</a>
+    <a href="Commercial.html" class="nav__mobile-link">Released Products</a>
     <a href="Updates.html" class="nav__mobile-link">Updates</a>
     <a href="Contact.html" class="nav__mobile-link">Contact</a>
     <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
@@ -174,9 +174,8 @@
             </p>
 
             <p class="hero__desc">
-              Versatile B.Tech IT student specializing in full-cycle software development.
-              Bridging the gap between scalable Linux infrastructure, AI-integrated backends,
-              and responsive cross-platform mobile apps.
+              Linux, networking and systems software; cross-platform Flutter applications.
+              Bridging robust kernel and server environments with high-performance client experiences.
             </p>
 
             <div class="hero__cta">
@@ -237,7 +236,7 @@
               backends (Python/Flask), and responsive cross-platform mobile applications (Flutter/Dart).</p>
             <p>Beyond architecture, I have a proven track record of leading technical communities and delivering rapid,
               production-ready prototypes for fast-paced environments. My game <em>Wave of Fate</em> shipped for GitHub
-              Game Off 2025, and I've architected enterprise-level KVM/QEMU home labs.</p>
+              Game Off 2025, and I've built experimental KVM/QEMU virtualization home labs.</p>
             <p>Currently pursuing B.Tech IT at <strong>AMCET (Anna University)</strong>, CGPA 8.26, while building
               real-world experience through internships, hackathons, and open-source.</p>
 
@@ -319,13 +318,18 @@
               </div>
             </div>
 
-            <div style="margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-              <a href="mailto:yuvaneshkarunakaran@gmail.com?subject=Resume%20Request&body=Hi%20Yuvanesh%2C%0A%0ACould%20you%20share%20your%20resume%3F"
-                class="btn btn--outline uiverse-btn-glass">
-                <span class="material-symbols-rounded">description</span> Request Resume
+            <div style="margin-top: 1.75rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <!-- TODO: Owner must drop actual Resume.pdf into Assets/Resume.pdf -->
+              <a href="Assets/Resume.pdf" target="_blank" rel="noopener noreferrer"
+                class="btn btn--outline uiverse-btn-glass" title="Download Resume PDF">
+                <span class="material-symbols-rounded">description</span> Resume (PDF)
               </a>
+              <button type="button" id="downloadJsonBtn" class="btn btn--outline uiverse-btn-glass"
+                title="Download full portfolio & project details in structured JSON format">
+                <span class="material-symbols-rounded">download</span> Resume Data (JSON)
+              </button>
               <a href="Commercial.html" class="btn btn--primary uiverse-btn-glass">
-                <span class="material-symbols-rounded">storefront</span> Explore Commercial Work →
+                <span class="material-symbols-rounded">storefront</span> Explore Released Products →
               </a>
             </div>
           </div>
@@ -365,7 +369,7 @@
         <div class="projects__grid">
 
           <article class="project-card fade-up">
-            <img src="Assets/Github-placholder.png" data-src="https://opengraph.githubassets.com/1/North-Abyss/abyss_chat" alt="Abyss Chat"
+            <img src="Assets/github-placeholder.png" data-src="https://opengraph.githubassets.com/1/North-Abyss/abyss_chat" alt="Abyss Chat"
               class="project-card__img lazy-img" loading="lazy" width="600" height="180">
             <div class="project-card__body">
               <div class="project-card__tags">
@@ -375,13 +379,16 @@
               </div>
               <h3 class="project-card__title">Abyss Chat 💬</h3>
               <p class="project-card__desc">
-                A cross-platform WhatsApp-style clone using WebRTC and mDNS to connect peers without a central server.
-                Features End-to-End Encryption, Group Calls, and Material 3 design.
+                Cross-platform decentralized P2P messaging and video calling using WebRTC, PeerJS signaling, mDNS LAN discovery, and AES-GCM encryption. Connects peers directly without a central message server.
               </p>
               <div class="project-card__footer">
                 <a href="https://github.com/North-Abyss/abyss_chat" target="_blank" rel="noopener noreferrer"
                   class="btn btn--outline btn--sm">
                   <i class="fab fa-github"></i> Source Code
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.abyss.chat" target="_blank" rel="noopener noreferrer"
+                  class="btn btn--outline btn--sm">
+                  <i class="fab fa-google-play"></i> Play Store
                 </a>
                 <span style="font-size:0.78rem;color:var(--text-muted);">2026</span>
               </div>
@@ -389,47 +396,72 @@
           </article>
 
           <article class="project-card fade-up">
-            <img src="Assets/Github-placholder.png" data-src="https://opengraph.githubassets.com/1/North-Abyss/wave-of-fate" alt="Wave of Fate"
-              class="project-card__img lazy-img" loading="lazy" width="600" height="180">
+            <img src="Assets/github-placeholder.png" data-src="https://repository-images.githubusercontent.com/183628925/e065f148-dd5b-451f-aa65-3020262ccf5d" alt="Virtualization Home Lab"
+              class="project-card__img lazy-img" loading="lazy" width="600" height="180"
+              onerror="this.onerror=null; this.src='Assets/github-placeholder.png';">
             <div class="project-card__body">
               <div class="project-card__tags">
-                <span class="project-tag">Godot Engine</span>
-                <span class="project-tag">GDScript</span>
-                <span class="project-tag">Game Dev</span>
+                <span class="project-tag">Linux</span>
+                <span class="project-tag">KVM/QEMU</span>
+                <span class="project-tag">Docker</span>
               </div>
-              <h3 class="project-card__title">Wave of Fate 🌊</h3>
+              <h3 class="project-card__title">Virtualization Home Lab 🖥️</h3>
               <p class="project-card__desc">
-                A 2D platformer for GitHub Game Off 2025. Custom physics, parallax backgrounds,
-                full web-export. Complete product shipped solo under competition deadline.
+                Experimental Linux virtualization setup on KVM/QEMU hypervisor with Docker containers, Bash automation, and Arch/Rocky/Ubuntu distributions for hands-on systems learning.
               </p>
               <div class="project-card__footer">
-                <a href="https://github.com/North-Abyss/wave-of-fate" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/posts/yuvaneshks_linux-sysadmin-archlinux-ugcPost-7411089191008301056-YVbU" target="_blank" rel="noopener noreferrer"
                   class="btn btn--outline btn--sm">
-                  <i class="fab fa-github"></i> Source Code
+                  <i class="fab fa-linkedin"></i> LinkedIn Post
                 </a>
-                <span style="font-size:0.78rem;color:var(--text-muted);">Nov 2025</span>
+                <span style="font-size:0.78rem;color:var(--text-muted);">2025–2026</span>
               </div>
             </div>
           </article>
 
           <article class="project-card fade-up" data-delay="100">
-            <img src="Assets/Github-placholder.png" data-src="https://opengraph.githubassets.com/1/North-Abyss/Trackify-Flutter" alt="Trackify Flutter app"
+            <img src="Assets/github-placeholder.png" data-src="https://opengraph.githubassets.com/1/North-Abyss/smart-trap" alt="SMART-TRAP"
               class="project-card__img lazy-img" loading="lazy" width="600" height="180">
             <div class="project-card__body">
               <div class="project-card__tags">
-                <span class="project-tag">Flutter</span>
-                <span class="project-tag">Dart</span>
-                <span class="project-tag">Riverpod</span>
+                <span class="project-tag">Hardware / IoT</span>
+                <span class="project-tag">Smart City</span>
               </div>
-              <h3 class="project-card__title">Trackify 📱</h3>
+              <h3 class="project-card__title">SMART-TRAP ♻️</h3>
               <p class="project-card__desc">
-                Cross-platform productivity tracker from #100DaysOfFlutter. Riverpod state management,
-                custom theming, persistent storage, multi-platform support (Android, iOS, Web).
+                Statutory Municipal Architecture for Resource-Recovery & Tracking via Tax-Linked Recycling & Neighborhood Accountability Policy. Hardware/IoT sustainability architecture.
               </p>
               <div class="project-card__footer">
-                <a href="https://github.com/North-Abyss/Trackify-Flutter" target="_blank" rel="noopener noreferrer"
+                <a href="https://github.com/North-Abyss/smart-trap" target="_blank" rel="noopener noreferrer"
                   class="btn btn--outline btn--sm">
                   <i class="fab fa-github"></i> Source Code
+                </a>
+                <span style="font-size:0.78rem;color:var(--text-muted);">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card fade-up" data-delay="100">
+            <img src="Assets/github-placeholder.png" data-src="https://opengraph.githubassets.com/1/North-Abyss/Q-Ternary-VQC" alt="Q-Ternary-VQC"
+              class="project-card__img lazy-img" loading="lazy" width="600" height="180">
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="project-tag">PennyLane</span>
+                <span class="project-tag">PyTorch</span>
+                <span class="project-tag">Quantum</span>
+              </div>
+              <h3 class="project-card__title">Q-Ternary-VQC ⚛️</h3>
+              <p class="project-card__desc">
+                Open-source 72-parameter variational quantum classifier using 3-level Qutrits (d=3) for tabular data compression, CSUM ring entanglement, and SHAP explainability.
+              </p>
+              <div class="project-card__footer">
+                <a href="https://github.com/North-Abyss/Q-Ternary-VQC" target="_blank" rel="noopener noreferrer"
+                  class="btn btn--outline btn--sm">
+                  <i class="fab fa-github"></i> Source Code
+                </a>
+                <a href="https://lnkd.in/p/gmgFS84P" target="_blank" rel="noopener noreferrer"
+                  class="btn btn--outline btn--sm">
+                  <i class="fab fa-linkedin"></i> Article
                 </a>
                 <span style="font-size:0.78rem;color:var(--text-muted);">2026</span>
               </div>
@@ -437,26 +469,51 @@
           </article>
 
           <article class="project-card fade-up" data-delay="200">
-            <img
-              src="Assets/Github-placholder.png" data-src="https://opengraph.githubassets.com/1/North-Abyss/AI-Sugarcane-Disease-Ring-Spot-Yellow-Leaf-Prediction"
-              alt="AI Sugarcane" class="project-card__img lazy-img" loading="lazy" width="600" height="180">
+            <img src="Assets/github-placeholder.png" data-src="https://opengraph.githubassets.com/1/North-Abyss/Trackify-Flutter" alt="Trackify Flutter app"
+              class="project-card__img lazy-img" loading="lazy" width="600" height="180">
             <div class="project-card__body">
               <div class="project-card__tags">
-                <span class="project-tag">YOLOv8</span>
-                <span class="project-tag">Streamlit</span>
-                <span class="project-tag">Python</span>
+                <span class="project-tag">Flutter</span>
+                <span class="project-tag">Dart</span>
+                <span class="project-tag">Provider</span>
               </div>
-              <h3 class="project-card__title">AI Sugarcane Disease Detection 🌿</h3>
+              <h3 class="project-card__title">Trackify 📱</h3>
               <p class="project-card__desc">
-                YOLOv8 computer vision pipeline detecting sugarcane diseases from field imagery.
-                Streamlit web UI for upload-based inference. Demonstrated at Agrithon 2.0, VIT.
+                Cross-platform productivity tracker from #100DaysOfFlutter. Features Provider state management, custom high-gloss claymorphic UI, and persistent storage via SharedPreferences across Web, Android, Linux, and Windows.
               </p>
               <div class="project-card__footer">
-                <a href="https://github.com/North-Abyss/AI-Sugarcane-Disease-Ring-Spot-Yellow-Leaf-Prediction"
-                  target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
+                <a href="https://github.com/North-Abyss/Trackify-Flutter" target="_blank" rel="noopener noreferrer"
+                  class="btn btn--outline btn--sm">
                   <i class="fab fa-github"></i> Source Code
                 </a>
-                <span style="font-size:0.78rem;color:var(--text-muted);">Aug 2025</span>
+                <a href="https://north-abyss.github.io/Trackify-Flutter/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn--outline btn--sm">
+                  <span class="material-symbols-rounded" style="font-size: 1rem; vertical-align: middle;">language</span> Web
+                </a>
+                <span style="font-size:0.78rem;color:var(--text-muted);">2026</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card fade-up" data-delay="200">
+            <img src="Assets/github-placeholder.png" data-src="https://opengraph.githubassets.com/1/North-Abyss/wave-of-fate" alt="Wave of Fate"
+              class="project-card__img lazy-img" loading="lazy" width="600" height="180">
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="project-tag">Godot Engine</span>
+                <span class="project-tag">GDScript</span>
+                <span class="project-tag">2D Action Platformer</span>
+              </div>
+              <h3 class="project-card__title">Wave of Fate 🌊</h3>
+              <p class="project-card__desc">
+                A 2D Metroidvania-style action platformer for GitHub Game Off 2025. Built with Godot Engine, custom physics, parallax backgrounds, dynamic audio, and web export. Ranked #361 of 716 entries.
+              </p>
+              <div class="project-card__footer">
+                <a href="https://github.com/North-Abyss/wave-of-fate" target="_blank" rel="noopener noreferrer"
+                  class="btn btn--outline btn--sm">
+                  <i class="fab fa-github"></i> Source Code
+                </a>
+                <span style="font-size:0.78rem;color:var(--text-muted);">Nov 2025</span>
               </div>
             </div>
           </article>
@@ -587,7 +644,7 @@
                     style="vertical-align: middle; color: var(--text-100); margin-right: 4px;">smartphone</span> Day 35
                   of #100DaysOfFlutter!</strong><br>
                 Continuing the journey deep into Flutter and Dart. Cross-platform apps with seamless UIs
-                and Riverpod state management. Every day ships something new.
+                and Provider state management. Every day ships something new.
               </p>
 
               <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7466138185643859968" target="_blank"
@@ -765,7 +822,7 @@
         <nav class="footer__links" aria-label="Footer links">
           <a href="index.html" class="footer__link">Home</a>
           <a href="Projects.html" class="footer__link">Projects</a>
-          <a href="Commercial.html" class="footer__link">Commercial</a>
+          <a href="Commercial.html" class="footer__link">Released Products</a>
           <a href="Updates.html" class="footer__link">Updates</a>
           <a href="Contact.html" class="footer__link">Contact</a>
         </nav>

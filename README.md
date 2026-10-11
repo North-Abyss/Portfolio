@@ -1,6 +1,6 @@
 # Portfolio 🌌
 
-A futuristic, highly interactive personal portfolio website designed for **Yuvanesh KS**, bridging the gap between **Linux System Administration** and **Data Engineering**. 
+A personal portfolio website for **Yuvanesh KS**, specializing in **Linux, networking and systems software; Flutter apps**. 
 
 **Live Demo**: [https://north-abyss.github.io/Portfolio/](https://north-abyss.github.io/Portfolio/)
 
@@ -8,12 +8,12 @@ A futuristic, highly interactive personal portfolio website designed for **Yuvan
 
 ## 📖 About The Project
 
-This portfolio features a "Deep Space" aesthetic with dynamic visual effects to showcase a transition from Game Development to Enterprise Infrastructure. It is designed to be **fast, responsive, and visually engaging** without relying on heavy frontend frameworks (no React, no jQuery).
+This portfolio features a "High Gloss Mono" aesthetic with dynamic visual effects to showcase engineering capability across systems software and client products. It is built with **vanilla HTML/CSS/JS, no frameworks** (no React, Vue, jQuery, or Tailwind).
 
 **Current Persona:**
-* **Role:** Software Engineer & System Administrator 🐧🚀
-* **Focus:** Enterprise Linux (Rocky/Arch), Containerization (Docker), and Cross-Platform App Development (Flutter/Dart).
-* **Key Projects:** Abyss Chat (P2P WebRTC), Enterprise Home Lab, Caelestia Arch Linux.
+* **Role:** Systems & Software Engineer 🐧🚀
+* **Focus:** Linux, networking & systems software; cross-platform Flutter apps; DevOps & CI/CD.
+* **Key Projects:** Abyss Chat (P2P WebRTC), Virtualization Home Lab, Starvik Solution Infrastructure, Trackify.
 
 ---
 
@@ -24,14 +24,16 @@ This is a **Static Website hosted on GitHub Pages**. It utilizes GitHub's native
 ### File Structure
 The portfolio utilizes a multi-page routing structure for optimal SEO and performance:
 - **`index.html`**: The unified landing page and main interactive hub.
-- **`Projects.html`**: The main repository gallery showcasing open-source game development and data engineering web apps.
+- **`Projects.html`**: The main repository gallery showcasing open-source game development, AI, and systems projects.
+- **`Commercial.html`**: Released products, developer platforms, and cloud server infrastructure.
 - **`Updates.html`**: A dedicated LinkedIn and social activity feed.
+- **`Contact.html`**: Dedicated contact page with Formspree mailer integration and JSON resume download.
 - **`404.html`**: A native GitHub Pages catch-all error handling route.
-- **`Contact.html`**: Dedicated contact page with a static Formspree mailer integration.
 - **`style.css`**: The core styling engine containing all design logic and CSS variables.
 - **`script.js`**: Lightweight DOM logic for intersection observers, theme toggling, and data hydration.
 - **`_config.yml`**: GitHub Pages / Jekyll configuration for automated SEO meta tag generation.
-- **`_data/`**: Centralized data repository (`data.js`, `links.json`) that dynamically powers the UI across all HTML pages.
+- **`_data/`**: Centralized data repository (`data.js`) as the single source of truth dynamically powering the UI across all HTML pages.
+- **`CHANGELOG.md`**: Project overhaul tracking log.
 
 ---
 

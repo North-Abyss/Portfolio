@@ -123,10 +123,10 @@ function initTyped() {
   if (!el) return;
 
   var phrases = [
-    'Software Engineer',
-    'Cloud & Linux Infrastructure',
-    'Cross-Platform App Dev',
-    'Java • Python • Docker • CI/CD'
+    'Linux, Networking & Systems Software',
+    'Cross-Platform Flutter Apps',
+    'DevOps, CI/CD & Cloud Infrastructure',
+    'Quantum ML & Creative Computing'
   ];
   var index    = 0;
   var charIdx  = 0;
@@ -329,22 +329,58 @@ function initAnchorScroll() {
 
 // ── Dynamic Data Fetching ───────────────────────────────────────────────────
 //
-// getData() uses window.PORTFOLIO_DATA (set by data.js <script> tag) when
-// available — this works on file:// protocol locally.
-// Falls back to fetch('_data/links.json') when on a real server (GitHub Pages).
+// getData() uses window.PORTFOLIO_DATA (set by data.js <script> tag) as
+// the canonical single source of truth across all pages.
+// Falls back to fetch('Assets/resume-data.json') if available.
 
 /**
- * Retrieves portfolio data from the global scope (if loaded via data.js)
- * or dynamically fetches it from '_data/links.json' as a fallback.
- * @returns {Promise<Object>} The parsed JSON data containing projects and updates.
+ * Retrieves portfolio data from the canonical data source (window.PORTFOLIO_DATA)
+ * or dynamically fetches the structured JSON fallback.
+ * @returns {Promise<Object>} The parsed portfolio data.
  */
 function getData() {
   if (window.PORTFOLIO_DATA) {
     return Promise.resolve(window.PORTFOLIO_DATA);
   }
-  return fetch('_data/links.json').then(function(res) {
-    if (!res.ok) throw new Error('fetch failed: ' + res.status);
-    return res.json();
+  return fetch('Assets/resume-data.json').then(function(res) {
+    if (res.ok) return res.json();
+    return Promise.reject(new Error('PORTFOLIO_DATA not loaded. Ensure data.js is included.'));
+  }).catch(function() {
+    return Promise.reject(new Error('PORTFOLIO_DATA not loaded. Ensure data.js is included.'));
+  });
+}
+
+/**
+ * Exports and downloads the portfolio data as a structured JSON resume file.
+ */
+function downloadResumeJSON() {
+  getData().then(function(data) {
+    const jsonStr = JSON.stringify(data, null, 2);
+    const blob = new Blob([jsonStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Yuvanesh_KS_Portfolio_Resume.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }).catch(function(err) {
+    console.error('Failed to export JSON resume:', err);
+    window.location.href = 'Assets/resume-data.json';
+  });
+}
+
+/**
+ * Initializes listeners for any JSON resume download triggers on the page.
+ */
+function initResumeExport() {
+  const triggers = document.querySelectorAll('#downloadJsonBtn, .download-json-btn, [data-action="download-json-resume"]');
+  triggers.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      downloadResumeJSON();
+    });
   });
 }
 
@@ -375,11 +411,11 @@ async function initGitHubData() {
       const accent = accentMap[filter] || 'var(--violet)';
 
       // Default fallback image if the OG image fails
-      const fallbackImg = "Assets/Github-placholder.png";
+      const fallbackImg = "Assets/github-placeholder.png";
 
       html += `
         <article class="project-card fade-up glass-panel" data-category="${filter}">
-          <img src="Assets/Github-placholder.png" data-src="${repo.preview}" alt="${repo.name} preview" class="project-card__img lazy-img" loading="lazy" width="600" height="180"
+          <img src="Assets/github-placeholder.png" data-src="${repo.preview}" alt="${repo.name} preview" class="project-card__img lazy-img" loading="lazy" width="600" height="180"
                onerror="this.onerror=null; this.src='${fallbackImg}';">
           <div class="project-card__body">
             <div class="project-card__tags">
@@ -759,6 +795,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initExperienceData();
   initCertificationsData();
   initCommercialData();
+  initResumeExport();
   initLazyLoading();
 });
 
