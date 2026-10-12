@@ -50,19 +50,80 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css?v=2.0">
 
-  <!-- JSON-LD -->
+  <!-- JSON-LD Structured Data for Sitelinks & Knowledge Graph -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Yuvanesh KS",
-    "alternateName":"NorthAbyss",
-    "jobTitle":["Software Engineer","Cloud & Linux Infrastructure","Flutter Developer","Game Developer"],
-    "url":"https://north-abyss.github.io/Portfolio/",
-    "image":"https://avatars.githubusercontent.com/u/183628925?v=4",
-    "email":"yuvaneshkarunakaran@gmail.com",
-    "sameAs":["https://www.linkedin.com/in/yuvaneshks/","https://github.com/North-Abyss","https://north-abyss.itch.io/"],
-    "alumniOf":{"@type":"CollegeOrUniversity","name":"Annai Mira College of Engineering and Technology"}
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://north-abyss.github.io/Portfolio/#website",
+        "url": "https://north-abyss.github.io/Portfolio/",
+        "name": "Yuvanesh KS Portfolio",
+        "description": "Software Engineer building Cloud & Linux Infrastructure, Cross-Platform App Dev.",
+        "publisher": {
+          "@id": "https://north-abyss.github.io/Portfolio/#yuvaneshks"
+        },
+        "inLanguage": "en",
+        "hasPart": [
+          {
+            "@type": "SiteNavigationElement",
+            "name": "Projects",
+            "description": "Open-source projects, systems software, and research publications",
+            "url": "https://north-abyss.github.io/Portfolio/Projects.html"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "Released Products",
+            "description": "Released production applications, developer platforms, and cloud infrastructure",
+            "url": "https://north-abyss.github.io/Portfolio/Commercial.html"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "Updates",
+            "description": "Technical insights, LinkedIn updates, and engineering milestones",
+            "url": "https://north-abyss.github.io/Portfolio/Updates.html"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "Contact",
+            "description": "Contact form, communication channels, and JSON resume export",
+            "url": "https://north-abyss.github.io/Portfolio/Contact.html"
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://north-abyss.github.io/Portfolio/#yuvaneshks",
+        "name": "Yuvanesh KS",
+        "alternateName": ["NorthAbyss", "Yuvanesh Karunakaran"],
+        "jobTitle": "Software Engineer",
+        "description": "Software Engineer building Cloud & Linux Infrastructure, Cross-Platform App Dev. B.Tech IT '27 at AMCET.",
+        "url": "https://north-abyss.github.io/Portfolio/",
+        "image": "https://avatars.githubusercontent.com/u/183628925?v=4",
+        "email": "yuvaneshkarunakaran@gmail.com",
+        "sameAs": [
+          "https://github.com/North-Abyss",
+          "https://www.linkedin.com/in/yuvaneshks/",
+          "https://north-abyss.itch.io/",
+          "https://play.google.com/store/apps/details?id=com.abyss.chat"
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Annai Mira College of Engineering and Technology"
+        },
+        "knowsAbout": [
+          "Linux Systems Administration",
+          "Cloud Infrastructure",
+          "Docker & Containerization",
+          "CI/CD Pipelines",
+          "Flutter & Dart",
+          "Java",
+          "Python",
+          "Quantum Machine Learning"
+        ]
+      }
+    ]
   }
   </script>
 </head>

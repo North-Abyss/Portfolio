@@ -2,7 +2,15 @@
 
 All notable changes to the Yuvanesh KS Portfolio project are documented in this file.
 
-## [Unreleased] - 2026-10-11
+## [Unreleased] - 2026-10-12
+
+### SEO, Google SERP Structured Data & Sitemap Fix
+- **Sitemap & Robots Infrastructure**: Created `robots.txt` specifying the absolute canonical sitemap location (`https://north-abyss.github.io/Portfolio/sitemap.xml`) to fix search crawler discovery.
+- **Nested Sitelinks Schema**: Injected Schema.org `@graph` in `index.html` featuring `WebSite` and `SiteNavigationElement` array defining the core site hierarchy (`Projects`, `Released Products`, `Updates`, `Contact`).
+- **Knowledge Graph Schema**: Enriched `Person` entity with canonical `@id`, `sameAs` array (GitHub, LinkedIn, itch.io, Google Play developer link), and detailed `knowsAbout` topics.
+- **Breadcrumb Hierarchy**: Added `BreadcrumbList` JSON-LD schemas to `Projects.html`, `Commercial.html`, `Updates.html`, and `Contact.html` linking back to the root domain.
+
+## [1.1.0] - 2026-10-11
 
 ### Consolidated Data Layer (Single Source of Truth)
 - Merged `_data/links.json` into `_data/data.js` and established `data.js` as the sole canonical data source.
