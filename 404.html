@@ -5,11 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 — Page Not Found | Yuvanesh KS</title>
+  <!-- Dynamic Base Path for GitHub Pages & Nested 404s -->
   <script>
     (function () {
       var t = localStorage.getItem('theme') ||
         (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
       document.documentElement.setAttribute('data-theme', t);
+
+      // On GitHub Pages or web server, establish project root as base for all relative links
+      if (location.protocol !== 'file:') {
+        var base = document.createElement('base');
+        base.href = location.hostname.indexOf('github.io') !== -1 ? '/Portfolio/' : '/';
+        document.head.appendChild(base);
+      }
     })();
   </script>
   <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/183628925?v=4">
@@ -21,6 +29,7 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/Portfolio/style.css?v=2.0">
   <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 
@@ -193,11 +202,20 @@
       }
       if (countdown <= 0) {
         clearInterval(timer);
-        window.location.href = 'index.html';
+        var isGitHub = location.hostname.indexOf('github.io') !== -1;
+        window.location.href = isGitHub ? '/Portfolio/index.html' : 'index.html';
       }
     }, 1000);
   </script>
-  <script src="script.js"></script>
+  <script>
+    // Robust script.js loader for root, subfolder, and local 404s
+    (function () {
+      var s = document.createElement('script');
+      var prefix = (location.hostname.indexOf('github.io') !== -1) ? '/Portfolio/' : '';
+      s.src = prefix + 'script.js';
+      document.body.appendChild(s);
+    })();
+  </script>
 </body>
 
 </html>
