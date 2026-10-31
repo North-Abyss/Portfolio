@@ -1792,6 +1792,8 @@ ol {
   height: 180px;
   object-fit: cover;
   background: var(--bg-surface);
+  display: block;
+  color: transparent;
 }
 
 .project-card__body {

@@ -652,6 +652,14 @@ function initLazyLoading() {
         
         const loadImg = () => {
           if (img.dataset.src) {
+            if (!img.onerror) {
+              img.onerror = function() {
+                this.onerror = null;
+                this.src = this.classList.contains('social-preview-image')
+                  ? 'Assets/Linkedin-Placeholder.png'
+                  : 'Assets/github-placeholder.png';
+              };
+            }
             img.src = img.dataset.src;
             img.classList.remove('lazy-img');
           }
