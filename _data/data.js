@@ -23,6 +23,15 @@ window.PORTFOLIO_DATA = {
 
   "linkedin_posts": [
     {
+      "id": 39,
+      "title": "Universal UI Themes & Design Tokens in Pure Vanilla CSS 🎨",
+      "icon": "palette",
+      "desc": "Released 22 production-ready, zero-dependency universal UI themes & design token presets in pure Vanilla CSS. Featuring 3-tier token architecture, 1-line dynamic switching, Glassmorphism, Claymorphism, Frutiger Aero, and developer palettes like Tokyo Night & Catppuccin.",
+      "url": "https://github.com/North-Abyss/ui-themes",
+      "meta": "Recently • Open Source Release",
+      "tag": "DesignSystem"
+    },
+    {
       "id": 38,
       "title": "Logarithmic Qudit Compression: A 72-Parameter Q-Ternary VQC",
       "icon": "article",
@@ -464,6 +473,26 @@ window.PORTFOLIO_DATA = {
   /* ── Projects — synced from gh repo list North-Abyss --visibility=public ── */
   "projects": [
     {
+      "name": "ui-themes",
+      "desc": "22 production-ready, zero-dependency universal UI themes & design token presets (Material 3, Glassmorphism, Claymorphism, Frutiger Aero, GitHub, VS Code, Tokyo Night, Catppuccin) in pure Vanilla CSS with 3-tier token architecture.",
+      "url": "https://github.com/North-Abyss/ui-themes",
+      "web_url": "https://north-abyss.github.io/ui-themes/",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/ui-themes",
+      "category": "Design System / CSS",
+      "filter": "web",
+      "tags": ["Vanilla CSS", "Design Tokens", "Claymorphism", "Glassmorphism", "Open-Source"]
+    },
+    {
+      "name": "SkyPrognos",
+      "desc": "Aviation fleet health & predictive maintenance platform forecasting turbofan Remaining Useful Life (RUL) with ~11.9 RMSE using NASA C-MAPSS telemetry, PyTorch GRU/CNN models exported to ONNX (~2.7ms CPU inference), and an interactive Digital Twin command center.",
+      "url": "https://github.com/North-Abyss/SkyPrognos",
+      "web_url": "https://skyprognos.streamlit.app/",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/SkyPrognos",
+      "category": "Predictive AI & Digital Twin",
+      "filter": "ai",
+      "tags": ["Python", "PyTorch", "ONNX Runtime", "Streamlit", "XGBoost", "Docker"]
+    },
+    {
       "name": "Q-Ternary-VQC",
       "desc": "Open-source qutrit (d=3) variational quantum classifier for tabular data. Lossless 2³→3² binary-to-ternary compression, CSUM ring entanglement, and SHAP explainability. 72 parameters. Built with PennyLane + PyTorch.",
       "url": "https://github.com/North-Abyss/Q-Ternary-VQC",
@@ -610,6 +639,15 @@ window.PORTFOLIO_DATA = {
       "category": "Documentation",
       "filter": "systems",
       "tags": ["Documentation", "Lab Manual", "IT"]
+    },
+    {
+      "name": "JAVA-30",
+      "desc": "Curated 30-day intensive Java programming and placement DSA challenge repository covering OOP paradigms, recursion, algorithm optimizations, and technical interview problems.",
+      "url": "https://github.com/North-Abyss/JAVA-30",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/JAVA-30",
+      "category": "Core Java & DSA",
+      "filter": "systems",
+      "tags": ["Java", "DSA", "Algorithms", "OOP"]
     },
     {
       "name": "antigravity-brain-web",
@@ -767,6 +805,50 @@ window.PORTFOLIO_DATA = {
         "CSUM ring entanglement & SHAP explainability"
       ],
       "confidentiality": "Open-Source Research Publication",
+      "is_verified": true
+    },
+    {
+      "id": "skyprognos-platform",
+      "name": "SkyPrognos — Aviation Predictive Maintenance",
+      "client": "Open-Source Predictive AI Platform",
+      "client_url": "https://github.com/North-Abyss/SkyPrognos",
+      "verification_url": "https://github.com/North-Abyss/SkyPrognos",
+      "web_url": "https://skyprognos.streamlit.app/",
+      "role": "Solo ML & Systems Engineer",
+      "status": "Live Cloud Demo & Digital Twin",
+      "category": "Aviation Fleet Telemetry & Predictive AI",
+      "icon": "flight",
+      "desc": "Aviation fleet-health command center predicting engine Remaining Useful Life (RUL) using NASA C-MAPSS dataset. Features baseline XGBoost and PyTorch neural models (GRU, Tiny-CNN) exported to ONNX for ~2.7ms CPU inference, fleet-wide health ranking, and an idempotent SQLite outbox simulating edge telemetry sync.",
+      "tech": ["Python", "Streamlit", "PyTorch (GRU/CNN)", "ONNX Runtime", "XGBoost", "Docker Compose", "SQLite Outbox"],
+      "focus_areas": [
+        "NASA C-MAPSS FD001 automated data pipeline & RUL clipping",
+        "PyTorch neural network ONNX CPU runtime export (~2.7ms latency)",
+        "Streamlit Digital Twin command center with fleet ranking & mission scheduling",
+        "Store-and-forward edge telemetry simulation with idempotent SQLite outbox"
+      ],
+      "confidentiality": "Open-Source Production AI Platform",
+      "is_verified": true
+    },
+    {
+      "id": "universal-ui-themes",
+      "name": "Universal UI Themes & Design Tokens",
+      "client": "Open-Source Design System",
+      "client_url": "https://github.com/North-Abyss/ui-themes",
+      "verification_url": "https://github.com/North-Abyss/ui-themes",
+      "web_url": "https://north-abyss.github.io/ui-themes/",
+      "role": "Author & Design Architect",
+      "status": "Released Open-Source Library",
+      "category": "Universal Design System & CSS Tokens",
+      "icon": "palette",
+      "desc": "Production-ready, zero-dependency design token presets and 22 visual themes in pure Vanilla CSS (Material 3, Glassmorphism, Claymorphism, Frutiger Aero, GitHub, VS Code, Tokyo Night, Catppuccin). Implements a 3-tier token architecture (Primitives, Semantic Themes, Components) with 1-line dynamic switching.",
+      "tech": ["Vanilla CSS", "CSS Custom Properties", "Design Tokens", "3-Tier Architecture", "Claymorphism", "Glassmorphism", "Material Symbols"],
+      "focus_areas": [
+        "22 production-ready theme presets with 1-line dynamic attribute switching",
+        "Zero runtime & zero dependencies using standard CSS custom properties",
+        "Universal framework portability across Web (React, Vue, Vanilla) and Mobile tokens",
+        "Live interactive showcase & kitchen sink portal"
+      ],
+      "confidentiality": "Open-Source MIT Design System",
       "is_verified": true
     }
   ]

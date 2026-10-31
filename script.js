@@ -430,7 +430,7 @@ async function initGitHubData() {
               </a>
               ${repo.web_url ? `
               <a href="${repo.web_url}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm uiverse-btn-glass">
-                <i class="fas fa-play"></i> Live Play
+                <i class="fas ${filter === 'game' ? 'fa-play' : 'fa-arrow-up-right-from-square'}"></i> ${filter === 'game' ? 'Live Play' : 'Live Demo'}
               </a>` : ''}
             </div>
           </div>
