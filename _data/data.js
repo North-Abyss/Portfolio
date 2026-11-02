@@ -484,13 +484,13 @@ window.PORTFOLIO_DATA = {
     },
     {
       "name": "SkyPrognos",
-      "desc": "Aviation fleet health & predictive maintenance platform forecasting turbofan Remaining Useful Life (RUL) with ~11.9 RMSE using NASA C-MAPSS telemetry, PyTorch GRU/CNN models exported to ONNX (~2.7ms CPU inference), and an interactive Digital Twin command center.",
+      "desc": "Aviation fleet health & predictive maintenance platform forecasting turbofan Remaining Useful Life (RUL) with ~11.9 RMSE using NASA C-MAPSS telemetry, PyTorch neural models, and an interactive Digital Twin command center.",
       "url": "https://github.com/North-Abyss/SkyPrognos",
       "web_url": "https://skyprognos.streamlit.app/",
       "preview": "https://opengraph.githubassets.com/1/North-Abyss/SkyPrognos",
       "category": "Predictive AI & Digital Twin",
       "filter": "ai",
-      "tags": ["Python", "PyTorch", "ONNX Runtime", "Streamlit", "XGBoost", "Docker"]
+      "tags": ["Python", "PyTorch", "Streamlit", "XGBoost", "Docker"]
     },
     {
       "name": "Q-Ternary-VQC",
@@ -818,11 +818,11 @@ window.PORTFOLIO_DATA = {
       "status": "Live Cloud Demo & Digital Twin",
       "category": "Aviation Fleet Telemetry & Predictive AI",
       "icon": "flight",
-      "desc": "Aviation fleet-health command center predicting engine Remaining Useful Life (RUL) using NASA C-MAPSS dataset. Features baseline XGBoost and PyTorch neural models (GRU, Tiny-CNN) exported to ONNX for ~2.7ms CPU inference, fleet-wide health ranking, and an idempotent SQLite outbox simulating edge telemetry sync.",
-      "tech": ["Python", "Streamlit", "PyTorch (GRU/CNN)", "ONNX Runtime", "XGBoost", "Docker Compose", "SQLite Outbox"],
+      "desc": "Aviation fleet-health command center predicting engine Remaining Useful Life (RUL) using NASA C-MAPSS dataset. Features baseline XGBoost and PyTorch neural models (GRU, Tiny-CNN) for lightweight CPU inference, fleet-wide health ranking, and an idempotent SQLite outbox simulating edge telemetry sync.",
+      "tech": ["Python", "Streamlit", "PyTorch (GRU/CNN)", "XGBoost", "Docker Compose", "SQLite Outbox"],
       "focus_areas": [
         "NASA C-MAPSS FD001 automated data pipeline & RUL clipping",
-        "PyTorch neural network ONNX CPU runtime export (~2.7ms latency)",
+        "PyTorch neural network CPU inference optimization (~2.7ms latency)",
         "Streamlit Digital Twin command center with fleet ranking & mission scheduling",
         "Store-and-forward edge telemetry simulation with idempotent SQLite outbox"
       ],
