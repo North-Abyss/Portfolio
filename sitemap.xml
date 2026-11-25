@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://north-abyss.github.io/Portfolio/</loc>
-    <lastmod>2026-10-31T18:15:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8000</priority>
+    <lastmod>2026-11-25T18:55:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0000</priority>
   </url>
   <url>
     <loc>https://north-abyss.github.io/Portfolio/Projects.html</loc>
-    <lastmod>2026-10-31T18:15:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6400</priority>
+    <lastmod>2026-11-25T18:55:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9000</priority>
   </url>
   <url>
     <loc>https://north-abyss.github.io/Portfolio/Commercial.html</loc>
-    <lastmod>2026-10-31T18:15:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6400</priority>
+    <lastmod>2026-11-25T18:55:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8500</priority>
   </url>
   <url>
     <loc>https://north-abyss.github.io/Portfolio/Updates.html</loc>
-    <lastmod>2026-10-31T18:15:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6400</priority>
+    <lastmod>2026-11-25T18:55:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8000</priority>
   </url>
   <url>
     <loc>https://north-abyss.github.io/Portfolio/Contact.html</loc>
-    <lastmod>2026-10-31T18:15:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6400</priority>
+    <lastmod>2026-11-25T18:55:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7000</priority>
   </url>
 </urlset>

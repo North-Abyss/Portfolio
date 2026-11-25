@@ -12,13 +12,24 @@
   },
   "linkedin_posts": [
     {
+      "id": 40,
+      "title": "Exploring Qutrits (d=3) for Image Classification: Iris-Image (Quantum Computing)",
+      "icon": "memory",
+      "desc": "Most Quantum Machine Learning (QML) models rely on deep CNN backbones. In Iris-Image, I implemented Direct Pixel Ternary Encoding mapping raw image pixels directly into three-level quantum states (qutrits, d=3) via a lossless 2\u00b3\u21923\u00b2 radix conversion, achieving 98.75% test accuracy with only 72 trainable parameters.",
+      "url": "https://www.linkedin.com/posts/yuvaneshks_quantumcomputing-qml-python-share-7530570883711631360-lJq3",
+      "video_frame": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:activity:7530588719242731521?compact=1\" height=\"399\" style=\"width: 100%; border: none; display: block;\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+      "meta": "Recently \u2022 Quantum Machine Learning",
+      "tag": "Quantum QML"
+    },
+    {
       "id": 39,
       "title": "Universal UI Themes & Design Tokens in Pure Vanilla CSS \ud83c\udfa8",
       "icon": "palette",
-      "desc": "Released 22 production-ready, zero-dependency universal UI themes & design token presets in pure Vanilla CSS. Featuring 3-tier token architecture, 1-line dynamic switching, Glassmorphism, Claymorphism, Frutiger Aero, and developer palettes like Tokyo Night & Catppuccin.",
-      "url": "https://github.com/North-Abyss/ui-themes",
+      "desc": "Tired of heavy CSS frameworks just to get a modern design system? Open-sourced Universal UI Themes: 34 production-ready, zero-dependency UI themes & 11 palettes (Material 3, Glassmorphism 2.0, Claymorphism 3D, Skeuomorphism, visionOS 2.0, Tokyo Night, Catppuccin) in pure Vanilla CSS with a live interactive UI Studio.",
+      "url": "https://www.linkedin.com/posts/yuvaneshks_webdev-css-designsystems-ugcPost-7522371857291927553-tcaw",
       "meta": "Recently \u2022 Open Source Release",
-      "tag": "DesignSystem"
+      "tag": "DesignSystem",
+      "video_frame": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:activity:7522386811319455747?compact=1\" height=\"399\" style=\"width: 100%; border: none; display: block;\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>"
     },
     {
       "id": 38,
@@ -457,8 +468,25 @@
   ],
   "projects": [
     {
+      "name": "Iris-Image",
+      "desc": "Direct Pixel Ternary Encoding for image classification using an 8-wire Qutrit (d=3) VQC. Lossless 2\u00b3\u21923\u00b2 radix conversion achieves 33.33% wire reduction and 98.75% test accuracy with only 72 trainable parameters. Includes Quantum SHAP explainability and interactive Flask web UI.",
+      "url": "https://github.com/North-Abyss/Iris-Image",
+      "web_url": "https://github.com/North-Abyss/Iris-Image#readme",
+      "preview": "https://opengraph.githubassets.com/1/North-Abyss/Iris-Image",
+      "category": "Quantum Machine Learning",
+      "filter": "ai",
+      "tags": [
+        "Quantum Computing",
+        "PennyLane",
+        "Qutrit (d=3)",
+        "QML",
+        "Python",
+        "Explainable AI"
+      ]
+    },
+    {
       "name": "ui-themes",
-      "desc": "22 production-ready, zero-dependency universal UI themes & design token presets (Material 3, Glassmorphism, Claymorphism, Frutiger Aero, GitHub, VS Code, Tokyo Night, Catppuccin) in pure Vanilla CSS with 3-tier token architecture.",
+      "desc": "34 production-ready, zero-dependency universal UI themes & 11 swappable palettes (Material 3, Glassmorphism 2.0, Claymorphism 3D, Neumorphism, Skeuomorphism, visionOS, Tokyo Night, Catppuccin) in pure Vanilla CSS + Live UI Studio.",
       "url": "https://github.com/North-Abyss/ui-themes",
       "web_url": "https://north-abyss.github.io/ui-themes/",
       "preview": "https://opengraph.githubassets.com/1/North-Abyss/ui-themes",
@@ -469,6 +497,7 @@
         "Design Tokens",
         "Claymorphism",
         "Glassmorphism",
+        "Zero Dependency",
         "Open-Source"
       ]
     },
@@ -936,6 +965,28 @@
       "is_verified": true
     },
     {
+      "id": "iris-image-research",
+      "name": "Iris-Image \u2014 Quantum Image Classification",
+      "client": "Open-Source Quantum Research",
+      "client_url": "https://github.com/North-Abyss/Iris-Image",
+      "verification_url": "https://github.com/North-Abyss/Iris-Image",
+      "web_url": "https://github.com/North-Abyss/Iris-Image#readme",
+      "role": "Lead Researcher & Quantum Architect",
+      "status": "Open-Source Research & Web Studio",
+      "category": "Quantum Machine Learning & Computer Vision",
+      "icon": "memory",
+      "desc": "Direct Pixel Ternary Encoding for image classification using an 8-wire Qutrit (d=3) VQC. Lossless 2\u00b3\u21923\u00b2 radix conversion achieves 33.33% wire reduction and 98.75% test accuracy with only 72 trainable parameters, featuring Quantum SHAP contour explainability and interactive Flask web UI.",
+      "metrics": "72 Trainable Params \u00b7 98.75% Test Accuracy \u00b7 33.33% Wire Reduction",
+      "focus_areas": [
+        "Lossless 2\u00b3\u21923\u00b2 radix conversion mapping 12 binary bits into 8 qutrit states",
+        "Extreme parameter efficiency: 72 parameters vs classical MLP (97.58% reduction)",
+        "Quantum SHAP explainability proving quantum circuit attends to genuine digit stroke geometry",
+        "Interactive Flask dashboard with real-time canvas drawing and quantum inference"
+      ],
+      "confidentiality": "Open-Source Quantum Research & Platform",
+      "is_verified": true
+    },
+    {
       "id": "skyprognos-platform",
       "name": "SkyPrognos \u2014 Aviation Predictive Maintenance",
       "client": "Open-Source Predictive AI Platform",
@@ -975,7 +1026,7 @@
       "status": "Released Open-Source Library",
       "category": "Universal Design System & CSS Tokens",
       "icon": "palette",
-      "desc": "Production-ready, zero-dependency design token presets and 22 visual themes in pure Vanilla CSS (Material 3, Glassmorphism, Claymorphism, Frutiger Aero, GitHub, VS Code, Tokyo Night, Catppuccin). Implements a 3-tier token architecture (Primitives, Semantic Themes, Components) with 1-line dynamic switching.",
+      "desc": "Production-ready, zero-dependency design token presets, 34 visual themes, and 11 curated palettes in pure Vanilla CSS (Material 3, Glassmorphism 2.0, Claymorphism 3D, Skeuomorphism, visionOS 2.0, Tokyo Night, Catppuccin). Implements a 3-tier token architecture (Primitives, Semantic Themes, Components) with 1-line dynamic switching.",
       "tech": [
         "Vanilla CSS",
         "CSS Custom Properties",
