@@ -1,0 +1,35 @@
+# ==============================================================================
+# .agentignore — AI Agent Context Shielding (Portfolio)
+# Prevents token burn across Antigravity, Zed, Claude Code, and Cursor
+# ==============================================================================
+
+# --- Secrets & Environment ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# --- Portfolio Local / Scratch / Legacy Directories ---
+tmp/
+old/
+social-data/
+.playwright-mcp/
+scratch/
+
+# --- Build & Package Caches ---
+_site/
+.sass-cache/
+.jekyll-cache/
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- Heavy Media & Archives ---
+*.mp4
+*.webm
+*.zip
+*.tar.gz

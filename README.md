@@ -1,105 +1,75 @@
 # Portfolio 🌌
 
-A personal portfolio website for **Yuvanesh KS**, specializing in **Linux, networking and systems software; Flutter apps**. 
+Personal portfolio website for **Yuvanesh KS** (`@North-Abyss`), focused on **Cloud & Linux Infrastructure**, **Cross-Platform App Development (Flutter)**, and **AI / Quantum ML Research**.
 
-**Live Demo**: [https://north-abyss.github.io/Portfolio/](https://north-abyss.github.io/Portfolio/)
+**Live Site:** [https://north-abyss.github.io/Portfolio/](https://north-abyss.github.io/Portfolio/)
 
 ---
 
 ## 📖 About The Project
 
-This portfolio features a "High Gloss Mono" aesthetic with dynamic visual effects to showcase engineering capability across systems software and client products. It is built with **vanilla HTML/CSS/JS, no frameworks** (no React, Vue, jQuery, or Tailwind).
+Built in pure **Vanilla HTML5, CSS3, and JavaScript** with zero build frameworks (no React, Vue, Tailwind, or bundlers), styled with the dual-mode **High Gloss Mono** claymorphic design system and hosted statically on GitHub Pages.
 
-**Current Persona:**
-* **Role:** Systems & Software Engineer 🐧🚀
-* **Focus:** Linux, networking & systems software; cross-platform Flutter apps; DevOps & CI/CD.
-* **Key Projects:** Abyss Chat (P2P WebRTC), Virtualization Home Lab, Starvik Solution Infrastructure, Trackify.
-
----
-
-## 🏗️ Structure & Architecture
-
-This is a **Static Website hosted on GitHub Pages**. It utilizes GitHub's native Jekyll backend to automatically handle SEO generation, routing, and metadata, ensuring a completely serverless frontend architecture.
-
-### File Structure
-The portfolio utilizes a multi-page routing structure for optimal SEO and performance:
-- **`index.html`**: The unified landing page and main interactive hub.
-- **`Projects.html`**: The main repository gallery showcasing open-source game development, AI, and systems projects.
-- **`Commercial.html`**: Released products, developer platforms, and cloud server infrastructure.
-- **`Updates.html`**: A dedicated LinkedIn and social activity feed.
-- **`Contact.html`**: Dedicated contact page with Formspree mailer integration and JSON resume download.
-- **`404.html`**: A native GitHub Pages catch-all error handling route.
-- **`style.css`**: The core styling engine containing all design logic and CSS variables.
-- **`script.js`**: Lightweight DOM logic for intersection observers, theme toggling, and data hydration.
-- **`_config.yml`**: GitHub Pages / Jekyll configuration for automated SEO meta tag generation.
-- **`_data/`**: Centralized data repository (`data.js`) as the single source of truth dynamically powering the UI across all HTML pages.
-- **`CHANGELOG.md`**: Project overhaul tracking log.
+- **Role:** Software Engineer | Cloud & Linux Infrastructure | Cross-Platform App Dev (`B.Tech IT '27`, CGPA `8.26`)
+- **Flagship Work:**
+  - **Abyss Chat:** Decentralized P2P Flutter + WebRTC + mDNS + AES-GCM messenger published on Google Play (`com.abyss.chat`)
+  - **Iris-Image:** Qutrit (`d = 3`) Variational Quantum Classifier for image classification (IRIS 2027 selected abstract; full paper under review for Springer Nature LNEE)
+  - **SkyPrognos:** Aviation RUL predictive maintenance platform (PyTorch + ONNX Runtime + Streamlit)
+  - **Universal UI Themes:** Open-source CSS design system with 34 themes & 11 swappable palettes (`north-abyss.github.io/ui-themes`)
+  - **Virtualization Home Lab & Starvik Infrastructure:** KVM/QEMU (`virbr0`), Docker Compose, Hetzner VPS, Bunny.net CDN, Cloudflare R2
 
 ---
 
-## 🎨 Base Color Themes & Design
+## 🏗️ Structure & Tooling
 
-The site uses a premium **Claymorphism** UI pattern with a dynamically toggled dark/light theme engine utilizing `localStorage`.
-
-### Theme Engine Details
-CSS custom variables in the `:root` pseudo-class control the entire aesthetic. We use the **High Gloss Mono** color palette.
-
-**Dark Mode - Default**
-- **Base Background (`--bg-void`)**: `#000000` (Pitch Black)
-- **Gradient Base (`--bg-surface`)**: `#1f1f1f`
-- **Text (`--text-100`)**: `#ffffff` (Pure White)
-- **Hover Shadow (Clay)**: Outer dark drop shadow with a visible white inner glow component.
-
-**Light Mode**
-- **Base Background (`--bg-void`)**: `#ffffff` (Pure White)
-- **Gradient Base (`--bg-surface`)**: `#f0f0f0`
-- **Text (`--text-100`)**: `#000000` (Pitch Black)
-- **Hover Shadow (Clay)**: Outer light drop shadow with a visible black outer shadow component.
-
-### Key Visual Features
-* **Ambient Parallax Glow:** Massive drifting background spots (up to 600px wide, heavily blurred) that create a premium depth/parallax effect behind all content.
-* **Claymorphism UI:** Minimalist card designs with outline borders that transition to solid fills with dynamic clay hover shadows.
-* **Dynamic Media Previews:** Automated visual previews for GitHub repos, robust `microlink.io` unfurling for standard links, and **native inline video embeds** for interactive LinkedIn video posts.
-
----
-
-## ⚙️ What This Project Does & Needs
-
-### What It Does
-- Serves as a central, highly indexable personal hub.
-- Synchronizes theme preferences instantly across multiple sub-pages without flashing.
-- Displays rich media (LinkedIn posts, GitHub repositories) in a standardized, performant grid format.
-
-### Future Needs & Maintenance
-1. **Zero-Framework Strictness:** Maintain the vanilla HTML/CSS/JS architecture. Do not add React, Vue, or Tailwind.
-2. **SEO Optimization Maintenance:** Ensure any new HTML pages include the `_config.yml` integrations and semantic `<meta>` tags.
-3. **Core Web Vitals:** Keep DOM manipulation minimal in `script.js` to ensure fast Time-To-Interactive (TTI) scores on mobile devices.
-4. **CSS Variable Integrity:** All new colors or thematic elements MUST be bound to the `:root` variables in `style.css` to prevent theme-breaking behavior.
-
----
-
-## 🚀 Usage & Deployment
-
-Since all data needed is contained within the repository and served statically, deployment is entirely automated via GitHub Pages.
-
-### Local Development
-Simply open `index.html` in any modern web browser to view the site locally.
-
-```bash
-# Clone the repo
-git clone https://github.com/North-Abyss/Portfolio.git
-
-# Navigate to directory
-cd Portfolio
-
-# Open locally (Linux example)
-xdg-open index.html
+```text
+Portfolio/
+├── index.html              # Unified landing page (Hero, About, Experience, Projects, Updates, Contact)
+├── Projects.html           # Filterable project gallery (All / Game / Flutter / AI / Systems / Web)
+├── Commercial.html         # Released Products & client/cloud infrastructure showcase
+├── Updates.html            # LinkedIn social & technical feed
+├── Contact.html            # Contact form (Formspree), links & JSON/PDF resume downloads
+├── 404.html                # Terminal-style GitHub Pages 404 route
+├── style.css               # High Gloss Mono CSS custom properties & claymorphic UI
+├── script.js               # Theme sync, nav, typing effect, scroll reveals & dynamic renderers
+├── _config.yml             # Jekyll SEO & sitemap config for GitHub Pages
+├── robots.txt & sitemap.xml# Crawler & SERP sitemap indexing
+├── _data/data.js           # Canonical Single Source of Truth for projects, posts & experience
+├── Assets/                 # Resume.pdf, resume-data.json & image fallbacks
+├── AGENTS.md               # Minimal PT-derived operating manual for AI coding agents
+├── .agentignore            # AI context shielding (ignores tmp/, old/, social-data/, .playwright-mcp/)
+├── git-sync.sh             # Universal v0.5.0 commit, rebase, push & tag script
+├── scripts/dev/            # verify_web.sh (local/Playwright audit) & hook_safety_gate.py
+├── .agents/                # PreToolUse safety hook & relevant skills (browser-testing, code-review)
+└── CHANGELOG.md            # Versioned project changelog
 ```
 
-### GitHub Pages Deployment
-1. Commit any changes to the `main` branch.
-2. GitHub Actions will automatically trigger the Jekyll build process.
-3. The site will be live at `https://north-abyss.github.io/Portfolio/` within ~1-2 minutes.
+---
+
+## 🎨 Design System (High Gloss Mono)
+
+Flash-free dark/light theme switching runs inline in `<head>` via `localStorage` before styles render, synchronized across tabs via CSS custom properties in `style.css`:
+- **Dark Mode (`--bg-void: #000000`, `--bg-surface: #1f1f1f`, `--text-100: #ffffff`)**
+- **Light Mode (`--bg-void: #ffffff`, `--bg-surface: #f0f0f0`, `--text-100: #000000`)**
+- **Visual Highlights:** Claymorphic hover shadows, `.ambient-spots` parallax blur backdrop, inline LinkedIn video embeds, and automatic GitHub OpenGraph error fallbacks (`Assets/github-placeholder.png`).
 
 ---
-*Created by [Yuvanesh KS](https://github.com/North-Abyss)*
+
+## 🚀 Local Preview, Verification & Sync
+
+Use a local static HTTP server rather than `file://` so root links and dynamic data load identically to GitHub Pages:
+
+```bash
+# 1. Start local static server
+python3 -m http.server 8080
+
+# 2. Verify HTTP status, HTML / Playwright console errors (outputs to tmp/audit/)
+./scripts/dev/verify_web.sh http://localhost:8080
+
+# 3. Commit and sync changes safely to GitHub Pages
+./git-sync.sh --sync -m "feat: update portfolio content"
+```
+
+---
+
+*Maintained by [Yuvanesh KS (@North-Abyss)](https://github.com/North-Abyss)*

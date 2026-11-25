@@ -1,10 +1,62 @@
+# ==============================================================================
+# Portfolio .gitignore (Upgraded with North-Abyss/PT Hygiene)
+# ==============================================================================
+
+# --- Portfolio Local Notes & Legacy Scratch ---
 issues.md
 agent-memory.md
 Offline Reviews.txt
-
 old/
 social-data/
 tmp/
 .playwright-mcp/
+.zed/
+scratch/
+*.scratch.*
 
+# --- Environment Variables & Secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+secrets.json
+credentials.json
 
+# --- Static / Jekyll / Web Tooling ---
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+node_modules/
+.npm
+.cache/
+
+# --- Python & Cache Artifacts ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# --- Logs & Process Files ---
+logs/
+*.log
+!CHANGELOG.md
+*.pid
+
+# --- OS & Editor Artifacts ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+.directory
+*.swp
+*.swo
+.vscode/*
+!.vscode/settings.json
+.zed/settings.json
+.zed/tasks.json

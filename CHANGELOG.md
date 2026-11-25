@@ -2,45 +2,51 @@
 
 All notable changes to the Yuvanesh KS Portfolio project are documented in this file.
 
-## [Unreleased] - 2026-10-12
+## [1.4.0] - 2026-11-25
 
-### SEO, Google SERP Structured Data & Sitemap Fix
-- **Sitemap & Robots Infrastructure**: Created `robots.txt` specifying the absolute canonical sitemap location (`https://north-abyss.github.io/Portfolio/sitemap.xml`) to fix search crawler discovery.
-- **Nested Sitelinks Schema**: Injected Schema.org `@graph` in `index.html` featuring `WebSite` and `SiteNavigationElement` array defining the core site hierarchy (`Projects`, `Released Products`, `Updates`, `Contact`).
-- **Knowledge Graph Schema**: Enriched `Person` entity with canonical `@id`, `sameAs` array (GitHub, LinkedIn, itch.io, Google Play developer link), and detailed `knowsAbout` topics.
-- **Breadcrumb Hierarchy**: Added `BreadcrumbList` JSON-LD schemas to `Projects.html`, `Commercial.html`, `Updates.html`, and `Contact.html` linking back to the root domain.
+### Portfolio Flagships, SEO & Performance
+- **New Research & UI Releases (`637174c`):** Added **Iris-Image** (Qutrit Variational Quantum Classifier for direct pixel ternary image classification; selected abstract with full paper under review at IRIS 2027, Shaastra IIT Madras / Springer Nature LNEE) and updated **Universal UI Themes** (**34 themes & 11 palettes**).
+- **Updates, SEO & Performance:** Synced latest LinkedIn engineering posts into `_data/data.js`, refreshed structured metadata & `sitemap.xml`, and optimized resource `preconnect` hints across HTML pages.
+
+### ATS Resume Suite & Canonical Sync
+- **Canonical Resume (`Assets/Resume.pdf`):** Rebuilt via WeasyPrint with Arial TrueType typography, single-line Flexbox layout (`pdftotext` / `-bbox` verified strict 1-page reading order), verified phone (`+91-9080190600`), BGV-aligned Starvik dates (`Flutter Internship Team Lead | Jun 2026 - Jul 2026`), and synced `Yuvanesh-KS-Resume-Software-IT-Intern.pdf` directly to `Assets/Resume.pdf`.
+
+### Minimal PT Workflow & Tooling Integration
+- **Essentials-Only Integration from `North-Abyss/PT`:** Added `AGENTS.md`, `.agentignore`, `.agents/hooks.json`, `scripts/dev/hook_safety_gate.py`, `scripts/dev/verify_web.sh`, and 2 relevant skills (`browser-testing`, `code-review`).
+- **Repo Tooling Upgrades:** Upgraded `.gitignore` (preserving local Portfolio ignores while blocking secrets, caches, builds, and `.zed/` configs) and upgraded `git-sync.sh` to **v0.5.0** (replacing the legacy Trackify sync label and adding `--sync`, `--skip-ci`, `--watch`).
+- **Documentation Sync:** Updated `README.md`, `CHANGELOG.md`, `issues.md`, and `agent-memory.md`.
+
+## [1.3.0] - 2026-11-02
+
+### Search Footprint & Knowledge Graph Alignment
+- **Schema & Metadata Refinement (`52b4a29`, `18487e0`, `0f5a177`):** Replaced `alumniOf` with `affiliation` in `index.html` JSON-LD `Person` schema and prioritized **Quantum ML** and **Linux KVM** engineering tokens across meta keywords, skills, and `Assets/resume-data.json`.
+
+## [1.2.0] - 2026-10-31 to 2026-11-01
+
+### Public Repos Integration & Card Preview Resilience
+- **New Flagship Projects (`94a866f`):** Integrated `SkyPrognos`, `ui-themes`, and `JAVA-30` across `_data/data.js`, `Assets/resume-data.json`, `Commercial.html`, `Projects.html`, and `index.html`, with `Live Demo` CTA labels for non-game web builds.
+- **Image Fallback Hardening (`8f26cbe`):** Removed `SMART-TRAP` from homepage highlights (still retained in `Projects.html` / `_data/data.js`), added inline `onerror` and lazy-load fallbacks (`Assets/github-placeholder.png`, `Assets/Linkedin-Placeholder.png`) to counter GitHub OpenGraph HTTP 429 rate limits, and added `color: transparent` on `.project-card__img` to prevent alt-text bleed.
+- **SEO Polish:** Updated `sitemap.xml` timestamps and added `noindex, follow` to `404.html`.
+
+## [1.1.1] - 2026-10-12
+
+### SEO, Google SERP Structured Data & 404 Routing
+- **Sitemap & Robots (`48dacf1`):** Created `robots.txt` specifying `https://north-abyss.github.io/Portfolio/sitemap.xml` to improve Google Search Console indexing.
+- **Nested Sitelinks & Breadcrumbs:** Injected Schema.org `@graph` (`WebSite`, `SiteNavigationElement`, enriched `Person` graph) into `index.html`, plus `BreadcrumbList` JSON-LD across subpages.
+- **404 Path Resolution & Initial 1-Page Resume (`a25c26e`, `becb5e4`, `540d27f`):** Fixed GitHub Pages subpath asset resolution in `404.html` and added the initial generated `Assets/Resume.pdf`.
 
 ## [1.1.0] - 2026-10-11
 
 ### Consolidated Data Layer (Single Source of Truth)
-- Merged `_data/links.json` into `_data/data.js` and established `data.js` as the sole canonical data source.
+- Merged `_data/links.json` into `_data/data.js` and established `_data/data.js` as the sole canonical data source (`8145db7`).
 - Removed redundant `_data/links.json`.
 - Updated `script.js` `getData()` to read directly from `window.PORTFOLIO_DATA`.
-- Added dynamic and static JSON resume export feature for instant downloading and sharing.
+- Added dynamic and static JSON resume export (`Assets/resume-data.json`).
 
 ### Factual Corrections & Positioning
-- **CGPA**: Set to 8.26 consistently across all pages, hero stats, and education entries.
-- **Trackify**: Corrected state management to Provider and local storage to SharedPreferences (removed Riverpod and Hive references); labeled builds as Web, Android, Windows, and Linux. Removed proprietary/enterprise claims.
-- **Abyss Chat**: Corrected signaling details to PeerJS + STUN and mDNS LAN discovery; removed "Socket Signaling" and "zero-server" wording; added Play Store link.
-- **Wave of Fate**: Specified Godot Engine with custom physics (removed "custom physics engine"); aligned genre to 2D Metroidvania-style action platformer.
-- **Q-Ternary-VQC**: Aligned role and status with open-source research publication; removed unsupported "First" claims while highlighting 72 parameters, logarithmic qudit compression, and SHAP explainability.
-- **AI-Sugarcane**: Corrected frontend/backend stack references to Flask and TabNet (removed Streamlit mentions in hero/cards).
-- **Harmony-Music**: Clearly marked as a fork/learning exploration of `anandnet/Harmony-Music`.
-- **antigravity-brain-web**: Explicitly documented as an experimental prototype and visualizer.
-- **Experience**:
-  - Relabeled Home Lab to "Project: Virtualization Home Lab" reflecting an experimental learning setup; removed "zero-downtime" and "Software Engineer" claims.
-  - Removed duplicate Game Off entry from experience (already highlighted in projects).
-  - Cleaned education entry (removed Adobe India and MPL).
-  - Added Starvik website and developer portal infrastructure contributions.
-
-### Commercial Page -> Released Products
-- Renamed page heading, meta tags, and navigation links across all pages from "Commercial" to "Released Products".
-- Retained `Commercial.html` filename for URL stability.
-- Added Starvik Website and Developer Portal cards detailing server setup, Git CI/CD, Bunny.net CDN, and backend environment configuration.
-- Added HTML comment placeholder for future verified client work and customer case studies.
-
-### Positioning & UI Polish
-- Unified hero, typed text, and README positioning: "Linux, networking and systems software; Flutter apps".
-- Reordered featured projects on `index.html`: Abyss Chat, Virtualization Home Lab, SMART-TRAP, Q-Ternary-VQC, Trackify, Wave of Fate.
-- Renamed `Assets/Github-placholder.png` to `Assets/github-placeholder.png` and fixed all image references.
-- Updated `sitemap.xml` timestamps to 2026-10-11.
+- **CGPA:** Set to `8.26` consistently across all pages, hero stats, and education entries.
+- **Trackify:** Corrected state management to `Provider` and local storage to `SharedPreferences`; builds labeled Web, Android, Windows, and Linux.
+- **Abyss Chat:** Corrected signaling details to `PeerJS` + `STUN` and `mDNS` LAN discovery; added Google Play Store link.
+- **Wave of Fate:** Aligned genre to 2D Metroidvania-style action platformer in Godot Engine 4.
+- **Q-Ternary-VQC / AI-Sugarcane / Harmony-Music:** Verified accurate descriptions, roles, and frameworks (`Flask` + `TabNet` for AI-Sugarcane).
+- **Released Products (`Commercial.html`):** Renamed heading/navigation labels from "Commercial" to "Released Products" while retaining `Commercial.html` for URL stability, and added Starvik website & developer portal cards.
